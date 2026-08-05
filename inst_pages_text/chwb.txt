@@ -1,0 +1,108 @@
+URL: https://uok.edu.pk/research_institutes/chwb/index.php
+
+Center for Health and Wellbeing
+Email
+Facebook
+MCN
+Sitemap
+Directory
+Call: (9221) 9926 1300-7
+Search
+Home
+About Us
+Campus News
+Policies HEC / Sindh HEC
+Convocation
+Downloads
+Our history
+KURECRUITS
+Map of Pakistan
+Admissions
+Admissions Program 2026
+M.Phil./Ph.D. & M.S./M.D.
+Foreign Students' Policy
+Faculties
+Education
+Engineering
+Islamic Studies
+Law
+Management Sciences
+Medicine
+Pharmacy
+Science
+Arts & Social Sciences
+Institutes / Centers
+Library
+Home
+Digital Library
+Ebrary
+Administration
+Vice Chancellor
+Registrar
+Syndicate Members
+Former Vice Chancellors
+Directorates & Offices
+Examination
+Annual System
+Downloadable Forms
+Common Questions
+Overseas Examination
+Semester System
+Semester Rules Book
+Semester Fee
+Alumni
+Journals
+Home
+Institutes
+Center for Health and Wellbeing
+Main page
+Center for Health and Wellbeing
+Main page
+Introduction
+Our Team
+Brochure
+Contact
+Center for Health & Well-Being
+This project is inclusive of The 2030 Agenda for Sustainable Development, adopted by all United Nations Member States shared blueprint for peace and prosperity for people and the planet, now and into the future.
+University of Karachi’s Center for Health and Well-Being offers physical and mental health counseling, care and keeping fit services. It will be a space with substantial renovation of the Hostel building at University of Karachi. It is our belief that in order to succeed academically and to be at best of their potentials the University has to offer, students and staff to be cared for physically and mentally, and have a sense of   well-being within their community. CHWB will be an inclusive resource center that focuses on preventative health and wellness on campus. CHAWB is dedicated to making our care accessible to all students and staff with each of our experts to be committed in creating a safe, inclusive, and affirming environment for all.
+About Us
+Downloads
+MCN
+News & Events
+Pension Form
+Semester Fee
+Quick Links
+Affiliation Committee
+Postgraduate Students Portal Registration
+Directorates & offices
+Job Portal
+Student Advisor Office
+Physical Education
+Tenders and Quotations
+Syllabus Undergraduate Program
+Placements and Internships
+Karachi University Journal of Science
+Protection Against Harassment
+Web Links
+Digital Library
+Quality Enhancement Cell
+Karachi University Press
+NAEAC
+Political Map of Pakistan
+© 2026 University of Karachi
+Credits
+Contact us
+Copyright
+Disclaimer
+Maps
+Official Social Media Platforms, University of Karachi
+Tweet
+V.C. Office
+Inquiry Direct: 99261300-07
+Ext: 2219
+Fax: 99261340, 99261330 (P.R.O.)
+Email: vc@uok.edu.pk
+ERVER['DOCUMENT_ROOT'];
+$path .= "/footer.htm";
+include_once($path);
+?>

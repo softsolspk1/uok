@@ -1,0 +1,23 @@
+EXTERNAL | Faculties -> /faculties
+INTERNAL | Center for Digital Forensic Science and Technology -> /research_institutes/cdfst/index.php
+EXTERNAL | Applied Economics Research Center -> http://www.aerc.edu.pk
+INTERNAL | Area Study Center for Europe -> asce/index.php
+EXTERNAL | Center of Excellence for Marine Biology -> https://marinebiology.edu.pk/
+INTERNAL | Centre for Molecular Genetics -> cmg/index.php
+INTERNAL | Center of Excellence for Women's Studies -> cews/index.php
+INTERNAL | Center for Health and Wellbeing -> https://uok.edu.pk/research_institutes/chwb/index.php
+INTERNAL | Confucius Institute -> /research_institutes/confucius/index.php
+INTERNAL | Dr. A. Q. Khan Institute of Biotechnology &amp; Genetic Engineering -> kibge/index.php
+EXTERNAL | Dr. Zafar H. Zaidi Center for Proteomics -> http://proteomics.edu.pk/
+EXTERNAL | Dr. M. Ajmal Khan ​Institute of Sustainable Halophyte Utilization​ -> http://www.halophyte.org
+EXTERNAL | HEJ Research Institute of Chemistry -> http://www.iccs.edu
+EXTERNAL | Institute of Clinical Psychology -> https://icpuok.edu.pk/
+INTERNAL | Institute of Environmental Studies -> ies/index.php
+INTERNAL | Institute of Marine Science -> ims/index.php
+INTERNAL | Institute of Space Science and Technology -> isst/index.php
+INTERNAL | National Nematological Research Centre -> nnrc/index.php
+INTERNAL | Pakistan Study Center -> psc/index.php
+INTERNAL | Shaheed Mohtarma Benazir Bhutto Chair -> smbbc/index.php
+EXTERNAL | Umaer Basha Institute of Technology -> /faculties/computerscience/ubit.php
+INTERNAL | Sardar Yasin Malik Professional Development Centre -> sympdc/index.php
+EXTERNAL | Sheikh Zayed Islamic Center -> http://szic.edu.pk/
