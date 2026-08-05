@@ -1,0 +1,716 @@
+<title>University of Karachi — Est. 1951</title>
+<style>
+__FONT_FACES__
+
+/* ===== Tokens ===== */
+:root{
+  --bg:#EDE6D2;
+  --bg-elevated:#F7F3E4;
+  --bg-inverse:#1E4429;
+  --bg-inverse-2:#183A22;
+  --text:#1B2A1E;
+  --text-soft:#4B5A45;
+  --text-faint:#7C8A76;
+  --text-inverse:#F3EFDD;
+  --text-inverse-soft:#BFD1B9;
+  --accent:#3F7A34;
+  --accent-hover:#356A2C;
+  --accent-2:#A9793D;
+  --accent-2-soft:#C9A567;
+  --border:rgba(27,42,29,.15);
+  --border-inverse:rgba(243,239,221,.16);
+  --focus-ring:#3F7A34;
+  --shadow:0 1px 2px rgba(27,42,29,.06),0 8px 24px -12px rgba(27,42,29,.18);
+  --font-display:'Fraunces',Georgia,'Times New Roman',serif;
+  --font-body:'Work Sans',system-ui,-apple-system,'Segoe UI',sans-serif;
+  --font-urdu:'Noto Nastaliq Urdu',serif;
+  --container:1240px;
+  color-scheme: light;
+}
+@media (prefers-color-scheme: dark){
+  :root{
+    --bg:#10160D; --bg-elevated:#1A2416; --bg-inverse:#24361F; --bg-inverse-2:#1B2A17;
+    --text:#EDE8D6; --text-soft:#A9B39C; --text-faint:#71806A;
+    --text-inverse:#F2EEDC; --text-inverse-soft:#C7D4BE;
+    --accent:#72C25A; --accent-hover:#8AD473; --accent-2:#D3A968; --accent-2-soft:#8C6B3C;
+    --border:rgba(237,232,214,.14); --border-inverse:rgba(237,232,214,.14);
+    --focus-ring:#8AD473; color-scheme: dark;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#10160D; --bg-elevated:#1A2416; --bg-inverse:#24361F; --bg-inverse-2:#1B2A17;
+  --text:#EDE8D6; --text-soft:#A9B39C; --text-faint:#71806A;
+  --text-inverse:#F2EEDC; --text-inverse-soft:#C7D4BE;
+  --accent:#72C25A; --accent-hover:#8AD473; --accent-2:#D3A968; --accent-2-soft:#8C6B3C;
+  --border:rgba(237,232,214,.14); --border-inverse:rgba(237,232,214,.14);
+  --focus-ring:#8AD473; color-scheme: dark;
+}
+:root[data-theme="light"]{
+  --bg:#EDE6D2; --bg-elevated:#F7F3E4; --bg-inverse:#1E4429; --bg-inverse-2:#183A22;
+  --text:#1B2A1E; --text-soft:#4B5A45; --text-faint:#7C8A76;
+  --text-inverse:#F3EFDD; --text-inverse-soft:#BFD1B9;
+  --accent:#3F7A34; --accent-hover:#356A2C; --accent-2:#A9793D; --accent-2-soft:#C9A567;
+  --border:rgba(27,42,29,.15); --border-inverse:rgba(243,239,221,.16);
+  --focus-ring:#3F7A34; color-scheme: light;
+}
+
+/* ===== Reset & base ===== */
+*,*::before,*::after{box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+@media (prefers-reduced-motion: reduce){html{scroll-behavior:auto;}
+  *,*::before,*::after{animation-duration:.001ms !important;animation-iteration-count:1 !important;transition-duration:.001ms !important;scroll-behavior:auto !important;}}
+body{
+  margin:0; background:var(--bg); color:var(--text);
+  font-family:var(--font-body); font-size:17px; line-height:1.65;
+  -webkit-font-smoothing:antialiased; text-rendering:optimizeLegibility;
+  overflow-x:hidden;
+}
+img{max-width:100%;display:block;}
+a{color:inherit;}
+h1,h2,h3,h4{font-family:var(--font-display);font-weight:700;margin:0;text-wrap:balance;}
+p{margin:0;}
+button{font-family:inherit;}
+ul{margin:0;padding:0;list-style:none;}
+:focus-visible{outline:3px solid var(--focus-ring);outline-offset:3px;border-radius:2px;}
+.skip-link{
+  position:absolute;left:1rem;top:-100px;background:var(--accent);color:#fff;
+  padding:.75rem 1.25rem;border-radius:4px;z-index:1000;transition:top .2s;
+  font-weight:600;
+}
+.skip-link:focus{top:1rem;}
+
+.container{max-width:var(--container);margin-inline:auto;padding-inline:1.5rem;}
+@media(min-width:640px){.container{padding-inline:2.5rem;}}
+
+.eyebrow{
+  font-family:var(--font-body);font-size:.72rem;font-weight:700;letter-spacing:.14em;
+  text-transform:uppercase;color:var(--accent-2);display:flex;align-items:center;gap:.6rem;
+}
+.eyebrow::before{content:"";width:22px;height:2px;background:var(--accent-2);display:inline-block;}
+.section{padding-block:5.5rem;}
+@media(max-width:640px){.section{padding-block:3.5rem;}}
+.section-head{max-width:640px;margin-bottom:3rem;display:flex;flex-direction:column;gap:.9rem;}
+.section-head h2{font-size:clamp(1.7rem,3.2vw,2.5rem);line-height:1.12;}
+.section-head p{color:var(--text-soft);font-size:1.05rem;max-width:56ch;}
+.band-inverse{background:var(--bg-inverse);color:var(--text-inverse);}
+.band-elevated{background:var(--bg-elevated);}
+
+.btn{
+  display:inline-flex;align-items:center;gap:.5rem;font-weight:600;font-size:.95rem;
+  padding:.85rem 1.5rem;border-radius:3px;border:1.5px solid transparent;cursor:pointer;
+  text-decoration:none;transition:background .15s,color .15s,border-color .15s,transform .15s;
+  white-space:nowrap;
+}
+.btn:active{transform:translateY(1px);}
+.btn-primary{background:var(--accent);color:#fff;}
+.btn-primary:hover{background:var(--accent-hover);}
+.btn-outline{border-color:currentColor;color:inherit;background:transparent;}
+.btn-outline:hover{background:rgba(255,255,255,.08);}
+.btn-outline.on-light{border-color:var(--text);color:var(--text);}
+.btn-outline.on-light:hover{background:rgba(27,42,29,.06);}
+.btn svg{width:16px;height:16px;flex:none;}
+
+/* ===== Utility bar ===== */
+.utility-bar{background:var(--bg-inverse-2);color:var(--text-inverse-soft);font-size:.8rem;}
+.utility-bar .container{display:flex;align-items:center;justify-content:space-between;height:38px;gap:1rem;}
+.utility-left{display:flex;align-items:center;gap:.5rem;font-family:var(--font-urdu);font-size:1rem;}
+.utility-left .sep{opacity:.5;font-family:var(--font-body);font-size:.8rem;}
+.utility-right{display:flex;align-items:center;gap:1.25rem;}
+.utility-right a{text-decoration:none;color:inherit;opacity:.9;}
+.utility-right a:hover{opacity:1;text-decoration:underline;}
+.lang-toggle{display:flex;gap:2px;font-weight:700;}
+.lang-toggle button{background:none;border:none;color:inherit;opacity:.6;cursor:pointer;padding:.2rem .35rem;font-size:.78rem;font-family:var(--font-body);}
+.lang-toggle button[aria-pressed="true"]{opacity:1;text-decoration:underline;text-underline-offset:3px;}
+@media(max-width:760px){.utility-right .hide-sm{display:none;}}
+
+/* ===== Header ===== */
+header.site-header{
+  position:sticky;top:0;z-index:100;background:var(--bg);border-bottom:1px solid var(--border);
+  backdrop-filter:saturate(140%) blur(6px);
+}
+.header-row{display:flex;align-items:center;justify-content:space-between;gap:1.5rem;height:84px;}
+.brand{display:flex;align-items:center;gap:.85rem;text-decoration:none;color:inherit;}
+.brand img{height:46px;width:auto;}
+.brand-word{display:flex;flex-direction:column;line-height:1.15;}
+.brand-word .name{font-family:var(--font-display);font-weight:700;font-size:1.18rem;}
+.brand-word .tag{font-size:.68rem;letter-spacing:.09em;text-transform:uppercase;color:var(--text-faint);}
+nav.primary-nav{display:flex;align-items:center;gap:2.1rem;}
+nav.primary-nav a{text-decoration:none;font-weight:600;font-size:.95rem;color:var(--text);position:relative;padding-block:.3rem;}
+nav.primary-nav a::after{content:"";position:absolute;left:0;right:0;bottom:0;height:2px;background:var(--accent);transform:scaleX(0);transform-origin:left;transition:transform .18s;}
+nav.primary-nav a:hover::after{transform:scaleX(1);}
+.header-actions{display:flex;align-items:center;gap:.9rem;}
+.menu-toggle{display:none;background:none;border:1px solid var(--border);border-radius:4px;padding:.5rem;cursor:pointer;color:var(--text);}
+@media(max-width:980px){
+  nav.primary-nav{position:fixed;inset:84px 0 0 0;background:var(--bg);flex-direction:column;align-items:flex-start;
+    padding:2rem 1.5rem;gap:1.4rem;transform:translateX(100%);transition:transform .25s ease;overflow-y:auto;}
+  nav.primary-nav.open{transform:translateX(0);}
+  nav.primary-nav a{font-size:1.2rem;}
+  .menu-toggle{display:flex;}
+  .header-actions .btn-primary{display:none;}
+}
+
+/* ===== Hero ===== */
+.hero{position:relative;color:var(--text-inverse);overflow:hidden;}
+.hero-bg{position:absolute;inset:0;background-size:cover;background-position:center 62%;}
+.hero-scrim{position:absolute;inset:0;
+  background:linear-gradient(180deg,rgba(14,26,16,.72) 0%,rgba(20,40,24,.82) 45%,rgba(30,68,41,.94) 100%);}
+.hero-inner{position:relative;padding-block:5rem 4rem;display:flex;flex-direction:column;gap:1.7rem;max-width:760px;}
+.hero-eyebrow{display:flex;align-items:center;gap:.85rem;font-size:.8rem;letter-spacing:.1em;text-transform:uppercase;color:var(--text-inverse-soft);font-weight:600;}
+.hero-eyebrow .urdu{font-family:var(--font-urdu);text-transform:none;letter-spacing:0;font-size:1.35rem;color:var(--text-inverse);font-weight:700;}
+.hero h1{font-size:clamp(2.3rem,5.6vw,3.9rem);line-height:1.06;letter-spacing:-.01em;}
+.hero p.lead{font-size:1.15rem;color:var(--text-inverse-soft);max-width:56ch;}
+.hero-ctas{display:flex;flex-wrap:wrap;gap:1rem;margin-top:.4rem;}
+
+.quick-tasks{position:relative;margin-top:-3.4rem;}
+.quick-tasks .container{position:relative;}
+.quick-grid{
+  background:var(--bg-elevated);border:1px solid var(--border);border-radius:8px;box-shadow:var(--shadow);
+  display:grid;grid-template-columns:repeat(4,1fr);
+}
+.quick-grid a{
+  display:flex;align-items:center;gap:.85rem;padding:1.3rem 1.4rem;text-decoration:none;color:var(--text);
+  border-right:1px solid var(--border);transition:background .15s;
+}
+.quick-grid a:last-child{border-right:none;}
+.quick-grid a:hover{background:var(--bg);}
+.quick-grid .qicon{
+  width:38px;height:38px;border-radius:50%;background:rgba(63,122,52,.12);color:var(--accent);
+  display:flex;align-items:center;justify-content:center;flex:none;
+}
+.quick-grid .qicon svg{width:19px;height:19px;}
+.quick-grid .qtext{display:flex;flex-direction:column;gap:.1rem;min-width:0;}
+.quick-grid .qtext .qlabel{font-weight:700;font-size:.92rem;}
+.quick-grid .qtext .qsub{font-size:.78rem;color:var(--text-faint);}
+@media(max-width:900px){.quick-grid{grid-template-columns:repeat(2,1fr);}
+  .quick-grid a:nth-child(2){border-right:none;}
+  .quick-grid a{border-bottom:1px solid var(--border);}
+}
+@media(max-width:520px){.quick-grid{grid-template-columns:1fr;} .quick-tasks{margin-top:-2rem;}}
+
+/* ===== Stats ===== */
+.stats-band{padding-block:3.6rem;}
+.stats-grid{display:grid;grid-template-columns:repeat(6,1fr);gap:1.5rem;text-align:center;}
+.stat b{display:block;font-family:var(--font-display);font-size:clamp(1.5rem,3vw,2.3rem);
+  font-variant-numeric:tabular-nums;color:var(--text-inverse);}
+.stat span{font-size:.74rem;letter-spacing:.08em;text-transform:uppercase;color:var(--text-inverse-soft);}
+@media(max-width:900px){.stats-grid{grid-template-columns:repeat(3,1fr);row-gap:2rem;}}
+@media(max-width:520px){.stats-grid{grid-template-columns:repeat(2,1fr);}}
+
+/* ===== Notice strip ===== */
+.notice-strip{border-top:1px solid var(--border);border-bottom:1px solid var(--border);}
+.notice-inner{display:flex;align-items:center;gap:1.1rem;padding-block:1rem;flex-wrap:wrap;}
+.notice-tag{
+  flex:none;background:var(--accent-2);color:#231705;font-size:.68rem;font-weight:700;letter-spacing:.08em;
+  text-transform:uppercase;padding:.3rem .6rem;border-radius:2px;
+}
+.notice-inner p{font-weight:600;font-size:.94rem;}
+.notice-inner .date{color:var(--text-faint);font-size:.85rem;}
+.notice-inner .view-all{margin-left:auto;font-weight:700;font-size:.88rem;color:var(--accent);text-decoration:none;flex:none;}
+.notice-inner .view-all:hover{text-decoration:underline;}
+
+/* ===== About / history ===== */
+.about-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:4rem;align-items:start;}
+.about-grid p{color:var(--text-soft);margin-bottom:1.1rem;font-size:1.02rem;}
+.about-grid p:last-child{margin-bottom:0;}
+.pull-card{
+  background:var(--bg-elevated);border:1px solid var(--border);border-radius:6px;padding:2.4rem;
+  border-left:3px solid var(--accent-2);
+}
+.pull-card blockquote{font-family:var(--font-display);font-style:italic;font-size:1.35rem;line-height:1.5;margin:0 0 1.2rem;}
+.pull-card cite{font-style:normal;font-size:.82rem;color:var(--text-faint);}
+@media(max-width:860px){.about-grid{grid-template-columns:1fr;gap:2.5rem;}}
+
+/* ===== Faculties directory ===== */
+.faculty-list{border-top:1px solid var(--border);}
+.faculty-row{
+  display:grid;grid-template-columns:2.2fr 1fr auto;gap:1.5rem;align-items:center;
+  padding:1.35rem 0;border-bottom:1px solid var(--border);text-decoration:none;color:inherit;
+}
+.faculty-row:hover .fname{color:var(--accent);}
+.faculty-row .fnum{font-variant-numeric:tabular-nums;color:var(--text-faint);font-size:.85rem;width:1.6rem;}
+.faculty-row .fname{font-family:var(--font-display);font-weight:700;font-size:1.18rem;transition:color .15s;}
+.faculty-row .fdean{font-size:.85rem;color:var(--text-soft);}
+.faculty-row .farrow{color:var(--text-faint);}
+.faculty-row .farrow svg{width:18px;height:18px;}
+.faculty-head-row{display:grid;grid-template-columns:2.2fr 1fr auto;gap:1.5rem;padding-bottom:.7rem;
+  font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;color:var(--text-faint);}
+@media(max-width:700px){
+  .faculty-row,.faculty-head-row{grid-template-columns:1fr auto;}
+  .faculty-row .fdean,.faculty-head-row .col-dean{display:none;}
+}
+
+/* ===== Research ===== */
+.research-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;margin-top:2.5rem;}
+.research-card{
+  background:rgba(243,239,221,.05);border:1px solid var(--border-inverse);border-radius:6px;padding:1.9rem;
+  display:flex;flex-direction:column;gap:.9rem;
+}
+.research-card .rname{font-family:var(--font-display);font-weight:700;font-size:1.15rem;line-height:1.3;}
+.research-card p{color:var(--text-inverse-soft);font-size:.92rem;}
+.research-card a{margin-top:auto;font-size:.82rem;font-weight:700;color:var(--accent-2-soft);text-decoration:none;}
+.research-card a:hover{text-decoration:underline;}
+@media(max-width:860px){.research-grid{grid-template-columns:1fr;}}
+
+/* ===== Library feature ===== */
+.library-feature{display:grid;grid-template-columns:.95fr 1.05fr;gap:0;border:1px solid var(--border);border-radius:8px;overflow:hidden;}
+.library-feature .lib-img{position:relative;min-height:320px;background-size:cover;background-position:center;}
+.library-feature .lib-copy{padding:3rem;display:flex;flex-direction:column;gap:1.1rem;background:var(--bg-elevated);}
+.library-feature .lib-copy p{color:var(--text-soft);}
+.lib-facts{display:flex;gap:2rem;margin-top:.4rem;flex-wrap:wrap;}
+.lib-facts div b{display:block;font-family:var(--font-display);font-size:1.4rem;font-variant-numeric:tabular-nums;}
+.lib-facts div span{font-size:.72rem;text-transform:uppercase;letter-spacing:.07em;color:var(--text-faint);}
+@media(max-width:820px){.library-feature{grid-template-columns:1fr;} .library-feature .lib-img{min-height:220px;}}
+
+/* ===== News ===== */
+.news-tabs{display:flex;gap:.5rem;margin-bottom:2rem;flex-wrap:wrap;border-bottom:1px solid var(--border);}
+.news-tab{
+  background:none;border:none;cursor:pointer;font-weight:600;font-size:.9rem;color:var(--text-faint);
+  padding:.7rem 1.1rem;border-bottom:2px solid transparent;margin-bottom:-1px;transition:color .15s,border-color .15s;
+}
+.news-tab[aria-selected="true"]{color:var(--text);border-color:var(--accent);}
+.news-tab:hover{color:var(--text);}
+.news-list{display:none;}
+.news-list.active{display:flex;flex-direction:column;}
+.news-item{display:flex;gap:1.3rem;align-items:baseline;padding:1rem 0;border-bottom:1px solid var(--border);}
+.news-item .ndate{flex:none;width:6.4rem;font-size:.78rem;color:var(--text-faint);font-variant-numeric:tabular-nums;}
+.news-item .ntitle{font-weight:600;font-size:.96rem;text-decoration:none;color:var(--text);}
+.news-item .ntitle:hover{color:var(--accent);text-decoration:underline;}
+
+/* ===== CTA band ===== */
+.cta-band{display:flex;align-items:center;justify-content:space-between;gap:2rem;flex-wrap:wrap;
+  padding:3.2rem 0;border-top:1px solid var(--border-inverse);}
+.cta-band h3{font-size:1.7rem;}
+.cta-band p{color:var(--text-inverse-soft);margin-top:.4rem;}
+
+/* ===== Footer ===== */
+footer{padding-top:4.5rem;}
+.footer-grid{display:grid;grid-template-columns:1.4fr repeat(4,1fr);gap:2.5rem;padding-bottom:3rem;}
+.footer-col h4{font-size:.76rem;text-transform:uppercase;letter-spacing:.09em;color:var(--accent-2-soft);margin-bottom:1.1rem;font-family:var(--font-body);font-weight:700;}
+.footer-col ul{display:flex;flex-direction:column;gap:.65rem;}
+.footer-col a{text-decoration:none;color:var(--text-inverse-soft);font-size:.9rem;}
+.footer-col a:hover{color:var(--text-inverse);text-decoration:underline;}
+.footer-brand{display:flex;align-items:center;gap:.75rem;margin-bottom:1.1rem;}
+.footer-brand img{height:38px;filter:brightness(0) invert(1);opacity:.92;}
+.footer-brand span{font-family:var(--font-display);font-weight:700;font-size:1.05rem;}
+.footer-about p{color:var(--text-inverse-soft);font-size:.9rem;max-width:32ch;margin-bottom:1rem;}
+.footer-about address{font-style:normal;color:var(--text-inverse-soft);font-size:.85rem;line-height:1.7;}
+@media(max-width:980px){.footer-grid{grid-template-columns:repeat(2,1fr);}}
+@media(max-width:560px){.footer-grid{grid-template-columns:1fr;}}
+.footer-bottom{border-top:1px solid var(--border-inverse);padding-block:1.6rem;display:flex;justify-content:space-between;
+  align-items:center;gap:1rem;flex-wrap:wrap;font-size:.8rem;color:var(--text-inverse-soft);}
+.footer-bottom .flinks{display:flex;gap:1.3rem;flex-wrap:wrap;}
+.footer-bottom a{text-decoration:none;color:inherit;}
+.footer-bottom a:hover{text-decoration:underline;}
+
+/* ===== Reveal-on-scroll ===== */
+.reveal{opacity:0;transform:translateY(16px);transition:opacity .6s ease,transform .6s ease;}
+.reveal.in{opacity:1;transform:none;}
+</style>
+
+<a href="#main" class="skip-link">Skip to main content</a>
+
+<div class="utility-bar">
+  <div class="container">
+    <div class="utility-left">
+      <span class="urdu">جامعہ کراچی</span>
+      <span class="sep">·</span>
+      <span>Est. 1951 &nbsp;·&nbsp; Federal Charter</span>
+    </div>
+    <div class="utility-right">
+      <div class="lang-toggle" role="group" aria-label="Language">
+        <button type="button" aria-pressed="true">EN</button>
+        <span aria-hidden="true">/</span>
+        <button type="button" aria-pressed="false">اردو</button>
+      </div>
+      <a href="#" class="hide-sm">(9221) 9926 1300-7</a>
+      <a href="#">Directory</a>
+      <a href="#">Student Portal</a>
+    </div>
+  </div>
+</div>
+
+<header class="site-header">
+  <div class="container header-row">
+    <a href="#" class="brand">
+      <img src="__LOGO__" alt="University of Karachi crest" />
+      <span class="brand-word">
+        <span class="name">University of Karachi</span>
+        <span class="tag">Since 1951 &middot; Karachi, Pakistan</span>
+      </span>
+    </a>
+    <nav class="primary-nav" id="primary-nav">
+      <a href="#about">About</a>
+      <a href="#academics">Academics</a>
+      <a href="admissions.html">Admissions</a>
+      <a href="#research">Research</a>
+      <a href="#library">Library</a>
+      <a href="#news">News</a>
+      <a href="#footer">Contact</a>
+    </nav>
+    <div class="header-actions">
+      <a href="admissions.html" class="btn btn-primary">Apply Now</a>
+      <button class="menu-toggle" id="menu-toggle" aria-expanded="false" aria-controls="primary-nav" aria-label="Toggle navigation menu">
+        <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+
+  <section class="hero">
+    <div class="hero-bg" style="background-image:url('__HERO_UBIT__')"></div>
+    <div class="hero-scrim"></div>
+    <div class="container hero-inner reveal">
+      <div class="hero-eyebrow">
+        <span class="urdu">جامعہ کراچی</span>
+        <span>Platinum Jubilee &middot; 1951&ndash;2026</span>
+      </div>
+      <h1>Karachi&rsquo;s own university, since 1951.</h1>
+      <p class="lead">1,279 acres on University Road &mdash; fifty-three departments, twenty research institutes, and the chemistry that earned Pakistan a seat at the world&rsquo;s table.</p>
+      <div class="hero-ctas">
+        <a href="admissions.html" class="btn btn-primary">Apply for Admissions 2026</a>
+        <a href="#academics" class="btn btn-outline">Explore Faculties</a>
+      </div>
+    </div>
+  </section>
+
+  <div class="quick-tasks reveal">
+    <div class="container">
+      <div class="quick-grid">
+        <a href="#">
+          <span class="qicon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="6" width="20" height="13" rx="2"/><line x1="2" y1="11" x2="22" y2="11"/><line x1="6" y1="15" x2="10" y2="15"/></svg></span>
+          <span class="qtext"><span class="qlabel">Pay Semester Fee</span><span class="qsub">1Link, Raast &amp; cards</span></span>
+        </a>
+        <a href="#">
+          <span class="qicon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 12l2 2 4-4"/><circle cx="12" cy="12" r="9"/></svg></span>
+          <span class="qtext"><span class="qlabel">Check Exam Result</span><span class="qsub">Annual &amp; semester</span></span>
+        </a>
+        <a href="#">
+          <span class="qicon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 016.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 014 19.5v-15A2.5 2.5 0 016.5 2z"/></svg></span>
+          <span class="qtext"><span class="qlabel">Library Catalogue</span><span class="qsub">360,000+ volumes</span></span>
+        </a>
+        <a href="#">
+          <span class="qicon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v13m0 0l-4-4m4 4l4-4"/><path d="M4 19h16"/></svg></span>
+          <span class="qtext"><span class="qlabel">Download Forms</span><span class="qsub">Admissions &amp; exams</span></span>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <section class="stats-band band-inverse">
+    <div class="container">
+      <div class="stats-grid" id="stats-grid">
+        <div class="stat reveal"><b data-count="41000" data-suffix="+">0</b><span>Students</span></div>
+        <div class="stat reveal"><b data-count="700" data-suffix="+">0</b><span>Faculty</span></div>
+        <div class="stat reveal"><b data-count="53" data-suffix="">0</b><span>Departments</span></div>
+        <div class="stat reveal"><b data-count="20" data-suffix="">0</b><span>Research Institutes</span></div>
+        <div class="stat reveal"><b data-count="1279" data-suffix="">0</b><span>Acres</span></div>
+        <div class="stat reveal"><b data-count="75" data-suffix="">0</b><span>Years, 1951&ndash;2026</span></div>
+      </div>
+    </div>
+  </section>
+
+  <div class="notice-strip">
+    <div class="container notice-inner">
+      <span class="notice-tag">Latest Notice</span>
+      <p>Revised dates of postponed papers &mdash; Urs of Hazrat Shah Abdul Latif Bhitai (R.A.)</p>
+      <span class="date">28 July 2026</span>
+      <a href="#news" class="view-all">View all notices &rarr;</a>
+    </div>
+  </div>
+
+  <section class="section" id="about">
+    <div class="container">
+      <div class="about-grid">
+        <div class="reveal">
+          <div class="eyebrow">Our History</div>
+          <h2 style="margin-top:.9rem;margin-bottom:1.4rem;">Established by an act of parliament, seventy-five years ago.</h2>
+          <p>The University of Karachi was founded under the Karachi University Act, passed on 23 October 1950 and enacted the following year, with Prof. A. B. A. Haleem appointed as its first Vice Chancellor. For its first two years the university existed only to examine the students of Sindh&rsquo;s affiliated colleges &mdash; it began teaching its own students in 1953, opening with two faculties and an intake of fifty.</p>
+          <p>As the young university outgrew its buildings beside Civil Hospital, a 1,279-acre plot on what is now University Road was acquired, and on 18 January 1960 the campus moved to its present site &mdash; a date still marked jointly by alumni associations and the university administration each year.</p>
+          <p>Today it is the largest university in Pakistan: eight faculties, fifty-three departments, and twenty research institutes and centres, serving an enrolment of more than 41,000 students under the guidance of over 700 faculty members.</p>
+        </div>
+        <div class="pull-card reveal">
+          <blockquote>&ldquo;For its first two years, the University of Karachi taught no one &mdash; it only examined the affiliated colleges of Sindh, before enrolling a single class of its own in 1953.&rdquo;</blockquote>
+          <cite>From the university&rsquo;s founding years, 1951&ndash;1953</cite>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section band-elevated" id="academics">
+    <div class="container">
+      <div class="section-head reveal">
+        <div class="eyebrow">Academics</div>
+        <h2>Eight faculties. Fifty-three departments.</h2>
+        <p>From Natural Product Chemistry to Marine Science, Law to Visual Studies &mdash; degree programs span the full range of a comprehensive research university.</p>
+      </div>
+      <div class="faculty-list reveal">
+        <div class="faculty-head-row">
+          <span>Faculty</span><span class="col-dean">Dean</span><span></span>
+        </div>
+        <a href="#" class="faculty-row"><span class="fnum">01</span><span class="fname">Science &mdash; 21 departments</span><span class="fdean">Prof. Dr. Bilquees Gul</span><span class="farrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a>
+        <a href="#" class="faculty-row"><span class="fnum">02</span><span class="fname">Arts &amp; Social Sciences</span><span class="fdean">Prof. Dr. Samina Saeed</span><span class="farrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a>
+        <a href="#" class="faculty-row"><span class="fnum">03</span><span class="fname">Pharmacy &amp; Pharmaceutical Sciences</span><span class="fdean">Prof. Dr. Muhammad Harris Shoaib</span><span class="farrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a>
+        <a href="#" class="faculty-row"><span class="fnum">04</span><span class="fname">Management &amp; Administrative Sciences</span><span class="fdean">Prof. Dr. Zaeema Asrar Mohiuddin</span><span class="farrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a>
+        <a href="#" class="faculty-row"><span class="fnum">05</span><span class="fname">Medicine</span><span class="fdean">Prof. Dr. Fareeda Islam</span><span class="farrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a>
+        <a href="#" class="faculty-row"><span class="fnum">06</span><span class="fname">Law</span><span class="fdean">Barrister Muhammad Sarfaraz Ali Metlo</span><span class="farrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a>
+        <a href="#" class="faculty-row"><span class="fnum">07</span><span class="fname">Islamic Studies</span><span class="fdean">Prof. Dr. Zahid Ali</span><span class="farrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a>
+        <a href="#" class="faculty-row"><span class="fnum">08</span><span class="fname">Education</span><span class="fdean">Prof. Dr. Samina Saeed (Officiating)</span><span class="farrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section band-inverse" id="research">
+    <div class="container">
+      <div class="section-head reveal">
+        <div class="eyebrow">Research</div>
+        <h2>Where Pakistani chemistry earned its global reputation.</h2>
+        <p style="color:var(--text-inverse-soft);">The H.E.J. Research Institute of Chemistry is designated by the World Academy of Sciences &mdash; the country&rsquo;s foremost centre for natural product chemistry, and one of twenty institutes housed across the campus.</p>
+      </div>
+      <div class="research-grid">
+        <div class="research-card reveal">
+          <span class="rname">H.E.J. Research Institute of Chemistry</span>
+          <p>The university&rsquo;s prime research institute, internationally recognised for natural product chemistry and designated by the World Academy of Sciences.</p>
+          <a href="#">View institute &rarr;</a>
+        </div>
+        <div class="research-card reveal">
+          <span class="rname">Dr. Panjwani Center for Molecular Medicine &amp; Drug Research</span>
+          <p>Part of the International Center for Chemical &amp; Biological Sciences (ICCBS), driving drug discovery and molecular medicine research.</p>
+          <a href="#">View institute &rarr;</a>
+        </div>
+        <div class="research-card reveal">
+          <span class="rname">Dr. A. Q. Khan Institute of Biotechnology &amp; Genetic Engineering</span>
+          <p>KIBGE conducts biotechnology and genetic engineering research feeding directly into national health and agricultural priorities.</p>
+          <a href="#">kibge@uok.edu.pk &rarr;</a>
+        </div>
+        <div class="research-card reveal">
+          <span class="rname">Marine Reference Collection &amp; Resource Centre</span>
+          <p>The largest repository of marine life from the Arabian Sea, supporting the Centre of Excellence in Marine Biology.</p>
+          <a href="#">mrcc@uok.edu.pk &rarr;</a>
+        </div>
+        <div class="research-card reveal">
+          <span class="rname">Institute of Environmental Studies</span>
+          <p>Interdisciplinary environmental research spanning climate, conservation, and sustainable resource management for the region.</p>
+          <a href="#">ies@uok.edu.pk &rarr;</a>
+        </div>
+        <div class="research-card reveal">
+          <span class="rname">Institute of Space Science &amp; Technology</span>
+          <p>One of twenty research institutes and centres extending the university&rsquo;s reach from molecular biology to remote sensing.</p>
+          <a href="#">isst@uok.edu.pk &rarr;</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="library">
+    <div class="container">
+      <div class="library-feature reveal">
+        <div class="lib-img" style="background-image:url('__HERO_CHEM__')"></div>
+        <div class="lib-copy">
+          <div class="eyebrow">Library</div>
+          <h2 style="font-size:clamp(1.5rem,2.6vw,2rem);">Dr. Mahmud Hussain Library</h2>
+          <p>One of the largest libraries in the country, and home to Quaid-i-Azam&rsquo;s personal book collection &mdash; many volumes still carrying his own signature &mdash; alongside the papers of the All India Muslim League.</p>
+          <div class="lib-facts">
+            <div><b>360,000+</b><span>Books</span></div>
+            <div><b>110,000+</b><span>Journals &amp; periodicals</span></div>
+          </div>
+          <div class="hero-ctas" style="margin-top:.6rem;">
+            <a href="#" class="btn btn-primary">Search the Catalogue</a>
+            <a href="#" class="btn btn-outline on-light">Digital Library</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section band-elevated" id="news">
+    <div class="container">
+      <div class="section-head reveal">
+        <div class="eyebrow">News &amp; Notices</div>
+        <h2>What&rsquo;s current on campus.</h2>
+      </div>
+      <div class="reveal">
+        <div class="news-tabs" role="tablist" aria-label="News categories">
+          <button class="news-tab" role="tab" aria-selected="true" data-tab="notices">Notifications</button>
+          <button class="news-tab" role="tab" aria-selected="false" data-tab="exams">Examinations</button>
+          <button class="news-tab" role="tab" aria-selected="false" data-tab="campus">Campus Life</button>
+        </div>
+        <div class="news-list active" id="tab-notices">
+          <div class="news-item"><span class="ndate">28 Jul 2026</span><a class="ntitle" href="#">Revised dates of postponed papers &mdash; Urs of Hazrat Shah Abdul Latif Bhitai (R.A.)</a></div>
+          <div class="news-item"><span class="ndate">08 Oct 2025</span><a class="ntitle" href="#">Future Leaders Award 2.0 (Technology Sector) awarded to MCN&rsquo;s Nadeem Ahmed</a></div>
+          <div class="news-item"><span class="ndate">04 Sep 2025</span><a class="ntitle" href="#">University closed 5&ndash;6 September for Eid Milad-un-Nabi (S.A.W.W.)</a></div>
+          <div class="news-item"><span class="ndate">23 Jul 2025</span><a class="ntitle" href="#">Final merit list &mdash; Prime Minister Laptop Scheme 2025</a></div>
+          <div class="news-item"><span class="ndate">03 Feb 2026</span><a class="ntitle" href="#">Kashmir Solidarity Day observance</a></div>
+        </div>
+        <div class="news-list" id="tab-exams">
+          <div class="news-item"><span class="ndate">17 Jul 2026</span><a class="ntitle" href="#">Program of M.Ed (Morning / Evening) Annual Examinations 2024</a></div>
+          <div class="news-item"><span class="ndate">17 Jul 2026</span><a class="ntitle" href="#">Program of B.Ed (Morning / Evening) Annual Examinations 2024</a></div>
+          <div class="news-item"><span class="ndate">11 Jun 2026</span><a class="ntitle" href="#">Revised schedule &mdash; ADA/BA Psychology practical annual examinations 2025</a></div>
+          <div class="news-item"><span class="ndate">21 Jul 2025</span><a class="ntitle" href="#">Programme of MBBS (Final) Professional Annual Examinations 2025</a></div>
+          <div class="news-item"><span class="ndate">10 Mar 2026</span><a class="ntitle" href="#">Fee schedule &mdash; M.A. (External) Annual Examination 2025</a></div>
+        </div>
+        <div class="news-list" id="tab-campus">
+          <div class="news-item"><span class="ndate">30 Apr 2026</span><a class="ntitle" href="#">Labour Day &mdash; university holiday</a></div>
+          <div class="news-item"><span class="ndate">19 Mar 2026</span><a class="ntitle" href="#">Pakistan Day, 23rd March 2026 &mdash; programme notice</a></div>
+          <div class="news-item"><span class="ndate">28 Feb 2026</span><a class="ntitle" href="#">Prime Minister&rsquo;s Laptop Distribution &mdash; instructions</a></div>
+          <div class="news-item"><span class="ndate">07 Mar 2026</span><a class="ntitle" href="#">Online morning classes resume from 9th March 2026</a></div>
+          <div class="news-item"><span class="ndate">12 Aug 2025</span><a class="ntitle" href="#">Independence Day Programme 2025</a></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="band-inverse">
+    <div class="container cta-band">
+      <div>
+        <h3>Admissions 2026 are open.</h3>
+        <p>Undergraduate, graduate and evening programs across all eight faculties.</p>
+      </div>
+      <div class="hero-ctas" style="margin-top:0;">
+        <a href="admissions.html" class="btn btn-primary">Apply for Admissions 2026</a>
+        <a href="#" class="btn btn-outline">Download Prospectus</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="band-inverse" id="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-col footer-about">
+        <div class="footer-brand">
+          <img src="__LOGO__" alt="" />
+          <span>University of Karachi</span>
+        </div>
+        <p>Pakistan&rsquo;s largest university &mdash; eight faculties, fifty-three departments, twenty research institutes.</p>
+        <address>
+          University Road, Karachi&nbsp;75270<br />
+          Sindh, Pakistan<br />
+          (9221) 9926 1300&ndash;7<br />
+          vc@uok.edu.pk
+        </address>
+      </div>
+      <div class="footer-col">
+        <h4>Academics</h4>
+        <ul>
+          <li><a href="#">Faculties</a></li>
+          <li><a href="#">Departments A&ndash;Z</a></li>
+          <li><a href="admissions.html">Admissions 2026</a></li>
+          <li><a href="#">M.Phil. / Ph.D. &amp; M.S. / M.D.</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Administration</h4>
+        <ul>
+          <li><a href="#">Vice Chancellor</a></li>
+          <li><a href="#">Registrar</a></li>
+          <li><a href="#">Syndicate Members</a></li>
+          <li><a href="#">Directorates &amp; Offices</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Examinations</h4>
+        <ul>
+          <li><a href="#">Annual System</a></li>
+          <li><a href="#">Semester System</a></li>
+          <li><a href="#">Semester Fee</a></li>
+          <li><a href="#">Downloadable Forms</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Connect</h4>
+        <ul>
+          <li><a href="#">Alumni</a></li>
+          <li><a href="#">Journals</a></li>
+          <li><a href="#">Contact Us</a></li>
+          <li><a href="#">Facebook</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; 2026 University of Karachi. This site is available in English and Urdu.</span>
+      <div class="flinks">
+        <a href="#">Accessibility</a>
+        <a href="#">Disclaimer</a>
+        <a href="#">Sitemap</a>
+        <a href="#">Credits</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var toggle = document.getElementById('menu-toggle');
+  var nav = document.getElementById('primary-nav');
+  toggle.addEventListener('click', function(){
+    var open = nav.classList.toggle('open');
+    toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+  });
+  nav.querySelectorAll('a').forEach(function(a){
+    a.addEventListener('click', function(){ nav.classList.remove('open'); toggle.setAttribute('aria-expanded','false'); });
+  });
+
+  var tabs = document.querySelectorAll('.news-tab');
+  tabs.forEach(function(tab){
+    tab.addEventListener('click', function(){
+      tabs.forEach(function(t){ t.setAttribute('aria-selected','false'); });
+      tab.setAttribute('aria-selected','true');
+      document.querySelectorAll('.news-list').forEach(function(l){ l.classList.remove('active'); });
+      document.getElementById('tab-' + tab.dataset.tab).classList.add('active');
+    });
+  });
+
+  var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  var revealEls = document.querySelectorAll('.reveal');
+  if('IntersectionObserver' in window && !reduceMotion){
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(entry){
+        if(entry.isIntersecting){ entry.target.classList.add('in'); io.unobserve(entry.target); }
+      });
+    }, {threshold:.12, rootMargin:'0px 0px -40px 0px'});
+    revealEls.forEach(function(el){ io.observe(el); });
+  } else {
+    revealEls.forEach(function(el){ el.classList.add('in'); });
+  }
+
+  if(!reduceMotion && 'IntersectionObserver' in window){
+    var counters = document.querySelectorAll('[data-count]');
+    var countIO = new IntersectionObserver(function(entries){
+      entries.forEach(function(entry){
+        if(!entry.isIntersecting) return;
+        countIO.unobserve(entry.target);
+        var el = entry.target;
+        var target = parseInt(el.dataset.count, 10);
+        var suffix = el.dataset.suffix || '';
+        var start = null;
+        var duration = 1200;
+        function step(ts){
+          if(!start) start = ts;
+          var progress = Math.min((ts - start) / duration, 1);
+          var eased = 1 - Math.pow(1 - progress, 3);
+          el.textContent = Math.round(target * eased).toLocaleString('en-US') + suffix;
+          if(progress < 1) requestAnimationFrame(step);
+        }
+        requestAnimationFrame(step);
+      });
+    }, {threshold:.4});
+    counters.forEach(function(el){ countIO.observe(el); });
+  } else {
+    document.querySelectorAll('[data-count]').forEach(function(el){
+      el.textContent = parseInt(el.dataset.count,10).toLocaleString('en-US') + (el.dataset.suffix||'');
+    });
+  }
+
+  var langBtns = document.querySelectorAll('.lang-toggle button');
+  langBtns.forEach(function(btn){
+    btn.addEventListener('click', function(){
+      langBtns.forEach(function(b){ b.setAttribute('aria-pressed','false'); });
+      btn.setAttribute('aria-pressed','true');
+    });
+  });
+})();
+</script>
