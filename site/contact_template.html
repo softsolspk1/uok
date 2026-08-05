@@ -1,0 +1,205 @@
+<meta charset="utf-8" />
+<title>Contact Directory — University of Karachi</title>
+<style>
+__FONT_FACES__
+:root{--bg:#EDE6D2; --bg-elevated:#F7F3E4; --bg-inverse:#1E4429; --bg-inverse-2:#183A22;
+  --text:#1B2A1E; --text-soft:#4B5A45; --text-faint:#5E695A; --text-inverse:#F3EFDD; --text-inverse-soft:#BFD1B9;
+  --accent:#3B7331; --accent-hover:#356A2C; --accent-2:#845E2F; --accent-2-soft:#C9A567;
+  --border:rgba(27,42,29,.15); --border-inverse:rgba(243,239,221,.16); --focus-ring:#3B7331;--on-accent:#FFFFFF;
+  --font-display:'Fraunces',Georgia,'Times New Roman',serif; --font-body:'Work Sans',system-ui,-apple-system,'Segoe UI',sans-serif;
+  --font-urdu:'Noto Nastaliq Urdu',serif; --container:1240px; color-scheme: light;}
+@media (prefers-color-scheme: dark){:root{--bg:#10160D; --bg-elevated:#1A2416; --bg-inverse:#24361F; --bg-inverse-2:#1B2A17;
+  --text:#EDE8D6; --text-soft:#A9B39C; --text-faint:#809079; --text-inverse:#F2EEDC; --text-inverse-soft:#C7D4BE;
+  --accent:#72C25A; --accent-hover:#8AD473; --accent-2:#D3A968; --accent-2-soft:#BA955F;
+  --border:rgba(237,232,214,.14); --border-inverse:rgba(237,232,214,.14); --focus-ring:#8AD473;--on-accent:#0B1009; color-scheme: dark;}}
+:root[data-theme="dark"]{--bg:#10160D; --bg-elevated:#1A2416; --bg-inverse:#24361F; --bg-inverse-2:#1B2A17;
+  --text:#EDE8D6; --text-soft:#A9B39C; --text-faint:#809079; --text-inverse:#F2EEDC; --text-inverse-soft:#C7D4BE;
+  --accent:#72C25A; --accent-hover:#8AD473; --accent-2:#D3A968; --accent-2-soft:#BA955F;
+  --border:rgba(237,232,214,.14); --border-inverse:rgba(237,232,214,.14); --focus-ring:#8AD473;--on-accent:#0B1009; color-scheme: dark;}
+:root[data-theme="light"]{--bg:#EDE6D2; --bg-elevated:#F7F3E4; --bg-inverse:#1E4429; --bg-inverse-2:#183A22;
+  --text:#1B2A1E; --text-soft:#4B5A45; --text-faint:#5E695A; --text-inverse:#F3EFDD; --text-inverse-soft:#BFD1B9;
+  --accent:#3B7331; --accent-hover:#356A2C; --accent-2:#845E2F; --accent-2-soft:#C9A567;
+  --border:rgba(27,42,29,.15); --border-inverse:rgba(243,239,221,.16); --focus-ring:#3B7331;--on-accent:#FFFFFF; color-scheme: light;}
+*,*::before,*::after{box-sizing:border-box;} html{scroll-behavior:smooth;}
+@media (prefers-reduced-motion: reduce){html{scroll-behavior:auto;}*,*::before,*::after{animation-duration:.001ms !important;animation-iteration-count:1 !important;transition-duration:.001ms !important;scroll-behavior:auto !important;}}
+body{margin:0;background:var(--bg);color:var(--text);font-family:var(--font-body);font-size:17px;line-height:1.65;-webkit-font-smoothing:antialiased;overflow-x:hidden;}
+img{max-width:100%;display:block;} a{color:inherit;}
+h1,h2,h3,h4{font-family:var(--font-display);font-weight:700;margin:0;text-wrap:balance;}
+p{margin:0;} button{font-family:inherit;} ul{margin:0;padding:0;list-style:none;}
+:focus-visible{outline:3px solid var(--focus-ring);outline-offset:3px;border-radius:2px;}
+.skip-link{position:absolute;left:1rem;top:-100px;background:var(--accent);color:var(--on-accent);padding:.75rem 1.25rem;border-radius:4px;z-index:1000;transition:top .2s;font-weight:600;}
+.skip-link:focus{top:1rem;}
+.container{max-width:var(--container);margin-inline:auto;padding-inline:1.5rem;} @media(min-width:640px){.container{padding-inline:2.5rem;}}
+.eyebrow{font-size:.72rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--accent-2);display:flex;align-items:center;gap:.6rem;}
+.eyebrow::before{content:"";width:22px;height:2px;background:var(--accent-2);display:inline-block;}
+.section{padding-block:5.5rem;} @media(max-width:640px){.section{padding-block:3.5rem;}}
+.section-head{max-width:640px;margin-bottom:3rem;display:flex;flex-direction:column;gap:.9rem;}
+.section-head h2{font-size:clamp(1.7rem,3.2vw,2.5rem);line-height:1.12;} .section-head p{color:var(--text-soft);font-size:1.05rem;max-width:56ch;}
+.band-inverse{background:var(--bg-inverse);color:var(--text-inverse);} .band-elevated{background:var(--bg-elevated);}
+.btn{display:inline-flex;align-items:center;gap:.5rem;font-weight:600;font-size:.95rem;padding:.85rem 1.5rem;border-radius:3px;border:1.5px solid transparent;cursor:pointer;text-decoration:none;transition:background .15s,color .15s,border-color .15s,transform .15s;white-space:nowrap;}
+.btn:active{transform:translateY(1px);} .btn-primary{background:var(--accent);color:var(--on-accent);} .btn-primary:hover{background:var(--accent-hover);}
+.utility-bar{background:var(--bg-inverse-2);color:var(--text-inverse-soft);font-size:.8rem;}
+.utility-bar .container{display:flex;align-items:center;justify-content:space-between;height:38px;gap:1rem;}
+.utility-left{display:flex;align-items:center;gap:.5rem;font-family:var(--font-urdu);font-size:1rem;} .utility-left .sep{opacity:.5;font-family:var(--font-body);font-size:.8rem;}
+.utility-right{display:flex;align-items:center;gap:1.25rem;} .utility-right a{text-decoration:none;color:inherit;opacity:.9;} .utility-right a:hover{opacity:1;text-decoration:underline;}
+.lang-toggle{display:flex;gap:2px;font-weight:700;} .lang-toggle button{background:none;border:none;color:inherit;opacity:.6;cursor:pointer;padding:.2rem .35rem;font-size:.78rem;font-family:var(--font-body);}
+.lang-toggle button[aria-pressed="true"]{opacity:1;text-decoration:underline;text-underline-offset:3px;} @media(max-width:760px){.utility-right .hide-sm{display:none;}}
+header.site-header{position:sticky;top:0;z-index:100;background:var(--bg);border-bottom:1px solid var(--border);}
+.header-row{display:flex;align-items:center;justify-content:space-between;gap:1.5rem;height:84px;}
+.brand{display:flex;align-items:center;gap:.85rem;text-decoration:none;color:inherit;} .brand img{height:46px;width:auto;}
+.brand-word{display:flex;flex-direction:column;line-height:1.15;} .brand-word .name{font-family:var(--font-display);font-weight:700;font-size:1.18rem;}
+.brand-word .tag{font-size:.68rem;letter-spacing:.09em;text-transform:uppercase;color:var(--text-faint);}
+nav.primary-nav{display:flex;align-items:center;gap:2.1rem;} nav.primary-nav a{text-decoration:none;font-weight:600;font-size:.95rem;color:var(--text);position:relative;padding-block:.3rem;}
+nav.primary-nav a::after{content:"";position:absolute;left:0;right:0;bottom:0;height:2px;background:var(--accent);transform:scaleX(0);transform-origin:left;transition:transform .18s;}
+nav.primary-nav a:hover::after{transform:scaleX(1);} nav.primary-nav a[aria-current="page"]{color:var(--accent);} nav.primary-nav a[aria-current="page"]::after{transform:scaleX(1);}
+.header-actions{display:flex;align-items:center;gap:.9rem;} .menu-toggle{display:none;background:none;border:1px solid var(--border);border-radius:4px;padding:.5rem;cursor:pointer;color:var(--text);}
+@media(max-width:980px){nav.primary-nav{position:fixed;inset:84px 0 0 0;background:var(--bg);flex-direction:column;align-items:flex-start;padding:2rem 1.5rem;gap:1.4rem;transform:translateX(100%);transition:transform .25s ease;overflow-y:auto;}
+  nav.primary-nav.open{transform:translateX(0);} nav.primary-nav a{font-size:1.2rem;} .menu-toggle{display:flex;} .header-actions .btn-primary{display:none;}}
+.breadcrumb{display:flex;align-items:center;gap:.5rem;font-size:.82rem;color:var(--text-soft);margin-bottom:1.3rem;flex-wrap:wrap;}
+.breadcrumb a{text-decoration:none;color:inherit;opacity:.85;} .breadcrumb a:hover{opacity:1;text-decoration:underline;}
+.breadcrumb span.sep{opacity:.5;} .breadcrumb .current{opacity:1;font-weight:600;color:var(--text);}
+.page-head{padding-block:3.5rem 3rem;border-bottom:1px solid var(--border);}
+.page-head h1{font-size:clamp(2rem,4.2vw,3rem);line-height:1.08;margin-bottom:1rem;max-width:800px;}
+.page-head .lead{font-size:1.06rem;color:var(--text-soft);max-width:62ch;}
+.hq-strip{border-bottom:1px solid var(--border);} .hq-strip .container{display:flex;flex-wrap:wrap;gap:0;}
+.hq-strip .fact{flex:1 1 200px;padding:1.3rem 1.6rem;border-right:1px solid var(--border);display:flex;flex-direction:column;gap:.2rem;}
+.hq-strip .fact:last-child{border-right:none;}
+.hq-strip .fact b{font-family:var(--font-display);font-size:1.1rem;}
+.hq-strip .fact span{font-size:.76rem;color:var(--text-faint);text-transform:uppercase;letter-spacing:.06em;}
+.dir-table{width:100%;border-collapse:collapse;font-size:.92rem;}
+.dir-table th{text-align:left;font-size:.7rem;text-transform:uppercase;letter-spacing:.07em;color:var(--text-faint);padding-bottom:.8rem;border-bottom:1px solid var(--border);font-weight:700;}
+.dir-table td{padding:1rem 0;border-bottom:1px solid var(--border);vertical-align:top;}
+.dir-table .off{font-weight:700;font-family:var(--font-display);}
+.dir-table .who{color:var(--text-soft);}
+.dir-table .ext{font-variant-numeric:tabular-nums;color:var(--text-faint);}
+.dir-table a{color:var(--accent);text-decoration:none;}
+.dir-table a:hover{text-decoration:underline;}
+.table-wrap{overflow-x:auto;}
+.cta-band{display:flex;align-items:center;justify-content:space-between;gap:2rem;flex-wrap:wrap;padding:3.2rem 0;}
+.cta-band h3{font-size:1.7rem;} .cta-band p{color:var(--text-inverse-soft);margin-top:.4rem;}
+footer{padding-top:4.5rem;} .footer-grid{display:grid;grid-template-columns:1.4fr repeat(4,1fr);gap:2.5rem;padding-bottom:3rem;}
+.footer-col h4{font-size:.76rem;text-transform:uppercase;letter-spacing:.09em;color:var(--accent-2-soft);margin-bottom:1.1rem;font-weight:700;}
+.footer-col ul{display:flex;flex-direction:column;gap:.65rem;} .footer-col a{text-decoration:none;color:var(--text-inverse-soft);font-size:.9rem;} .footer-col a:hover{color:var(--text-inverse);text-decoration:underline;}
+.footer-brand{display:flex;align-items:center;gap:.75rem;margin-bottom:1.1rem;} .footer-brand img{height:38px;filter:brightness(0) invert(1);opacity:.92;}
+.footer-brand span{font-family:var(--font-display);font-weight:700;font-size:1.05rem;}
+.footer-about p{color:var(--text-inverse-soft);font-size:.9rem;max-width:32ch;margin-bottom:1rem;} .footer-about address{font-style:normal;color:var(--text-inverse-soft);font-size:.85rem;line-height:1.7;}
+@media(max-width:980px){.footer-grid{grid-template-columns:repeat(2,1fr);}} @media(max-width:560px){.footer-grid{grid-template-columns:1fr;}}
+.footer-bottom{border-top:1px solid var(--border-inverse);padding-block:1.6rem;display:flex;justify-content:space-between;align-items:center;gap:1rem;flex-wrap:wrap;font-size:.8rem;color:var(--text-inverse-soft);}
+.footer-bottom .flinks{display:flex;gap:1.3rem;flex-wrap:wrap;} .footer-bottom a{text-decoration:none;color:inherit;} .footer-bottom a:hover{text-decoration:underline;}
+.reveal{opacity:0;transform:translateY(16px);transition:opacity .6s ease,transform .6s ease;} .reveal.in{opacity:1;transform:none;}
+</style>
+
+<a href="#main" class="skip-link">Skip to main content</a>
+<div class="utility-bar"><div class="container">
+  <div class="utility-left"><span class="urdu">جامعہ کراچی</span><span class="sep">·</span><span>Est. 1951 &nbsp;·&nbsp; Federal Charter</span></div>
+  <div class="utility-right"><div class="lang-toggle" role="group" aria-label="Language"><button type="button" aria-pressed="true">EN</button><span aria-hidden="true">/</span><button type="button" aria-pressed="false">اردو</button></div>
+    <a href="#" class="hide-sm">(9221) 9926 1300-7</a><a href="#" aria-current="page">Directory</a><a href="#">Student Portal</a></div>
+</div></div>
+
+<header class="site-header"><div class="container header-row">
+  <a href="index.html" class="brand"><img src="__LOGO__" alt="University of Karachi crest" /><span class="brand-word"><span class="name">University of Karachi</span><span class="tag">Since 1951 &middot; Karachi, Pakistan</span></span></a>
+  <nav class="primary-nav" id="primary-nav">
+    <a href="index.html#about">About</a><a href="faculties.html">Academics</a><a href="admissions.html">Admissions</a>
+    <a href="research.html">Research</a><a href="library.html">Library</a><a href="#" aria-current="page">Contact</a>
+  </nav>
+  <div class="header-actions"><a href="admissions.html" class="btn btn-primary">Apply Now</a>
+    <button class="menu-toggle" id="menu-toggle" aria-expanded="false" aria-controls="primary-nav" aria-label="Toggle navigation menu"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg></button>
+  </div>
+</div></header>
+
+<main id="main">
+  <div class="page-head"><div class="container reveal">
+    <div class="breadcrumb"><a href="index.html">Home</a><span class="sep">/</span><span class="current">Contact Directory</span></div>
+    <div class="eyebrow">Contact</div>
+    <h1 style="margin-top:.8rem;">Every office, one directory.</h1>
+    <p class="lead">Extensions and emails for university officials, alphabetically &mdash; the fastest way to reach the right desk without going through the switchboard.</p>
+  </div></div>
+
+  <div class="hq-strip"><div class="container">
+    <div class="fact"><b>University Road, Karachi 75270</b><span>Address</span></div>
+    <div class="fact"><b>(9221) 9926 1300&ndash;06</b><span>PABX, 7 lines</span></div>
+    <div class="fact"><b>(9221) 9926 1340</b><span>Fax, VC Office</span></div>
+    <div class="fact"><b>vc@uok.edu.pk</b><span>General inquiries</span></div>
+  </div></div>
+
+  <section class="section">
+    <div class="container">
+      <div class="section-head reveal"><div class="eyebrow">University Officials</div><h2>In alphabetical order.</h2></div>
+      <div class="table-wrap reveal">
+        <table class="dir-table">
+          <thead><tr><th>Office</th><th>Contact</th><th>Extension</th><th>Email</th></tr></thead>
+          <tbody>
+            <tr><td class="off">V.C. Office</td><td class="who">Prof. Dr. Muhammad Tufail, Acting Vice Chancellor</td><td class="ext">2210, 2454</td><td><a href="mailto:vc@uok.edu.pk">vc@uok.edu.pk</a></td></tr>
+            <tr><td class="off">Registrar Office</td><td class="who">Prof. Dr. Imran Ahmad Siddiqui</td><td class="ext">2233</td><td><a href="mailto:registrar@uok.edu.pk">registrar@uok.edu.pk</a></td></tr>
+            <tr><td class="off">Admission Office</td><td class="who">Dr. Saima Akhter, In-charge, Directorate of Admissions</td><td class="ext">2479</td><td><a href="mailto:admissions@uok.edu.pk">admissions@uok.edu.pk</a></td></tr>
+            <tr><td class="off">Affiliation Secretariat</td><td class="who">Prof. Dr. Sakina Riaz, Secretary Affiliation Committee</td><td class="ext">2285</td><td>&mdash;</td></tr>
+            <tr><td class="off">Board of Advance Studies &amp; Research</td><td class="who">Dr. Maria Baig, Assistant Registrar</td><td class="ext">2217</td><td><a href="mailto:basr@uok.edu.pk">basr@uok.edu.pk</a></td></tr>
+            <tr><td class="off">Bureau of Composition, Compilation &amp; Translation</td><td class="who">Dr. Nadeem Mehmood, Director</td><td class="ext">2333, 2231</td><td>&mdash;</td></tr>
+            <tr><td class="off">Campus Security Advisor</td><td class="who">Dr. Muhammad Moiz Khan</td><td class="ext">2541</td><td>&mdash;</td></tr>
+            <tr><td class="off">Examination Section</td><td class="who">Dr. Eng. Muhammad Yasir Khan, Controller of Examinations</td><td class="ext">&mdash;</td><td><a href="mailto:coe@uok.edu.pk">coe@uok.edu.pk</a></td></tr>
+            <tr><td class="off">Dr. Mahmud Husain Library</td><td class="who">Ms. Nargis Fatima, In-charge Library</td><td class="ext">2243, 2246</td><td><a href="mailto:librarian@uok.edu.pk">librarian@uok.edu.pk</a></td></tr>
+            <tr><td class="off">Foreign Students&rsquo; Advisor</td><td class="who">Dr. Shumaila Shafket Ali</td><td class="ext">&mdash;</td><td>&mdash;</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <section class="section band-elevated">
+    <div class="container">
+      <div class="section-head reveal"><div class="eyebrow">Deans of Faculties</div><h2>One dean per faculty.</h2></div>
+      <div class="table-wrap reveal">
+        <table class="dir-table">
+          <thead><tr><th>Faculty</th><th>Dean</th><th>Extension</th><th>Email</th></tr></thead>
+          <tbody>
+            <tr><td class="off">Education</td><td class="who">Prof. Dr. Samina Saeed (Officiating)</td><td class="ext">2212</td><td><a href="mailto:deaneducation@uok.edu.pk">deaneducation@uok.edu.pk</a></td></tr>
+            <tr><td class="off">Engineering</td><td class="who">Prof. Dr. Bilquees Gul</td><td class="ext">2255</td><td><a href="mailto:dos@uok.edu.pk">dos@uok.edu.pk</a></td></tr>
+            <tr><td class="off">Islamic Studies</td><td class="who">Prof. Dr. Zahid Ali</td><td class="ext">2394</td><td><a href="mailto:dis@uok.edu.pk">dis@uok.edu.pk</a></td></tr>
+            <tr><td class="off">Law</td><td class="who">Barrister Muhammad Sarfaraz Ali Metlo</td><td class="ext">2464</td><td><a href="mailto:deanlaw@uok.edu.pk">deanlaw@uok.edu.pk</a></td></tr>
+            <tr><td class="off">Management &amp; Admin. Sciences</td><td class="who">Prof. Dr. Zaeema Asrar Mohiuddin</td><td class="ext">2581</td><td><a href="mailto:dfmas@uok.edu.pk">dfmas@uok.edu.pk</a></td></tr>
+            <tr><td class="off">Medicine</td><td class="who">Prof. Dr. Fareeda Islam</td><td class="ext">&mdash;</td><td><a href="mailto:deanmedicine@uok.edu.pk">deanmedicine@uok.edu.pk</a></td></tr>
+            <tr><td class="off">Pharmacy</td><td class="who">Prof. Dr. Muhammad Harris Shoaib</td><td class="ext">2259</td><td><a href="mailto:fphar@uok.edu.pk">fphar@uok.edu.pk</a></td></tr>
+            <tr><td class="off">Science</td><td class="who">Prof. Dr. Bilquees Gul</td><td class="ext">2255</td><td><a href="mailto:deanscience@uok.edu.pk">deanscience@uok.edu.pk</a></td></tr>
+            <tr><td class="off">Arts &amp; Social Sciences</td><td class="who">Prof. Dr. Samina Saeed</td><td class="ext">2260</td><td><a href="mailto:deansocialscience@uok.edu.pk">deansocialscience@uok.edu.pk</a></td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <section class="band-inverse"><div class="container cta-band">
+    <div><h3>Can&rsquo;t find the right office?</h3><p>Call the PABX and ask to be transferred: (9221) 9926 1300&ndash;06.</p></div>
+    <a href="tel:+92219926130" class="btn btn-primary">Call the University</a>
+  </div></section>
+</main>
+
+<footer class="band-inverse" id="footer"><div class="container">
+  <div class="footer-grid">
+    <div class="footer-col footer-about"><div class="footer-brand"><img src="__LOGO__" alt="" /><span>University of Karachi</span></div>
+      <p>Pakistan&rsquo;s largest university &mdash; eight faculties, fifty-three departments, twenty research institutes.</p>
+      <address>University Road, Karachi&nbsp;75270<br />Sindh, Pakistan<br />(9221) 9926 1300&ndash;7</address></div>
+    <div class="footer-col"><h4>Academics</h4><ul><li><a href="faculties.html">All Faculties</a></li><li><a href="research.html">Research Institutes</a></li><li><a href="library.html">Library</a></li></ul></div>
+    <div class="footer-col"><h4>Administration</h4><ul><li><a href="administration.html">Vice Chancellor</a></li><li><a href="administration.html">Directorates</a></li></ul></div>
+    <div class="footer-col"><h4>Examinations</h4><ul><li><a href="examinations.html">Annual System</a></li><li><a href="examinations.html">Semester System</a></li></ul></div>
+    <div class="footer-col"><h4>Connect</h4><ul><li><a href="index.html">Homepage</a></li><li><a href="alumni.html">Alumni</a></li><li><a href="journals.html">Journals</a></li></ul></div>
+  </div>
+  <div class="footer-bottom"><span>&copy; 2026 University of Karachi. This site is available in English and Urdu.</span>
+    <div class="flinks"><a href="#">Accessibility</a><a href="#">Disclaimer</a><a href="#">Sitemap</a><a href="#">Credits</a></div>
+  </div>
+</div></footer>
+
+<script>
+(function(){
+  var toggle=document.getElementById('menu-toggle'),nav=document.getElementById('primary-nav');
+  toggle.addEventListener('click',function(){var open=nav.classList.toggle('open');toggle.setAttribute('aria-expanded',open?'true':'false');});
+  nav.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){nav.classList.remove('open');toggle.setAttribute('aria-expanded','false');});});
+  var reduceMotion=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var revealEls=document.querySelectorAll('.reveal');
+  if('IntersectionObserver' in window && !reduceMotion){
+    var io=new IntersectionObserver(function(entries){entries.forEach(function(entry){if(entry.isIntersecting){entry.target.classList.add('in');io.unobserve(entry.target);}});},{threshold:.1,rootMargin:'0px 0px -40px 0px'});
+    revealEls.forEach(function(el){io.observe(el);});
+  } else { revealEls.forEach(function(el){el.classList.add('in');}); }
+  var langBtns=document.querySelectorAll('.lang-toggle button');
+  langBtns.forEach(function(btn){btn.addEventListener('click',function(){langBtns.forEach(function(b){b.setAttribute('aria-pressed','false');});btn.setAttribute('aria-pressed','true');});});
+})();
+</script>

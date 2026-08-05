@@ -1,3 +1,4 @@
+<meta charset="utf-8" />
 <title>Admissions 2026 — University of Karachi</title>
 <style>
 __FONT_FACES__
@@ -5,11 +6,11 @@ __FONT_FACES__
 /* ===== Tokens (shared with homepage) ===== */
 :root{
   --bg:#EDE6D2; --bg-elevated:#F7F3E4; --bg-inverse:#1E4429; --bg-inverse-2:#183A22;
-  --text:#1B2A1E; --text-soft:#4B5A45; --text-faint:#7C8A76;
+  --text:#1B2A1E; --text-soft:#4B5A45; --text-faint:#5E695A;
   --text-inverse:#F3EFDD; --text-inverse-soft:#BFD1B9;
-  --accent:#3F7A34; --accent-hover:#356A2C; --accent-2:#A9793D; --accent-2-soft:#C9A567;
+  --accent:#3B7331; --accent-hover:#356A2C; --accent-2:#845E2F; --accent-2-soft:#C9A567;
   --border:rgba(27,42,29,.15); --border-inverse:rgba(243,239,221,.16);
-  --focus-ring:#3F7A34;
+  --focus-ring:#3B7331;--on-accent:#FFFFFF;
   --shadow:0 1px 2px rgba(27,42,29,.06),0 8px 24px -12px rgba(27,42,29,.18);
   --font-display:'Fraunces',Georgia,'Times New Roman',serif;
   --font-body:'Work Sans',system-ui,-apple-system,'Segoe UI',sans-serif;
@@ -20,28 +21,28 @@ __FONT_FACES__
 @media (prefers-color-scheme: dark){
   :root{
     --bg:#10160D; --bg-elevated:#1A2416; --bg-inverse:#24361F; --bg-inverse-2:#1B2A17;
-    --text:#EDE8D6; --text-soft:#A9B39C; --text-faint:#71806A;
+    --text:#EDE8D6; --text-soft:#A9B39C; --text-faint:#809079;
     --text-inverse:#F2EEDC; --text-inverse-soft:#C7D4BE;
-    --accent:#72C25A; --accent-hover:#8AD473; --accent-2:#D3A968; --accent-2-soft:#8C6B3C;
+    --accent:#72C25A; --accent-hover:#8AD473; --accent-2:#D3A968; --accent-2-soft:#BA955F;
     --border:rgba(237,232,214,.14); --border-inverse:rgba(237,232,214,.14);
-    --focus-ring:#8AD473; color-scheme: dark;
+    --focus-ring:#8AD473;--on-accent:#0B1009; color-scheme: dark;
   }
 }
 :root[data-theme="dark"]{
   --bg:#10160D; --bg-elevated:#1A2416; --bg-inverse:#24361F; --bg-inverse-2:#1B2A17;
-  --text:#EDE8D6; --text-soft:#A9B39C; --text-faint:#71806A;
+  --text:#EDE8D6; --text-soft:#A9B39C; --text-faint:#809079;
   --text-inverse:#F2EEDC; --text-inverse-soft:#C7D4BE;
-  --accent:#72C25A; --accent-hover:#8AD473; --accent-2:#D3A968; --accent-2-soft:#8C6B3C;
+  --accent:#72C25A; --accent-hover:#8AD473; --accent-2:#D3A968; --accent-2-soft:#BA955F;
   --border:rgba(237,232,214,.14); --border-inverse:rgba(237,232,214,.14);
-  --focus-ring:#8AD473; color-scheme: dark;
+  --focus-ring:#8AD473;--on-accent:#0B1009; color-scheme: dark;
 }
 :root[data-theme="light"]{
   --bg:#EDE6D2; --bg-elevated:#F7F3E4; --bg-inverse:#1E4429; --bg-inverse-2:#183A22;
-  --text:#1B2A1E; --text-soft:#4B5A45; --text-faint:#7C8A76;
+  --text:#1B2A1E; --text-soft:#4B5A45; --text-faint:#5E695A;
   --text-inverse:#F3EFDD; --text-inverse-soft:#BFD1B9;
-  --accent:#3F7A34; --accent-hover:#356A2C; --accent-2:#A9793D; --accent-2-soft:#C9A567;
+  --accent:#3B7331; --accent-hover:#356A2C; --accent-2:#845E2F; --accent-2-soft:#C9A567;
   --border:rgba(27,42,29,.15); --border-inverse:rgba(243,239,221,.16);
-  --focus-ring:#3F7A34; color-scheme: light;
+  --focus-ring:#3B7331;--on-accent:#FFFFFF; color-scheme: light;
 }
 
 *,*::before,*::after{box-sizing:border-box;}
@@ -62,7 +63,7 @@ button{font-family:inherit;}
 ul{margin:0;padding:0;list-style:none;}
 :focus-visible{outline:3px solid var(--focus-ring);outline-offset:3px;border-radius:2px;}
 .skip-link{
-  position:absolute;left:1rem;top:-100px;background:var(--accent);color:#fff;
+  position:absolute;left:1rem;top:-100px;background:var(--accent);color:var(--on-accent);
   padding:.75rem 1.25rem;border-radius:4px;z-index:1000;transition:top .2s;font-weight:600;
 }
 .skip-link:focus{top:1rem;}
@@ -86,7 +87,7 @@ ul{margin:0;padding:0;list-style:none;}
   text-decoration:none;transition:background .15s,color .15s,border-color .15s,transform .15s;white-space:nowrap;
 }
 .btn:active{transform:translateY(1px);}
-.btn-primary{background:var(--accent);color:#fff;}
+.btn-primary{background:var(--accent);color:var(--on-accent);}
 .btn-primary:hover{background:var(--accent-hover);}
 .btn-outline{border-color:currentColor;color:inherit;background:transparent;}
 .btn-outline:hover{background:rgba(255,255,255,.08);}
@@ -247,7 +248,7 @@ footer{padding-top:4.5rem;}
         <button type="button" aria-pressed="false">اردو</button>
       </div>
       <a href="#" class="hide-sm">(9221) 9926 1300-7</a>
-      <a href="#">Directory</a>
+      <a href="contact.html">Directory</a>
       <a href="#">Student Portal</a>
     </div>
   </div>
@@ -264,11 +265,11 @@ footer{padding-top:4.5rem;}
     </a>
     <nav class="primary-nav" id="primary-nav">
       <a href="index.html#about">About</a>
-      <a href="index.html#academics">Academics</a>
+      <a href="faculties.html">Academics</a>
       <a href="#" aria-current="page">Admissions</a>
-      <a href="index.html#research">Research</a>
-      <a href="index.html#library">Library</a>
-      <a href="index.html#footer">Contact</a>
+      <a href="research.html">Research</a>
+      <a href="library.html">Library</a>
+      <a href="contact.html">Contact</a>
     </nav>
     <div class="header-actions">
       <a href="#apply" class="btn btn-primary">Apply Now</a>
@@ -507,22 +508,22 @@ footer{padding-top:4.5rem;}
         <ul>
           <li><a href="index.html#academics">Faculties</a></li>
           <li><a href="#">Departments A&ndash;Z</a></li>
-          <li><a href="index.html#library">Library</a></li>
+          <li><a href="library.html">Library</a></li>
         </ul>
       </div>
       <div class="footer-col">
         <h4>Examinations</h4>
         <ul>
-          <li><a href="#">Annual System</a></li>
-          <li><a href="#">Semester System</a></li>
-          <li><a href="#">Semester Fee</a></li>
+          <li><a href="examinations.html">Annual System</a></li>
+          <li><a href="examinations.html">Semester System</a></li>
+          <li><a href="examinations.html">Semester Fee</a></li>
         </ul>
       </div>
       <div class="footer-col">
         <h4>Connect</h4>
         <ul>
           <li><a href="index.html">Homepage</a></li>
-          <li><a href="#">Alumni</a></li>
+          <li><a href="alumni.html">Alumni</a></li>
           <li><a href="#">Contact Us</a></li>
         </ul>
       </div>

@@ -1,3 +1,4 @@
+<meta charset="utf-8" />
 <title>University of Karachi — Est. 1951</title>
 <style>
 __FONT_FACES__
@@ -10,16 +11,16 @@ __FONT_FACES__
   --bg-inverse-2:#183A22;
   --text:#1B2A1E;
   --text-soft:#4B5A45;
-  --text-faint:#7C8A76;
+  --text-faint:#5E695A;
   --text-inverse:#F3EFDD;
   --text-inverse-soft:#BFD1B9;
-  --accent:#3F7A34;
+  --accent:#3B7331;
   --accent-hover:#356A2C;
-  --accent-2:#A9793D;
+  --accent-2:#845E2F;
   --accent-2-soft:#C9A567;
   --border:rgba(27,42,29,.15);
   --border-inverse:rgba(243,239,221,.16);
-  --focus-ring:#3F7A34;
+  --focus-ring:#3B7331;--on-accent:#FFFFFF;
   --shadow:0 1px 2px rgba(27,42,29,.06),0 8px 24px -12px rgba(27,42,29,.18);
   --font-display:'Fraunces',Georgia,'Times New Roman',serif;
   --font-body:'Work Sans',system-ui,-apple-system,'Segoe UI',sans-serif;
@@ -30,28 +31,28 @@ __FONT_FACES__
 @media (prefers-color-scheme: dark){
   :root{
     --bg:#10160D; --bg-elevated:#1A2416; --bg-inverse:#24361F; --bg-inverse-2:#1B2A17;
-    --text:#EDE8D6; --text-soft:#A9B39C; --text-faint:#71806A;
+    --text:#EDE8D6; --text-soft:#A9B39C; --text-faint:#809079;
     --text-inverse:#F2EEDC; --text-inverse-soft:#C7D4BE;
-    --accent:#72C25A; --accent-hover:#8AD473; --accent-2:#D3A968; --accent-2-soft:#8C6B3C;
+    --accent:#72C25A; --accent-hover:#8AD473; --accent-2:#D3A968; --accent-2-soft:#BA955F;
     --border:rgba(237,232,214,.14); --border-inverse:rgba(237,232,214,.14);
-    --focus-ring:#8AD473; color-scheme: dark;
+    --focus-ring:#8AD473;--on-accent:#0B1009; color-scheme: dark;
   }
 }
 :root[data-theme="dark"]{
   --bg:#10160D; --bg-elevated:#1A2416; --bg-inverse:#24361F; --bg-inverse-2:#1B2A17;
-  --text:#EDE8D6; --text-soft:#A9B39C; --text-faint:#71806A;
+  --text:#EDE8D6; --text-soft:#A9B39C; --text-faint:#809079;
   --text-inverse:#F2EEDC; --text-inverse-soft:#C7D4BE;
-  --accent:#72C25A; --accent-hover:#8AD473; --accent-2:#D3A968; --accent-2-soft:#8C6B3C;
+  --accent:#72C25A; --accent-hover:#8AD473; --accent-2:#D3A968; --accent-2-soft:#BA955F;
   --border:rgba(237,232,214,.14); --border-inverse:rgba(237,232,214,.14);
-  --focus-ring:#8AD473; color-scheme: dark;
+  --focus-ring:#8AD473;--on-accent:#0B1009; color-scheme: dark;
 }
 :root[data-theme="light"]{
   --bg:#EDE6D2; --bg-elevated:#F7F3E4; --bg-inverse:#1E4429; --bg-inverse-2:#183A22;
-  --text:#1B2A1E; --text-soft:#4B5A45; --text-faint:#7C8A76;
+  --text:#1B2A1E; --text-soft:#4B5A45; --text-faint:#5E695A;
   --text-inverse:#F3EFDD; --text-inverse-soft:#BFD1B9;
-  --accent:#3F7A34; --accent-hover:#356A2C; --accent-2:#A9793D; --accent-2-soft:#C9A567;
+  --accent:#3B7331; --accent-hover:#356A2C; --accent-2:#845E2F; --accent-2-soft:#C9A567;
   --border:rgba(27,42,29,.15); --border-inverse:rgba(243,239,221,.16);
-  --focus-ring:#3F7A34; color-scheme: light;
+  --focus-ring:#3B7331;--on-accent:#FFFFFF; color-scheme: light;
 }
 
 /* ===== Reset & base ===== */
@@ -73,7 +74,7 @@ button{font-family:inherit;}
 ul{margin:0;padding:0;list-style:none;}
 :focus-visible{outline:3px solid var(--focus-ring);outline-offset:3px;border-radius:2px;}
 .skip-link{
-  position:absolute;left:1rem;top:-100px;background:var(--accent);color:#fff;
+  position:absolute;left:1rem;top:-100px;background:var(--accent);color:var(--on-accent);
   padding:.75rem 1.25rem;border-radius:4px;z-index:1000;transition:top .2s;
   font-weight:600;
 }
@@ -102,7 +103,7 @@ ul{margin:0;padding:0;list-style:none;}
   white-space:nowrap;
 }
 .btn:active{transform:translateY(1px);}
-.btn-primary{background:var(--accent);color:#fff;}
+.btn-primary{background:var(--accent);color:var(--on-accent);}
 .btn-primary:hover{background:var(--accent-hover);}
 .btn-outline{border-color:currentColor;color:inherit;background:transparent;}
 .btn-outline:hover{background:rgba(255,255,255,.08);}
@@ -340,12 +341,12 @@ footer{padding-top:4.5rem;}
     </a>
     <nav class="primary-nav" id="primary-nav">
       <a href="#about">About</a>
-      <a href="#academics">Academics</a>
+      <a href="faculties.html">Academics</a>
       <a href="admissions.html">Admissions</a>
-      <a href="#research">Research</a>
-      <a href="#library">Library</a>
+      <a href="research.html">Research</a>
+      <a href="library.html">Library</a>
       <a href="#news">News</a>
-      <a href="#footer">Contact</a>
+      <a href="contact.html">Contact</a>
     </nav>
     <div class="header-actions">
       <a href="admissions.html" class="btn btn-primary">Apply Now</a>
@@ -370,7 +371,7 @@ footer{padding-top:4.5rem;}
       <p class="lead">1,279 acres on University Road &mdash; fifty-three departments, twenty research institutes, and the chemistry that earned Pakistan a seat at the world&rsquo;s table.</p>
       <div class="hero-ctas">
         <a href="admissions.html" class="btn btn-primary">Apply for Admissions 2026</a>
-        <a href="#academics" class="btn btn-outline">Explore Faculties</a>
+        <a href="faculties.html" class="btn btn-outline">Explore Faculties</a>
       </div>
     </div>
   </section>
@@ -449,14 +450,14 @@ footer{padding-top:4.5rem;}
         <div class="faculty-head-row">
           <span>Faculty</span><span class="col-dean">Dean</span><span></span>
         </div>
-        <a href="#" class="faculty-row"><span class="fnum">01</span><span class="fname">Science &mdash; 21 departments</span><span class="fdean">Prof. Dr. Bilquees Gul</span><span class="farrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a>
-        <a href="#" class="faculty-row"><span class="fnum">02</span><span class="fname">Arts &amp; Social Sciences</span><span class="fdean">Prof. Dr. Samina Saeed</span><span class="farrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a>
-        <a href="#" class="faculty-row"><span class="fnum">03</span><span class="fname">Pharmacy &amp; Pharmaceutical Sciences</span><span class="fdean">Prof. Dr. Muhammad Harris Shoaib</span><span class="farrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a>
-        <a href="#" class="faculty-row"><span class="fnum">04</span><span class="fname">Management &amp; Administrative Sciences</span><span class="fdean">Prof. Dr. Zaeema Asrar Mohiuddin</span><span class="farrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a>
-        <a href="#" class="faculty-row"><span class="fnum">05</span><span class="fname">Medicine</span><span class="fdean">Prof. Dr. Fareeda Islam</span><span class="farrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a>
-        <a href="#" class="faculty-row"><span class="fnum">06</span><span class="fname">Law</span><span class="fdean">Barrister Muhammad Sarfaraz Ali Metlo</span><span class="farrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a>
-        <a href="#" class="faculty-row"><span class="fnum">07</span><span class="fname">Islamic Studies</span><span class="fdean">Prof. Dr. Zahid Ali</span><span class="farrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a>
-        <a href="#" class="faculty-row"><span class="fnum">08</span><span class="fname">Education</span><span class="fdean">Prof. Dr. Samina Saeed (Officiating)</span><span class="farrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a>
+        <a href="faculties.html" class="faculty-row"><span class="fnum">01</span><span class="fname">Science &mdash; 21 departments</span><span class="fdean">Prof. Dr. Bilquees Gul</span><span class="farrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a>
+        <a href="faculties.html" class="faculty-row"><span class="fnum">02</span><span class="fname">Arts &amp; Social Sciences</span><span class="fdean">Prof. Dr. Samina Saeed</span><span class="farrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a>
+        <a href="faculties.html" class="faculty-row"><span class="fnum">03</span><span class="fname">Pharmacy &amp; Pharmaceutical Sciences</span><span class="fdean">Prof. Dr. Muhammad Harris Shoaib</span><span class="farrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a>
+        <a href="faculties.html" class="faculty-row"><span class="fnum">04</span><span class="fname">Management &amp; Administrative Sciences</span><span class="fdean">Prof. Dr. Zaeema Asrar Mohiuddin</span><span class="farrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a>
+        <a href="faculties.html" class="faculty-row"><span class="fnum">05</span><span class="fname">Medicine</span><span class="fdean">Prof. Dr. Fareeda Islam</span><span class="farrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a>
+        <a href="faculties.html" class="faculty-row"><span class="fnum">06</span><span class="fname">Law</span><span class="fdean">Barrister Muhammad Sarfaraz Ali Metlo</span><span class="farrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a>
+        <a href="faculties.html" class="faculty-row"><span class="fnum">07</span><span class="fname">Islamic Studies</span><span class="fdean">Prof. Dr. Zahid Ali</span><span class="farrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a>
+        <a href="faculties.html" class="faculty-row"><span class="fnum">08</span><span class="fname">Education</span><span class="fdean">Prof. Dr. Samina Saeed (Officiating)</span><span class="farrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a>
       </div>
     </div>
   </section>
@@ -472,12 +473,12 @@ footer{padding-top:4.5rem;}
         <div class="research-card reveal">
           <span class="rname">H.E.J. Research Institute of Chemistry</span>
           <p>The university&rsquo;s prime research institute, internationally recognised for natural product chemistry and designated by the World Academy of Sciences.</p>
-          <a href="#">View institute &rarr;</a>
+          <a href="research.html">View institute &rarr;</a>
         </div>
         <div class="research-card reveal">
           <span class="rname">Dr. Panjwani Center for Molecular Medicine &amp; Drug Research</span>
           <p>Part of the International Center for Chemical &amp; Biological Sciences (ICCBS), driving drug discovery and molecular medicine research.</p>
-          <a href="#">View institute &rarr;</a>
+          <a href="research.html">View institute &rarr;</a>
         </div>
         <div class="research-card reveal">
           <span class="rname">Dr. A. Q. Khan Institute of Biotechnology &amp; Genetic Engineering</span>
@@ -516,8 +517,8 @@ footer{padding-top:4.5rem;}
             <div><b>110,000+</b><span>Journals &amp; periodicals</span></div>
           </div>
           <div class="hero-ctas" style="margin-top:.6rem;">
-            <a href="#" class="btn btn-primary">Search the Catalogue</a>
-            <a href="#" class="btn btn-outline on-light">Digital Library</a>
+            <a href="library.html" class="btn btn-primary">Search the Catalogue</a>
+            <a href="library.html" class="btn btn-outline on-light">Digital Library</a>
           </div>
         </div>
       </div>
@@ -595,8 +596,8 @@ footer{padding-top:4.5rem;}
       <div class="footer-col">
         <h4>Academics</h4>
         <ul>
-          <li><a href="#">Faculties</a></li>
-          <li><a href="#">Departments A&ndash;Z</a></li>
+          <li><a href="faculties.html">Faculties</a></li>
+          <li><a href="faculties.html">Departments A&ndash;Z</a></li>
           <li><a href="admissions.html">Admissions 2026</a></li>
           <li><a href="#">M.Phil. / Ph.D. &amp; M.S. / M.D.</a></li>
         </ul>
@@ -604,27 +605,27 @@ footer{padding-top:4.5rem;}
       <div class="footer-col">
         <h4>Administration</h4>
         <ul>
-          <li><a href="#">Vice Chancellor</a></li>
-          <li><a href="#">Registrar</a></li>
-          <li><a href="#">Syndicate Members</a></li>
-          <li><a href="#">Directorates &amp; Offices</a></li>
+          <li><a href="administration.html">Vice Chancellor</a></li>
+          <li><a href="administration.html">Registrar</a></li>
+          <li><a href="administration.html">Syndicate Members</a></li>
+          <li><a href="administration.html">Directorates &amp; Offices</a></li>
         </ul>
       </div>
       <div class="footer-col">
         <h4>Examinations</h4>
         <ul>
-          <li><a href="#">Annual System</a></li>
-          <li><a href="#">Semester System</a></li>
-          <li><a href="#">Semester Fee</a></li>
-          <li><a href="#">Downloadable Forms</a></li>
+          <li><a href="examinations.html">Annual System</a></li>
+          <li><a href="examinations.html">Semester System</a></li>
+          <li><a href="examinations.html">Semester Fee</a></li>
+          <li><a href="examinations.html">Downloadable Forms</a></li>
         </ul>
       </div>
       <div class="footer-col">
         <h4>Connect</h4>
         <ul>
-          <li><a href="#">Alumni</a></li>
-          <li><a href="#">Journals</a></li>
-          <li><a href="#">Contact Us</a></li>
+          <li><a href="alumni.html">Alumni</a></li>
+          <li><a href="journals.html">Journals</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
           <li><a href="#">Facebook</a></li>
         </ul>
       </div>
