@@ -104,22 +104,13 @@ Top Bar & Header
 #nav ul { display: flex; align-items: center; gap: 30px; margin: 0; padding: 0; }
 #nav ul li a {
   color: var(--primary-dark);
-  font-weight: 600;
-  font-size: 15px;
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 18px;
   text-decoration: none;
   transition: color 0.2s ease;
 }
 #nav ul li a:hover { color: var(--accent-copper); }
-
-#nav ul li a.nav-home {
-  font-family: var(--font-heading);
-  font-size: 24px;
-  font-weight: 700;
-  color: var(--primary-dark);
-}
-#nav ul li a.nav-home:hover {
-  color: var(--accent-copper);
-}
 
 .apply-btn-wrapper { margin-left: 10px; }
 .apply-btn-wrapper a.apply-btn {
