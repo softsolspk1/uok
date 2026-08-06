@@ -80,6 +80,16 @@ header.site-header {
   background: var(--bg-elevated) !important;
   color: var(--text) !important;
 }
+.academic-card *, .research-card *, .news-card * {
+  color: inherit;
+}
+.academic-card p, .research-card p, .news-card p,
+.academic-card span, .research-card span, .news-card span {
+  color: var(--text-soft) !important;
+}
+.academic-card a, .research-card a, .news-card a {
+  color: var(--accent) !important;
+}
 .academic-card:hover, .research-card:hover, .news-card:hover {
   transform: translateY(-8px) scale(1.02) !important;
   box-shadow: var(--shadow-hover) !important;
