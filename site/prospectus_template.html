@@ -1,5 +1,5 @@
 <meta charset="utf-8" />
-<title>Dr. Mahmud Husain Library — University of Karachi</title>
+<title>Prospectus — University of Karachi</title>
 <style>
 __FONT_FACES__
 :root{--bg:#EDE6D2; --bg-elevated:#F7F3E4; --bg-inverse:#1E4429; --bg-inverse-2:#183A22;
@@ -20,8 +20,7 @@ __FONT_FACES__
   --text:#1B2A1E; --text-soft:#4B5A45; --text-faint:#5E695A; --text-inverse:#F3EFDD; --text-inverse-soft:#BFD1B9;
   --accent:#3B7331; --accent-hover:#356A2C; --accent-2:#845E2F; --accent-2-soft:#C9A567;
   --border:rgba(27,42,29,.15); --border-inverse:rgba(243,239,221,.16); --focus-ring:#3B7331;--on-accent:#FFFFFF; color-scheme: light;}
-*,*::before,*::after{box-sizing:border-box;}
-html{scroll-behavior:smooth;}
+*,*::before,*::after{box-sizing:border-box;} html{scroll-behavior:smooth;}
 @media (prefers-reduced-motion: reduce){html{scroll-behavior:auto;}*,*::before,*::after{animation-duration:.001ms !important;animation-iteration-count:1 !important;transition-duration:.001ms !important;scroll-behavior:auto !important;}}
 body{margin:0;background:var(--bg);color:var(--text);font-family:var(--font-body);font-size:17px;line-height:1.65;-webkit-font-smoothing:antialiased;overflow-x:hidden;}
 img{max-width:100%;display:block;} a{color:inherit;}
@@ -51,40 +50,33 @@ header.site-header{position:sticky;top:0;z-index:100;background:var(--bg);border
 .header-row{display:flex;align-items:center;justify-content:space-between;gap:1.5rem;height:84px;}
 .brand{display:flex;align-items:center;gap:.85rem;text-decoration:none;color:inherit;} .brand img{height:46px;width:auto;}
 .brand-word{display:flex;flex-direction:column;line-height:1.15;} .brand-word .name{font-family:var(--font-display);font-weight:700;font-size:1.18rem;}
-.brand-word .tag{font-size:.68rem;letter-spacing:.09em;text-transform:uppercase;color:var(--text-faint);}
 nav.primary-nav{display:flex;align-items:center;gap:2.1rem;} nav.primary-nav a{text-decoration:none;font-weight:600;font-size:.95rem;color:var(--text);position:relative;padding-block:.3rem;}
 nav.primary-nav a::after{content:"";position:absolute;left:0;right:0;bottom:0;height:2px;background:var(--accent);transform:scaleX(0);transform-origin:left;transition:transform .18s;}
 nav.primary-nav a:hover::after{transform:scaleX(1);} nav.primary-nav a[aria-current="page"]{color:var(--accent);} nav.primary-nav a[aria-current="page"]::after{transform:scaleX(1);}
 .header-actions{display:flex;align-items:center;gap:.9rem;} .menu-toggle{display:none;background:none;border:1px solid var(--border);border-radius:4px;padding:.5rem;cursor:pointer;color:var(--text);}
 @media(max-width:980px){nav.primary-nav{position:fixed;inset:84px 0 0 0;background:var(--bg);flex-direction:column;align-items:flex-start;padding:2rem 1.5rem;gap:1.4rem;transform:translateX(100%);transition:transform .25s ease;overflow-y:auto;}
   nav.primary-nav.open{transform:translateX(0);} nav.primary-nav a{font-size:1.2rem;} .menu-toggle{display:flex;} .header-actions .btn-primary{display:none;}}
-.breadcrumb{display:flex;align-items:center;gap:.5rem;font-size:.82rem;color:var(--text-inverse-soft);margin-bottom:1.3rem;flex-wrap:wrap;}
+.breadcrumb{display:flex;align-items:center;gap:.5rem;font-size:.82rem;color:var(--text-soft);margin-bottom:1.3rem;flex-wrap:wrap;}
 .breadcrumb a{text-decoration:none;color:inherit;opacity:.85;} .breadcrumb a:hover{opacity:1;text-decoration:underline;}
-.breadcrumb span.sep{opacity:.5;} .breadcrumb .current{opacity:1;font-weight:600;color:var(--text-inverse);}
-.page-hero{position:relative;color:var(--text-inverse);overflow:hidden;}
-.page-hero-bg{position:absolute;inset:0;background-size:cover;background-position:center 45%;}
-.page-hero-scrim{position:absolute;inset:0;background:linear-gradient(115deg,rgba(14,26,16,.95) 25%,rgba(30,68,41,.88) 65%,rgba(30,68,41,.65) 100%);}
-.page-hero-inner{position:relative;padding-block:3.8rem 3.4rem;max-width:780px;}
-.page-hero h1{font-size:clamp(2rem,4.2vw,3.1rem);line-height:1.08;margin-bottom:1rem;}
-.page-hero .lead{font-size:1.06rem;color:var(--text-inverse-soft);max-width:62ch;margin-bottom:1.8rem;}
-.fact-strip{border-bottom:1px solid var(--border);} .fact-strip .container{display:flex;flex-wrap:wrap;gap:0;}
-.fact-strip .fact{flex:1 1 200px;padding:1.3rem 1.6rem;border-right:1px solid var(--border);display:flex;flex-direction:column;gap:.2rem;}
-.fact-strip .fact:last-child{border-right:none;}
-.fact-strip .fact b{font-family:var(--font-display);font-size:1.2rem;font-variant-numeric:tabular-nums;}
-.fact-strip .fact span{font-size:.76rem;color:var(--text-faint);text-transform:uppercase;letter-spacing:.06em;}
-.two-col{display:grid;grid-template-columns:1.2fr .8fr;gap:4rem;align-items:start;}
-.two-col p{color:var(--text-soft);margin-bottom:1.1rem;font-size:1.02rem;} .two-col p:last-child{margin-bottom:0;}
-.spotlight-card{background:var(--bg-elevated);border:1px solid var(--border);border-left:3px solid var(--accent-2);border-radius:6px;padding:2.2rem;}
-.spotlight-card .vlabel{font-size:.72rem;text-transform:uppercase;letter-spacing:.08em;color:var(--accent-2);font-weight:700;margin-bottom:.9rem;}
-.spotlight-card blockquote{font-family:var(--font-display);font-style:italic;font-size:1.25rem;line-height:1.5;margin:0;}
-@media(max-width:860px){.two-col{grid-template-columns:1fr;gap:2.5rem;}}
-.service-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1.25rem;}
-.service-card{background:var(--bg-elevated);border:1px solid var(--border);border-radius:6px;padding:1.6rem;display:flex;flex-direction:column;gap:.6rem;}
-.service-card .sicon{width:36px;height:36px;border-radius:50%;background:rgba(63,122,52,.12);color:var(--accent);display:flex;align-items:center;justify-content:center;}
-.service-card .sicon svg{width:18px;height:18px;} .service-card .sname{font-family:var(--font-display);font-weight:700;font-size:1.02rem;}
-.service-card p{font-size:.86rem;color:var(--text-soft);}
-@media(max-width:980px){.service-grid{grid-template-columns:repeat(2,1fr);}} @media(max-width:560px){.service-grid{grid-template-columns:1fr;}}
-.cta-band{display:flex;align-items:center;justify-content:space-between;gap:2rem;flex-wrap:wrap;padding:3.2rem 0;border-top:1px solid var(--border-inverse);}
+.breadcrumb span.sep{opacity:.5;} .breadcrumb .current{opacity:1;font-weight:600;color:var(--text);}
+.page-head{padding-block:3.5rem 3rem;border-bottom:1px solid var(--border);}
+.page-head h1{font-size:clamp(2rem,4.2vw,3rem);line-height:1.08;margin-bottom:1rem;max-width:800px;}
+.page-head .lead{font-size:1.06rem;color:var(--text-soft);max-width:62ch;}
+.prospectus-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1.25rem;}
+.prospectus-card{background:var(--bg-elevated);border:1px solid var(--border);border-radius:8px;padding:1.7rem;display:flex;flex-direction:column;gap:.9rem;transition:border-color .15s,transform .15s;}
+.prospectus-card:hover{border-color:var(--accent);transform:translateY(-2px);}
+.prospectus-card .picon{width:40px;height:40px;border-radius:50%;background:rgba(63,115,49,.12);color:var(--accent);display:flex;align-items:center;justify-content:center;flex:none;}
+.prospectus-card .picon svg{width:20px;height:20px;}
+.prospectus-card .ptitle{font-family:var(--font-display);font-weight:700;font-size:1.08rem;line-height:1.3;}
+.prospectus-card .pdesc{font-size:.86rem;color:var(--text-soft);flex:1;}
+.prospectus-card .plink{display:inline-flex;align-items:center;gap:.4rem;font-size:.82rem;font-weight:700;color:var(--accent);text-decoration:none;}
+.prospectus-card .plink:hover{text-decoration:underline;}
+@media(max-width:980px){.prospectus-grid{grid-template-columns:repeat(2,1fr);}}
+@media(max-width:560px){.prospectus-grid{grid-template-columns:1fr;}}
+.notice-box{background:var(--bg-elevated);border:1px solid var(--border);border-left:3px solid var(--accent-2);border-radius:6px;padding:1.6rem 1.8rem;display:flex;gap:1rem;align-items:flex-start;max-width:74ch;}
+.notice-box svg{flex:none;width:20px;height:20px;color:var(--accent-2);margin-top:.15rem;}
+.notice-box p{font-size:.92rem;color:var(--text-soft);}
+.cta-band{display:flex;align-items:center;justify-content:space-between;gap:2rem;flex-wrap:wrap;padding:3.2rem 0;}
 .cta-band h3{font-size:1.7rem;} .cta-band p{color:var(--text-inverse-soft);margin-top:.4rem;}
 footer{padding-top:4.5rem;} .footer-grid{display:grid;grid-template-columns:1.4fr repeat(4,1fr);gap:2.5rem;padding-bottom:3rem;}
 .footer-col h4{font-size:.76rem;text-transform:uppercase;letter-spacing:.09em;color:var(--accent-2-soft);margin-bottom:1.1rem;font-weight:700;}
@@ -94,8 +86,8 @@ footer{padding-top:4.5rem;} .footer-grid{display:grid;grid-template-columns:1.4f
 .footer-about p{color:var(--text-inverse-soft);font-size:.9rem;max-width:32ch;margin-bottom:1rem;} .footer-about address{font-style:normal;color:var(--text-inverse-soft);font-size:.85rem;line-height:1.7;}
 @media(max-width:980px){.footer-grid{grid-template-columns:repeat(2,1fr);}} @media(max-width:560px){.footer-grid{grid-template-columns:1fr;}}
 .footer-bottom{border-top:1px solid var(--border-inverse);padding-block:1.6rem;display:flex;justify-content:space-between;align-items:center;gap:1rem;flex-wrap:wrap;font-size:.8rem;color:var(--text-inverse-soft);}
-.footer-bottom .flinks{display:flex;gap:1.3rem;flex-wrap:wrap;}
-.footer-bottom .dev-credit{color:var(--text-inverse-soft);opacity:.75;font-size:.78rem;} .footer-bottom a{text-decoration:none;color:inherit;} .footer-bottom a:hover{text-decoration:underline;}
+.footer-bottom .flinks{display:flex;gap:1.3rem;flex-wrap:wrap;} .footer-bottom a{text-decoration:none;color:inherit;} .footer-bottom a:hover{text-decoration:underline;}
+.footer-bottom .dev-credit{color:var(--text-inverse-soft);opacity:.75;font-size:.78rem;}
 .reveal{opacity:0;transform:translateY(16px);transition:opacity .6s ease,transform .6s ease;} .reveal.in{opacity:1;transform:none;}
 </style>
 
@@ -110,7 +102,7 @@ footer{padding-top:4.5rem;} .footer-grid{display:grid;grid-template-columns:1.4f
   <a href="index.html" class="brand"><img src="__LOGO__" alt="University of Karachi crest" /><span class="brand-word"><span class="name">Home</span></span></a>
   <nav class="primary-nav" id="primary-nav">
     <a href="index.html#about">About</a><a href="faculties.html">Academics</a><a href="admissions.html">Admissions</a>
-    <a href="research.html">Research</a><a href="#" aria-current="page">Library</a><a href="contact.html">Contact</a>
+    <a href="research.html">Research</a><a href="library.html">Library</a><a href="contact.html">Contact</a>
   </nav>
   <div class="header-actions"><a href="admissions.html" class="btn btn-primary">Apply Now</a>
     <button class="menu-toggle" id="menu-toggle" aria-expanded="false" aria-controls="primary-nav" aria-label="Toggle navigation menu"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg></button>
@@ -118,79 +110,80 @@ footer{padding-top:4.5rem;} .footer-grid{display:grid;grid-template-columns:1.4f
 </div></header>
 
 <main id="main">
-  <section class="page-hero">
-    <div class="page-hero-bg" style="background-image:url('__HERO_CHEM__')"></div>
-    <div class="page-hero-scrim"></div>
-    <div class="container page-hero-inner reveal">
-      <div class="breadcrumb"><a href="index.html">Home</a><span class="sep">/</span><span class="current">Library</span></div>
-      <div class="eyebrow" style="color:var(--accent-2-soft);">Dr. Mahmud Husain Library</div>
-      <h1 style="margin-top:.8rem;">A library shaped like a ship, at the centre of campus.</h1>
-      <p class="lead">Founded in 1952, the year after the university itself, and renamed in 1975 in honour of Vice Chancellor and scholar Prof. Dr. Mahmud Husain &mdash; it now holds over 350,000 books and functions as a UNO depository centre.</p>
-      <div class="hero-ctas"><a href="#" class="btn btn-primary">Search the Catalogue</a><a href="#" class="btn btn-outline">Digital Library</a></div>
-    </div>
-  </section>
-
-  <div class="fact-strip"><div class="container">
-    <div class="fact"><b>1952</b><span>Founded</span></div>
-    <div class="fact"><b>350,000+</b><span>Books</span></div>
-    <div class="fact"><b>350,000+</b><span>Bound journal volumes</span></div>
-    <div class="fact"><b>~6,000</b><span>Rare volumes, from the 1500s</span></div>
-    <div class="fact"><b>46</b><span>Personal scholar collections</span></div>
+  <div class="page-head"><div class="container reveal">
+    <div class="breadcrumb"><a href="index.html">Home</a><span class="sep">/</span><a href="admissions.html">Admissions</a><span class="sep">/</span><span class="current">Prospectus</span></div>
+    <div class="eyebrow">Prospectus 2026</div>
+    <h1 style="margin-top:.8rem;">Find the right prospectus for your program.</h1>
+    <p class="lead">Every admissions pathway publishes its own prospectus &mdash; eligibility, seats, fee structure, and dates. Choose your track below.</p>
   </div></div>
 
   <section class="section">
     <div class="container">
-      <div class="two-col">
-        <div class="reveal">
-          <div class="eyebrow">Introduction</div>
-          <h2 style="margin-top:.9rem;margin-bottom:1.4rem;font-size:clamp(1.6rem,3vw,2.2rem);">Housed in a building that resembles a ship.</h2>
-          <p>The Central Library of the University of Karachi occupies a unique building at the heart of the campus &mdash; its architecture famously resembles a huge ship. It is the hub of academic and research activity for one of the country&rsquo;s largest universities.</p>
-          <p>Founded in 1952, the library was renamed Dr. Mahmud Husain Library in 1975, following the death of the former Vice Chancellor and renowned scholar, in recognition of his services to scholarship, education, and the promotion of librarianship in Pakistan.</p>
-          <p>Its holdings include more than 350,000 books and an equal number of bound research and scientific journal volumes. The library also carries the status of a United Nations depository centre.</p>
-        </div>
-        <div class="spotlight-card reveal">
-          <div class="vlabel">The Quaid-e-Azam Collection</div>
-          <blockquote>The personal book collection of Quaid-e-Azam Muhammad Ali Jinnah, stored in its original antique cabinets &mdash; alongside photographs, letters, and posters from the Freedom Movement.</blockquote>
-          <p style="margin-top:.9rem;color:var(--text-soft);font-size:.88rem;">Part of a rare-books collection of roughly 6,000 volumes dating to the 16th century, and the personal libraries of 46 scholars and academicians.</p>
-        </div>
+      <div class="prospectus-grid reveal">
+        <a href="#" class="prospectus-card">
+          <span class="picon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 016.5 17H20V2H6.5A2.5 2.5 0 004 4.5v15z"/></svg></span>
+          <span class="ptitle">Undergraduate &mdash; Test Based</span>
+          <span class="pdesc">BS, B.Ed.(Hons.) and B.E. programs, morning session.</span>
+          <span class="plink">Download PDF &rarr;</span>
+        </a>
+        <a href="#" class="prospectus-card">
+          <span class="picon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 016.5 17H20V2H6.5A2.5 2.5 0 004 4.5v15z"/></svg></span>
+          <span class="ptitle">M.Phil. / Ph.D. &amp; M.S. / M.D.</span>
+          <span class="pdesc">Postgraduate research admissions across 58 departments and institutes.</span>
+          <span class="plink">Download PDF &rarr;</span>
+        </a>
+        <a href="#" class="prospectus-card">
+          <span class="picon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 016.5 17H20V2H6.5A2.5 2.5 0 004 4.5v15z"/></svg></span>
+          <span class="ptitle">Evening Program</span>
+          <span class="pdesc">Self-finance and reserved-seat evening study.</span>
+          <span class="plink">Download PDF &rarr;</span>
+        </a>
+        <a href="#" class="prospectus-card">
+          <span class="picon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 016.5 17H20V2H6.5A2.5 2.5 0 004 4.5v15z"/></svg></span>
+          <span class="ptitle">Doctor of Pharmacy (Pharm-D)</span>
+          <span class="pdesc">Faculty of Pharmacy admissions track.</span>
+          <span class="plink">Download PDF &rarr;</span>
+        </a>
+        <a href="#" class="prospectus-card">
+          <span class="picon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 016.5 17H20V2H6.5A2.5 2.5 0 004 4.5v15z"/></svg></span>
+          <span class="ptitle">Department of Visual Studies</span>
+          <span class="pdesc">Portfolio and interview-based admissions.</span>
+          <span class="plink">Download PDF &rarr;</span>
+        </a>
+        <a href="#" class="prospectus-card">
+          <span class="picon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 016.5 17H20V2H6.5A2.5 2.5 0 004 4.5v15z"/></svg></span>
+          <span class="ptitle">International Students</span>
+          <span class="pdesc">Foreign Students&rsquo; Policy and admission guide.</span>
+          <span class="plink">Download PDF &rarr;</span>
+        </a>
+        <a href="#" class="prospectus-card">
+          <span class="picon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 016.5 17H20V2H6.5A2.5 2.5 0 004 4.5v15z"/></svg></span>
+          <span class="ptitle">Chinese Language Program</span>
+          <span class="pdesc">Fall session intake prospectus.</span>
+          <span class="plink">Download PDF &rarr;</span>
+        </a>
+        <a href="#" class="prospectus-card">
+          <span class="picon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 016.5 17H20V2H6.5A2.5 2.5 0 004 4.5v15z"/></svg></span>
+          <span class="ptitle">Turkish Language Program</span>
+          <span class="pdesc">Parallel language-program admissions track.</span>
+          <span class="plink">Download PDF &rarr;</span>
+        </a>
       </div>
     </div>
   </section>
 
   <section class="section band-elevated">
     <div class="container">
-      <div class="section-head reveal">
-        <div class="eyebrow">Services</div>
-        <h2>What the library offers.</h2>
-      </div>
-      <div class="service-grid">
-        <div class="service-card reveal">
-          <span class="sicon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 016.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 014 19.5v-15A2.5 2.5 0 016.5 2z"/></svg></span>
-          <span class="sname">General Catalogue</span>
-          <p>Search the full print collection across 350,000+ titles.</p>
-        </div>
-        <div class="service-card reveal">
-          <span class="sicon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="14" rx="2"/><path d="M8 21h8M12 18v3"/></svg></span>
-          <span class="sname">Digital Library</span>
-          <p>Online access to e-books, e-journals, and digitised archives.</p>
-        </div>
-        <div class="service-card reveal">
-          <span class="sicon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></span>
-          <span class="sname">Ebrary / HEC Access</span>
-          <p>HEC-subscribed digital journal databases via ProQuest Ebrary.</p>
-        </div>
-        <div class="service-card reveal">
-          <span class="sicon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l2.5 6.5L21 9l-5 4.5L17.5 21 12 17l-5.5 4L8 13.5 3 9l6.5-.5z"/></svg></span>
-          <span class="sname">Rare Books &amp; Archives</span>
-          <p>Manuscripts from the 16th century and the Quaid-e-Azam collection, by appointment.</p>
-        </div>
+      <div class="notice-box reveal">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+        <p>Prospectus PDFs are published by each admissions office ahead of its intake window. If a download isn&rsquo;t live yet for your program, check the <a href="admissions.html" style="color:var(--accent);font-weight:600;">Admissions</a> page for the latest schedule, or contact the Directorate of Admissions directly.</p>
       </div>
     </div>
   </section>
 
   <section class="band-inverse"><div class="container cta-band">
-    <div><h3>Have a question for the library?</h3><p>Chief Librarian: Ms. Malahat Kareem</p></div>
-    <a href="contact.html" class="btn btn-primary">Contact the Library</a>
+    <div><h3>Not sure which pathway is yours?</h3><p>Compare all eight admissions tracks side by side.</p></div>
+    <a href="admissions.html" class="btn btn-primary">View All Pathways</a>
   </div></section>
 </main>
 
@@ -199,13 +192,12 @@ footer{padding-top:4.5rem;} .footer-grid{display:grid;grid-template-columns:1.4f
     <div class="footer-col footer-about"><div class="footer-brand"><img src="__LOGO__" alt="" /><span>University of Karachi</span></div>
       <p>Pakistan&rsquo;s largest university &mdash; eight faculties, fifty-three departments, twenty research institutes.</p>
       <address>University Road, Karachi&nbsp;75270<br />Sindh, Pakistan<br />(9221) 9926 1300&ndash;7</address></div>
-    <div class="footer-col"><h4>Academics</h4><ul><li><a href="faculties.html">All Faculties</a></li><li><a href="research.html">Research Institutes</a></li><li><a href="admissions.html">Admissions 2026</a></li></ul></div>
-    <div class="footer-col"><h4>Library</h4><ul><li><a href="#">Digital Library</a></li><li><a href="#">Ebrary</a></li><li><a href="#">Quaid-e-Azam Collection</a></li></ul></div>
-    <div class="footer-col"><h4>Examinations</h4><ul><li><a href="examinations.html">Annual System</a></li><li><a href="examinations.html">Semester Fee</a></li></ul></div>
+    <div class="footer-col"><h4>Admissions</h4><ul><li><a href="admissions.html">All Pathways</a></li><li><a href="#">Fee Structure</a></li><li><a href="student-portal.html">Student Portal</a></li></ul></div>
+    <div class="footer-col"><h4>Academics</h4><ul><li><a href="faculties.html">All Faculties</a></li><li><a href="library.html">Library</a></li></ul></div>
+    <div class="footer-col"><h4>Examinations</h4><ul><li><a href="examinations.html">Annual System</a></li><li><a href="examinations.html">Semester System</a></li></ul></div>
     <div class="footer-col"><h4>Connect</h4><ul><li><a href="index.html">Homepage</a></li><li><a href="alumni.html">Alumni</a></li><li><a href="contact.html">Contact Us</a></li></ul></div>
   </div>
-  <div class="footer-bottom"><span>&copy; 2026 University of Karachi. This site is available in English and Urdu.</span>
-      <span class="dev-credit">Developed by Softsols Pakistan</span>
+  <div class="footer-bottom"><span>&copy; 2026 University of Karachi. This site is available in English and Urdu.</span><span class="dev-credit">Developed by Softsols Pakistan</span>
     <div class="flinks"><a href="#">Accessibility</a><a href="#">Disclaimer</a><a href="#">Sitemap</a><a href="#">Credits</a></div>
   </div>
 </div></footer>

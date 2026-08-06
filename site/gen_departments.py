@@ -211,7 +211,7 @@ footer{{padding-top:4.5rem;}} .footer-grid{{display:grid;grid-template-columns:1
 <div class="utility-bar"><div class="container">
   <div class="utility-left"><span class="urdu">جامعہ کراچی</span><span class="sep">·</span><span>Est. 1951 &nbsp;·&nbsp; Federal Charter</span></div>
   <div class="utility-right"><div class="lang-toggle" role="group" aria-label="Language"><button type="button" aria-pressed="true">EN</button><span aria-hidden="true">/</span><button type="button" aria-pressed="false">اردو</button></div>
-    <a href="#" class="hide-sm">(9221) 9926 1300-7</a><a href="contact.html">Directory</a><a href="#">Student Portal</a></div>
+    <a href="#" class="hide-sm">(9221) 9926 1300-7</a><a href="contact.html">Directory</a><a href="student-portal.html">Student Portal</a></div>
 </div></div>
 
 <header class="site-header"><div class="container header-row">
