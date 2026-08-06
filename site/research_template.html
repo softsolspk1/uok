@@ -85,13 +85,15 @@ nav.primary-nav a[aria-current="page"]{color:var(--accent);} nav.primary-nav a[a
 .fact-strip .fact b{font-family:var(--font-display);font-size:1.2rem;font-variant-numeric:tabular-nums;}
 .fact-strip .fact span{font-size:.76rem;color:var(--text-faint);text-transform:uppercase;letter-spacing:.06em;}
 .flagship{display:grid;grid-template-columns:1fr 1fr;gap:2rem;margin-bottom:3rem;}
-.flagship-card{background:var(--bg-inverse-2);border:1px solid var(--border-inverse);border-radius:8px;padding:2.2rem;display:flex;flex-direction:column;gap:.8rem;}
+.flagship-card{background:var(--bg-inverse-2);border:1px solid var(--border-inverse);border-radius:8px;padding:2.2rem;display:flex;flex-direction:column;gap:.8rem;text-decoration:none;color:inherit;transition:border-color .15s;}
+.flagship-card:hover{border-color:var(--accent-2-soft);}
 .flagship-card .flabel{font-size:.7rem;text-transform:uppercase;letter-spacing:.08em;color:var(--accent-2-soft);font-weight:700;}
 .flagship-card h3{font-size:1.3rem;color:var(--text-inverse);}
 .flagship-card p{color:var(--text-inverse-soft);font-size:.94rem;}
 @media(max-width:780px){.flagship{grid-template-columns:1fr;}}
 .institute-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.25rem;}
-.institute-card{background:var(--bg-elevated);border:1px solid var(--border);border-radius:6px;padding:1.5rem;display:flex;flex-direction:column;gap:.5rem;}
+.institute-card{background:var(--bg-elevated);border:1px solid var(--border);border-radius:6px;padding:1.5rem;display:flex;flex-direction:column;gap:.5rem;text-decoration:none;color:inherit;transition:border-color .15s,transform .15s;}
+.institute-card:hover{border-color:var(--accent);transform:translateY(-2px);}
 .institute-card .iname{font-family:var(--font-display);font-weight:700;font-size:1.02rem;line-height:1.35;}
 .institute-card .iemail{font-size:.82rem;color:var(--accent);}
 .institute-card .icat{font-size:.68rem;text-transform:uppercase;letter-spacing:.06em;color:var(--text-faint);}
@@ -108,7 +110,8 @@ footer{padding-top:4.5rem;} .footer-grid{display:grid;grid-template-columns:1.4f
 .footer-about address{font-style:normal;color:var(--text-inverse-soft);font-size:.85rem;line-height:1.7;}
 @media(max-width:980px){.footer-grid{grid-template-columns:repeat(2,1fr);}} @media(max-width:560px){.footer-grid{grid-template-columns:1fr;}}
 .footer-bottom{border-top:1px solid var(--border-inverse);padding-block:1.6rem;display:flex;justify-content:space-between;align-items:center;gap:1rem;flex-wrap:wrap;font-size:.8rem;color:var(--text-inverse-soft);}
-.footer-bottom .flinks{display:flex;gap:1.3rem;flex-wrap:wrap;} .footer-bottom a{text-decoration:none;color:inherit;} .footer-bottom a:hover{text-decoration:underline;}
+.footer-bottom .flinks{display:flex;gap:1.3rem;flex-wrap:wrap;}
+.footer-bottom .dev-credit{color:var(--text-inverse-soft);opacity:.75;font-size:.78rem;} .footer-bottom a{text-decoration:none;color:inherit;} .footer-bottom a:hover{text-decoration:underline;}
 .reveal{opacity:0;transform:translateY(16px);transition:opacity .6s ease,transform .6s ease;} .reveal.in{opacity:1;transform:none;}
 </style>
 
@@ -147,16 +150,16 @@ footer{padding-top:4.5rem;} .footer-grid{display:grid;grid-template-columns:1.4f
   <section class="section">
     <div class="container">
       <div class="flagship reveal">
-        <div class="flagship-card">
+        <a href="http://www.iccs.edu" target="_blank" rel="noopener" class="flagship-card">
           <span class="flabel">Flagship &mdash; Faculty of Science</span>
           <h3>H.E.J. Research Institute of Chemistry</h3>
           <p>The university&rsquo;s prime research institute, designated by the World Academy of Sciences and internationally recognised for natural product chemistry. Part of the International Center for Chemical &amp; Biological Sciences (ICCBS).</p>
-        </div>
-        <div class="flagship-card">
+        </a>
+        <a href="http://www.iccs.edu" target="_blank" rel="noopener" class="flagship-card">
           <span class="flabel">Flagship &mdash; ICCBS</span>
           <h3>Dr. Panjwani Center for Molecular Medicine &amp; Drug Research</h3>
           <p>Drug discovery and molecular medicine research, sitting alongside HEJ under the International Center for Chemical &amp; Biological Sciences.</p>
-        </div>
+        </a>
       </div>
 
       <div class="section-head reveal">
@@ -164,26 +167,26 @@ footer{padding-top:4.5rem;} .footer-grid{display:grid;grid-template-columns:1.4f
         <h2>Browse by centre.</h2>
       </div>
       <div class="institute-grid reveal">
-        <div class="institute-card"><span class="icat">Technology</span><span class="iname">Center for Digital Forensic Science and Technology</span><span class="iemail">cdfst@uok.edu.pk</span></div>
-        <div class="institute-card"><span class="icat">Social Science</span><span class="iname">Applied Economics Research Center</span><span class="iemail">aerc@uok.edu.pk</span></div>
-        <div class="institute-card"><span class="icat">Area Studies</span><span class="iname">Area Study Center for Europe</span><span class="iemail">asce@uok.edu.pk</span></div>
-        <div class="institute-card"><span class="icat">Marine Science</span><span class="iname">Centre of Excellence for Marine Biology</span><span class="iemail">cemb@uok.edu.pk</span></div>
-        <div class="institute-card"><span class="icat">Life Science</span><span class="iname">Centre for Molecular Genetics</span><span class="iemail">cmg@uok.edu.pk</span></div>
-        <div class="institute-card"><span class="icat">Social Science</span><span class="iname">Centre of Excellence for Women&rsquo;s Studies</span><span class="iemail">cews@uok.edu.pk</span></div>
+        <a href="inst-cdfst.html" class="institute-card"><span class="icat">Technology</span><span class="iname">Center for Digital Forensic Science and Technology</span><span class="iemail">cdfst@uok.edu.pk</span></a>
+        <a href="http://www.aerc.edu.pk" target="_blank" rel="noopener" class="institute-card"><span class="icat">Social Science</span><span class="iname">Applied Economics Research Center</span><span class="iemail">aerc@uok.edu.pk</span></a>
+        <a href="inst-asce.html" class="institute-card"><span class="icat">Area Studies</span><span class="iname">Area Study Center for Europe</span><span class="iemail">asce@uok.edu.pk</span></a>
+        <a href="https://marinebiology.edu.pk/" target="_blank" rel="noopener" class="institute-card"><span class="icat">Marine Science</span><span class="iname">Centre of Excellence for Marine Biology</span><span class="iemail">cemb@uok.edu.pk</span></a>
+        <a href="inst-cmg.html" class="institute-card"><span class="icat">Life Science</span><span class="iname">Centre for Molecular Genetics</span><span class="iemail">cmg@uok.edu.pk</span></a>
+        <a href="inst-cews.html" class="institute-card"><span class="icat">Social Science</span><span class="iname">Centre of Excellence for Women&rsquo;s Studies</span><span class="iemail">cews@uok.edu.pk</span></a>
         <div class="institute-card"><span class="icat">Life Science</span><span class="iname">Center for Plant Conservation</span><span class="iemail">cpc@uok.edu.pk</span></div>
-        <div class="institute-card"><span class="icat">Health</span><span class="iname">Center for Health and Wellbeing</span><span class="iemail">chwb@uok.edu.pk</span></div>
-        <div class="institute-card"><span class="icat">Language &amp; Culture</span><span class="iname">Confucius Institute</span><span class="iemail">ci@uok.edu.pk</span></div>
-        <div class="institute-card"><span class="icat">Life Science</span><span class="iname">Dr. A. Q. Khan Institute of Biotechnology &amp; Genetic Engineering (KIBGE)</span><span class="iemail">kibge@uok.edu.pk</span></div>
-        <div class="institute-card"><span class="icat">Chemistry</span><span class="iname">Dr. Zafar H. Zaidi Center for Proteomics</span><span class="iemail">ncp@uok.edu.pk</span></div>
-        <div class="institute-card"><span class="icat">Life Science</span><span class="iname">Dr. M. Ajmal Khan Institute of Sustainable Halophyte Utilization</span><span class="iemail">halophyte@uok.edu.pk</span></div>
-        <div class="institute-card"><span class="icat">Health</span><span class="iname">Institute of Clinical Psychology</span><span class="iemail">icp@uok.edu.pk</span></div>
-        <div class="institute-card"><span class="icat">Environment</span><span class="iname">Institute of Environmental Studies</span><span class="iemail">ies@uok.edu.pk</span></div>
-        <div class="institute-card"><span class="icat">Marine Science</span><span class="iname">Institute of Marine Science</span><span class="iemail">ims@uok.edu.pk</span></div>
-        <div class="institute-card"><span class="icat">Space Science</span><span class="iname">Institute of Space Science and Technology</span><span class="iemail">isst@uok.edu.pk</span></div>
+        <a href="inst-chwb.html" class="institute-card"><span class="icat">Health</span><span class="iname">Center for Health and Wellbeing</span><span class="iemail">chwb@uok.edu.pk</span></a>
+        <a href="inst-confucius.html" class="institute-card"><span class="icat">Language &amp; Culture</span><span class="iname">Confucius Institute</span><span class="iemail">ci@uok.edu.pk</span></a>
+        <a href="inst-kibge.html" class="institute-card"><span class="icat">Life Science</span><span class="iname">Dr. A. Q. Khan Institute of Biotechnology &amp; Genetic Engineering (KIBGE)</span><span class="iemail">kibge@uok.edu.pk</span></a>
+        <a href="http://proteomics.edu.pk/" target="_blank" rel="noopener" class="institute-card"><span class="icat">Chemistry</span><span class="iname">Dr. Zafar H. Zaidi Center for Proteomics</span><span class="iemail">ncp@uok.edu.pk</span></a>
+        <a href="http://www.halophyte.org" target="_blank" rel="noopener" class="institute-card"><span class="icat">Life Science</span><span class="iname">Dr. M. Ajmal Khan Institute of Sustainable Halophyte Utilization</span><span class="iemail">halophyte@uok.edu.pk</span></a>
+        <a href="https://icpuok.edu.pk/" target="_blank" rel="noopener" class="institute-card"><span class="icat">Health</span><span class="iname">Institute of Clinical Psychology</span><span class="iemail">icp@uok.edu.pk</span></a>
+        <a href="inst-ies.html" class="institute-card"><span class="icat">Environment</span><span class="iname">Institute of Environmental Studies</span><span class="iemail">ies@uok.edu.pk</span></a>
+        <a href="inst-ims.html" class="institute-card"><span class="icat">Marine Science</span><span class="iname">Institute of Marine Science</span><span class="iemail">ims@uok.edu.pk</span></a>
+        <a href="inst-isst.html" class="institute-card"><span class="icat">Space Science</span><span class="iname">Institute of Space Science and Technology</span><span class="iemail">isst@uok.edu.pk</span></a>
         <div class="institute-card"><span class="icat">Marine Science</span><span class="iname">Marine Reference Collection &amp; Resource Centre</span><span class="iemail">mrcc@uok.edu.pk</span></div>
-        <div class="institute-card"><span class="icat">Agriculture</span><span class="iname">National Nematological Research Centre</span><span class="iemail">nnrc@uok.edu.pk</span></div>
-        <div class="institute-card"><span class="icat">Area Studies</span><span class="iname">Pakistan Study Center</span><span class="iemail">psc@uok.edu.pk</span></div>
-        <div class="institute-card"><span class="icat">Technology</span><span class="iname">Umaer Basha Institute of Technology (UBIT)</span><span class="iemail">dcs@uok.edu.pk</span></div>
+        <a href="inst-nnrc.html" class="institute-card"><span class="icat">Agriculture</span><span class="iname">National Nematological Research Centre</span><span class="iemail">nnrc@uok.edu.pk</span></a>
+        <a href="inst-psc.html" class="institute-card"><span class="icat">Area Studies</span><span class="iname">Pakistan Study Center</span><span class="iemail">psc@uok.edu.pk</span></a>
+        <a href="department-cs.html" class="institute-card"><span class="icat">Technology</span><span class="iname">Umaer Basha Institute of Technology (UBIT)</span><span class="iemail">dcs@uok.edu.pk</span></a>
       </div>
     </div>
   </section>
@@ -205,6 +208,7 @@ footer{padding-top:4.5rem;} .footer-grid{display:grid;grid-template-columns:1.4f
     <div class="footer-col"><h4>Connect</h4><ul><li><a href="index.html">Homepage</a></li><li><a href="journals.html">Journals</a></li><li><a href="contact.html">Contact Us</a></li></ul></div>
   </div>
   <div class="footer-bottom"><span>&copy; 2026 University of Karachi. This site is available in English and Urdu.</span>
+      <span class="dev-credit">Developed by Softsols Pakistan</span>
     <div class="flinks"><a href="#">Accessibility</a><a href="#">Disclaimer</a><a href="#">Sitemap</a><a href="#">Credits</a></div>
   </div>
 </div></footer>

@@ -120,7 +120,9 @@ nav.primary-nav a:hover::after{transform:scaleX(1);} nav.primary-nav a[aria-curr
 .fact-strip .fact:last-child{border-right:none;}
 .fact-strip .fact b{font-family:var(--font-display);font-size:1.15rem;}
 .fact-strip .fact span{font-size:.76rem;color:var(--text-faint);text-transform:uppercase;letter-spacing:.06em;}
+.prose-card{background:var(--bg-elevated);border:1px solid var(--border);border-radius:10px;padding:clamp(1.75rem,4vw,3.25rem);box-shadow:0 1px 2px rgba(27,42,29,.05),0 12px 32px -18px rgba(27,42,29,.22);}
 .prose{max-width:74ch;} .prose p{color:var(--text-soft);margin-bottom:1.1rem;font-size:1.02rem;} .prose p:last-child{margin-bottom:0;}
+.prose p:first-of-type{font-family:var(--font-display);font-style:italic;font-size:1.22rem;line-height:1.55;color:var(--text);}
 .prose h3{font-size:1.15rem;color:var(--text);margin:2rem 0 .8rem;} .prose h3:first-child{margin-top:0;}
 .contact-card{background:var(--bg-elevated);border:1px solid var(--border);border-left:3px solid var(--accent);border-radius:4px;padding:1.9rem;max-width:420px;}
 .contact-card .crole{font-size:.72rem;text-transform:uppercase;letter-spacing:.08em;color:var(--accent-2);font-weight:700;margin-bottom:.6rem;}
@@ -138,6 +140,7 @@ footer{padding-top:4.5rem;} .footer-grid{display:grid;grid-template-columns:1.4f
 @media(max-width:980px){.footer-grid{grid-template-columns:repeat(2,1fr);}} @media(max-width:560px){.footer-grid{grid-template-columns:1fr;}}
 .footer-bottom{border-top:1px solid var(--border-inverse);padding-block:1.6rem;display:flex;justify-content:space-between;align-items:center;gap:1rem;flex-wrap:wrap;font-size:.8rem;color:var(--text-inverse-soft);}
 .footer-bottom .flinks{display:flex;gap:1.3rem;flex-wrap:wrap;} .footer-bottom a{text-decoration:none;color:inherit;} .footer-bottom a:hover{text-decoration:underline;}
+.footer-bottom .dev-credit{color:var(--text-inverse-soft);opacity:.75;font-size:.78rem;}
 .reveal{opacity:0;transform:translateY(16px);transition:opacity .6s ease,transform .6s ease;} .reveal.in{opacity:1;transform:none;}
 </style>
 
@@ -171,14 +174,16 @@ footer{padding-top:4.5rem;} .footer-grid{display:grid;grid-template-columns:1.4f
 
   <section class="section">
     <div class="container">
-      <div class="prose reveal">
-        <p>Physical Education is a way of education by means of physical movement. From Molecular Biology to Material Sciences nothing of value can be expected from a society if the teaching and research in Health and physical education is ignored or if it is relegate to a secondary status.  Being a natural phenomenon, movement is the essence of life and the entire mechanism of human body is geared to it. Experts believe that exercise is also as important as food. While food provides necessary energy for the body, exercise tones up the human organism so that it can utilize this energy in a better way. Since a healthy body is necessary for a healthy mind, physical education as a discipline is more intimately concerned with human development than educational disciplines.</p>
+      <div class="prose-card reveal">
+        <div class="prose">
+          <p>Physical Education is a way of education by means of physical movement. From Molecular Biology to Material Sciences nothing of value can be expected from a society if the teaching and research in Health and physical education is ignored or if it is relegate to a secondary status.  Being a natural phenomenon, movement is the essence of life and the entire mechanism of human body is geared to it. Experts believe that exercise is also as important as food. While food provides necessary energy for the body, exercise tones up the human organism so that it can utilize this energy in a better way. Since a healthy body is necessary for a healthy mind, physical education as a discipline is more intimately concerned with human development than educational disciplines.</p>
         <p>Physical fitness is not only a concept but it reflects a practical approach to human betterment in terms of health. The survival of a nation is undoubtedly dependent on physical fitness which ensures general proficiency in all walks of life, and is inevitably linked with better economic growth. It is needless to emphasize the importance of physical education as a discipline as it already stands recognized at the university level. All the advanced countries, realizing its virtues and benefits, have included this subject as an essential part of curriculum at all levels of education.</p>
         <p>The Department has been working strenuously towards a program of teaching and research to meet the needs of the country in Physical Education &amp; Sports Sciences.</p>
         <h3>Teaching and Assessment</h3>
         <p>The teaching and assessment is done under the Semester System as per Karachi University rules.</p>
         <h3>Career Opportunities</h3>
         <p>The Graduate having a degree of Health and Physical education will be able to play a significant role and positive contribute to generate human resources and to serve various sector of society in general, related to such program in particular, render to educational institutions and sports organizations.</p>
+        </div>
       </div>
     </div>
   </section>
@@ -210,7 +215,7 @@ footer{padding-top:4.5rem;} .footer-grid{display:grid;grid-template-columns:1.4f
     <div class="footer-col"><h4>Administration</h4><ul><li><a href="administration.html">Vice Chancellor</a></li><li><a href="administration.html">Directorates</a></li></ul></div>
     <div class="footer-col"><h4>Connect</h4><ul><li><a href="index.html">Homepage</a></li><li><a href="alumni.html">Alumni</a></li><li><a href="contact.html">Contact Us</a></li></ul></div>
   </div>
-  <div class="footer-bottom"><span>&copy; 2026 University of Karachi. This site is available in English and Urdu.</span>
+  <div class="footer-bottom"><span>&copy; 2026 University of Karachi. This site is available in English and Urdu.</span><span class="dev-credit">Developed by Softsols Pakistan</span>
     <div class="flinks"><a href="#">Accessibility</a><a href="#">Disclaimer</a><a href="#">Sitemap</a><a href="#">Credits</a></div>
   </div>
 </div></footer>

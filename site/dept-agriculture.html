@@ -120,7 +120,9 @@ nav.primary-nav a:hover::after{transform:scaleX(1);} nav.primary-nav a[aria-curr
 .fact-strip .fact:last-child{border-right:none;}
 .fact-strip .fact b{font-family:var(--font-display);font-size:1.15rem;}
 .fact-strip .fact span{font-size:.76rem;color:var(--text-faint);text-transform:uppercase;letter-spacing:.06em;}
+.prose-card{background:var(--bg-elevated);border:1px solid var(--border);border-radius:10px;padding:clamp(1.75rem,4vw,3.25rem);box-shadow:0 1px 2px rgba(27,42,29,.05),0 12px 32px -18px rgba(27,42,29,.22);}
 .prose{max-width:74ch;} .prose p{color:var(--text-soft);margin-bottom:1.1rem;font-size:1.02rem;} .prose p:last-child{margin-bottom:0;}
+.prose p:first-of-type{font-family:var(--font-display);font-style:italic;font-size:1.22rem;line-height:1.55;color:var(--text);}
 .prose h3{font-size:1.15rem;color:var(--text);margin:2rem 0 .8rem;} .prose h3:first-child{margin-top:0;}
 .contact-card{background:var(--bg-elevated);border:1px solid var(--border);border-left:3px solid var(--accent);border-radius:4px;padding:1.9rem;max-width:420px;}
 .contact-card .crole{font-size:.72rem;text-transform:uppercase;letter-spacing:.08em;color:var(--accent-2);font-weight:700;margin-bottom:.6rem;}
@@ -138,6 +140,7 @@ footer{padding-top:4.5rem;} .footer-grid{display:grid;grid-template-columns:1.4f
 @media(max-width:980px){.footer-grid{grid-template-columns:repeat(2,1fr);}} @media(max-width:560px){.footer-grid{grid-template-columns:1fr;}}
 .footer-bottom{border-top:1px solid var(--border-inverse);padding-block:1.6rem;display:flex;justify-content:space-between;align-items:center;gap:1rem;flex-wrap:wrap;font-size:.8rem;color:var(--text-inverse-soft);}
 .footer-bottom .flinks{display:flex;gap:1.3rem;flex-wrap:wrap;} .footer-bottom a{text-decoration:none;color:inherit;} .footer-bottom a:hover{text-decoration:underline;}
+.footer-bottom .dev-credit{color:var(--text-inverse-soft);opacity:.75;font-size:.78rem;}
 .reveal{opacity:0;transform:translateY(16px);transition:opacity .6s ease,transform .6s ease;} .reveal.in{opacity:1;transform:none;}
 </style>
 
@@ -171,8 +174,9 @@ footer{padding-top:4.5rem;} .footer-grid{display:grid;grid-template-columns:1.4f
 
   <section class="section">
     <div class="container">
-      <div class="prose reveal">
-        <p>The department of Agriculture launched its BS-Program in Agriculture in 2004 and acquired the status of the department in 2006. It was renamed as the Department of Agriculture and Agribusiness Management in 2008. The Department offers specializations in “Agribusiness management”, “Plant protection” and “ Plant pathology ”.</p>
+      <div class="prose-card reveal">
+        <div class="prose">
+          <p>The department of Agriculture launched its BS-Program in Agriculture in 2004 and acquired the status of the department in 2006. It was renamed as the Department of Agriculture and Agribusiness Management in 2008. The Department offers specializations in “Agribusiness management”, “Plant protection” and “ Plant pathology ”.</p>
         <p>Agribusiness is an important and ever expanding industry in Pakistan. It combines the study of agricultural sciences with the management skills providing an understanding of economic and business principles and their application to Agribusiness. The program aims to develop a range of personal and transferrable skills along with the critical appreciation of the techniques to assist effective execution of agribusiness management function.</p>
         <p>It cannot be denied that the implementation of proper pest and disease management strategies can be helpful in increasing the crop yield and ultimately boost the economy of the country. The courses offered for specialization in plant pathology or plant protection enable the students to acquire an in-depth knowledge of pest and diseases affecting crops, vegetables, fruits and ornamental plants in the country and make them aware of the management strategies to overcome the problem in an eco-friendly manner.</p>
         <h3>Teaching and Assessment</h3>
@@ -180,6 +184,7 @@ footer{padding-top:4.5rem;} .footer-grid{display:grid;grid-template-columns:1.4f
         <h3>Career Opportunities</h3>
         <p>Specialization in Agribusiness management is helpful in getting jobs in farm business related to national and multinational organizations as managers, consultants, supply chain coordinators and accountants. It also provides an opportunity to enter self-employment immediately after graduating, largely within the farming or food sectors.</p>
         <p>Students specializing in plant protection or plant pathology have job opportunities in various research organizations like Department of plant protection, PARC, PCSIR, NIAB, NIA, ARI etc. They can also get jobs in plant and pesticide related national and multinational organizations or can initiate their own business to provide pest and disease management services to farmers.</p>
+        </div>
       </div>
     </div>
   </section>
@@ -211,7 +216,7 @@ footer{padding-top:4.5rem;} .footer-grid{display:grid;grid-template-columns:1.4f
     <div class="footer-col"><h4>Administration</h4><ul><li><a href="administration.html">Vice Chancellor</a></li><li><a href="administration.html">Directorates</a></li></ul></div>
     <div class="footer-col"><h4>Connect</h4><ul><li><a href="index.html">Homepage</a></li><li><a href="alumni.html">Alumni</a></li><li><a href="contact.html">Contact Us</a></li></ul></div>
   </div>
-  <div class="footer-bottom"><span>&copy; 2026 University of Karachi. This site is available in English and Urdu.</span>
+  <div class="footer-bottom"><span>&copy; 2026 University of Karachi. This site is available in English and Urdu.</span><span class="dev-credit">Developed by Softsols Pakistan</span>
     <div class="flinks"><a href="#">Accessibility</a><a href="#">Disclaimer</a><a href="#">Sitemap</a><a href="#">Credits</a></div>
   </div>
 </div></footer>

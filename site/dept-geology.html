@@ -120,7 +120,9 @@ nav.primary-nav a:hover::after{transform:scaleX(1);} nav.primary-nav a[aria-curr
 .fact-strip .fact:last-child{border-right:none;}
 .fact-strip .fact b{font-family:var(--font-display);font-size:1.15rem;}
 .fact-strip .fact span{font-size:.76rem;color:var(--text-faint);text-transform:uppercase;letter-spacing:.06em;}
+.prose-card{background:var(--bg-elevated);border:1px solid var(--border);border-radius:10px;padding:clamp(1.75rem,4vw,3.25rem);box-shadow:0 1px 2px rgba(27,42,29,.05),0 12px 32px -18px rgba(27,42,29,.22);}
 .prose{max-width:74ch;} .prose p{color:var(--text-soft);margin-bottom:1.1rem;font-size:1.02rem;} .prose p:last-child{margin-bottom:0;}
+.prose p:first-of-type{font-family:var(--font-display);font-style:italic;font-size:1.22rem;line-height:1.55;color:var(--text);}
 .prose h3{font-size:1.15rem;color:var(--text);margin:2rem 0 .8rem;} .prose h3:first-child{margin-top:0;}
 .contact-card{background:var(--bg-elevated);border:1px solid var(--border);border-left:3px solid var(--accent);border-radius:4px;padding:1.9rem;max-width:420px;}
 .contact-card .crole{font-size:.72rem;text-transform:uppercase;letter-spacing:.08em;color:var(--accent-2);font-weight:700;margin-bottom:.6rem;}
@@ -138,6 +140,7 @@ footer{padding-top:4.5rem;} .footer-grid{display:grid;grid-template-columns:1.4f
 @media(max-width:980px){.footer-grid{grid-template-columns:repeat(2,1fr);}} @media(max-width:560px){.footer-grid{grid-template-columns:1fr;}}
 .footer-bottom{border-top:1px solid var(--border-inverse);padding-block:1.6rem;display:flex;justify-content:space-between;align-items:center;gap:1rem;flex-wrap:wrap;font-size:.8rem;color:var(--text-inverse-soft);}
 .footer-bottom .flinks{display:flex;gap:1.3rem;flex-wrap:wrap;} .footer-bottom a{text-decoration:none;color:inherit;} .footer-bottom a:hover{text-decoration:underline;}
+.footer-bottom .dev-credit{color:var(--text-inverse-soft);opacity:.75;font-size:.78rem;}
 .reveal{opacity:0;transform:translateY(16px);transition:opacity .6s ease,transform .6s ease;} .reveal.in{opacity:1;transform:none;}
 </style>
 
@@ -171,12 +174,14 @@ footer{padding-top:4.5rem;} .footer-grid{display:grid;grid-template-columns:1.4f
 
   <section class="section">
     <div class="container">
-      <div class="prose reveal">
-        <p>Thee Department of Geology, University of Karachi is one of the oldest institutes for teaching of geology in Pakistan which started functioning in 1954. The department has a spacious building which contains many laboratories and classrooms. Among the universities of Pakistan, it has one of the most impressive geology museums. This museum houses a large collection of valuable   rocks, fossils and mineral specimen.  For students of geology these serve as reference geological samples. The Department has produced a large number of graduates who hold key positions in national and multinational organizations.</p>
+      <div class="prose-card reveal">
+        <div class="prose">
+          <p>Thee Department of Geology, University of Karachi is one of the oldest institutes for teaching of geology in Pakistan which started functioning in 1954. The department has a spacious building which contains many laboratories and classrooms. Among the universities of Pakistan, it has one of the most impressive geology museums. This museum houses a large collection of valuable   rocks, fossils and mineral specimen.  For students of geology these serve as reference geological samples. The Department has produced a large number of graduates who hold key positions in national and multinational organizations.</p>
         <h3>Career Opportunities</h3>
         <p>BS Degree holders of geology from this university can choose careers as petroleum geologist, engineering geologist, marine geologist, geochemist geophysicist, environmental geologist. In all national and multinational oil companies, a large number of petroleum geologists from Karachi University are engaged in exploration activity. Engineering geologist are required to investigate the foundations for all large civil engineering projects such as dams, motorways, power plants and high rise buildings. Engineering companies and government agencies employ engineering geologist and hydrogeologists for developing groundwater resources, resolving environmental issues and for assisting in better planning.</p>
         <p>Courses in oceanography and marine geology are offered to prepare our graduates to explore ocean resources. They have a career in oceanographic institutes, coastal development authorities and offshore oil exploration companies.</p>
         <p>Geophysics and geochemistry are interdisciplinary sciences. Principles of physics and chemistry are applied in understanding the constitution and the dynamics of the earth. These subjects are for monitoring of environmental problems and essential tools in oil and mineral exploration.</p>
+        </div>
       </div>
     </div>
   </section>
@@ -208,7 +213,7 @@ footer{padding-top:4.5rem;} .footer-grid{display:grid;grid-template-columns:1.4f
     <div class="footer-col"><h4>Administration</h4><ul><li><a href="administration.html">Vice Chancellor</a></li><li><a href="administration.html">Directorates</a></li></ul></div>
     <div class="footer-col"><h4>Connect</h4><ul><li><a href="index.html">Homepage</a></li><li><a href="alumni.html">Alumni</a></li><li><a href="contact.html">Contact Us</a></li></ul></div>
   </div>
-  <div class="footer-bottom"><span>&copy; 2026 University of Karachi. This site is available in English and Urdu.</span>
+  <div class="footer-bottom"><span>&copy; 2026 University of Karachi. This site is available in English and Urdu.</span><span class="dev-credit">Developed by Softsols Pakistan</span>
     <div class="flinks"><a href="#">Accessibility</a><a href="#">Disclaimer</a><a href="#">Sitemap</a><a href="#">Credits</a></div>
   </div>
 </div></footer>

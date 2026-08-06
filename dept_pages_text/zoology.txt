@@ -1,0 +1,111 @@
+URL: https://uok.edu.pk/faculties/zoology/index.php
+
+Department of Zoology
+Email
+Facebook
+MCN
+Sitemap
+Directory
+Call: (9221) 9926 1300-7
+Search
+Home
+About Us
+Campus News
+Policies HEC / Sindh HEC
+Convocation
+Downloads
+Our history
+KURECRUITS
+Map of Pakistan
+Admissions
+Admissions Program 2026
+M.Phil./Ph.D. & M.S./M.D.
+Foreign Students' Policy
+Faculties
+Education
+Engineering
+Islamic Studies
+Law
+Management Sciences
+Medicine
+Pharmacy
+Science
+Arts & Social Sciences
+Institutes / Centers
+Library
+Home
+Digital Library
+Ebrary
+Administration
+Vice Chancellor
+Registrar
+Syndicate Members
+Former Vice Chancellors
+Directorates & Offices
+Examination
+Annual System
+Downloadable Forms
+Common Questions
+Overseas Examination
+Semester System
+Semester Rules Book
+Semester Fee
+Alumni
+Journals
+Home
+Faculties
+Zoology
+Main page
+Department of Zoology
+Main page
+Introduction
+Faculty
+Programs
+Facilities
+Research
+Contact
+Chairman: Prof. Dr. Muhammad Shoaib
+The department of Zoology was established in 1951 and now it holds a pivotal position in the faculty and can also be compared with any department of Zoology elsewhere in and outside Pakistan.  The Department right from its inception has been imparting instruction at B.Sc., BS, and M.Sc. levels, besides providing facilities for post-graduate research leading to M.Phil, and Ph.D. degrees. More than two thousand (2000) research papers have been published by the faculty members in National and International research journals. Various monographs and thirty two books have been published by the faculty members. About 300 students are enrolled each year at various levels in the department including various specializations. Several are being enrolled each year in M.Phil and Ph.D programs.
+Career Opportunities
+The graduates of the department while catering the needs of the education department, where they are readily absorbed as teachers of Zoology in schools, colleges and University also have job opportunities in the department of Agriculture, Plant protection, Fisheries, Zoological Survey, Zoological Gardens Safari parks, Pakistan Council of Scientific and Industrial Research,  National Institute of Oceanography, Pakistan Agricultural Research Council, Wild life conservation and management of WWF, IUCN, Public and Private sectors pathological laboratories.
+About Us
+Downloads
+MCN
+News & Events
+Pension Form
+Semester Fee
+Quick Links
+Affiliation Committee
+Postgraduate Students Portal Registration
+Directorates & offices
+Job Portal
+Student Advisor Office
+Physical Education
+Tenders and Quotations
+Syllabus Undergraduate Program
+Placements and Internships
+Karachi University Journal of Science
+Protection Against Harassment
+Web Links
+Digital Library
+Quality Enhancement Cell
+Karachi University Press
+NAEAC
+Political Map of Pakistan
+© 2026 University of Karachi
+Credits
+Contact us
+Copyright
+Disclaimer
+Maps
+Official Social Media Platforms, University of Karachi
+Tweet
+V.C. Office
+Inquiry Direct: 99261300-07
+Ext: 2219
+Fax: 99261340, 99261330 (P.R.O.)
+Email: vc@uok.edu.pk
+CUMENT_ROOT'];
+$path .= "/footer.htm";
+include_once($path);
+?>

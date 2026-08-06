@@ -120,7 +120,9 @@ nav.primary-nav a:hover::after{transform:scaleX(1);} nav.primary-nav a[aria-curr
 .fact-strip .fact:last-child{border-right:none;}
 .fact-strip .fact b{font-family:var(--font-display);font-size:1.15rem;}
 .fact-strip .fact span{font-size:.76rem;color:var(--text-faint);text-transform:uppercase;letter-spacing:.06em;}
+.prose-card{background:var(--bg-elevated);border:1px solid var(--border);border-radius:10px;padding:clamp(1.75rem,4vw,3.25rem);box-shadow:0 1px 2px rgba(27,42,29,.05),0 12px 32px -18px rgba(27,42,29,.22);}
 .prose{max-width:74ch;} .prose p{color:var(--text-soft);margin-bottom:1.1rem;font-size:1.02rem;} .prose p:last-child{margin-bottom:0;}
+.prose p:first-of-type{font-family:var(--font-display);font-style:italic;font-size:1.22rem;line-height:1.55;color:var(--text);}
 .prose h3{font-size:1.15rem;color:var(--text);margin:2rem 0 .8rem;} .prose h3:first-child{margin-top:0;}
 .contact-card{background:var(--bg-elevated);border:1px solid var(--border);border-left:3px solid var(--accent);border-radius:4px;padding:1.9rem;max-width:420px;}
 .contact-card .crole{font-size:.72rem;text-transform:uppercase;letter-spacing:.08em;color:var(--accent-2);font-weight:700;margin-bottom:.6rem;}
@@ -138,6 +140,7 @@ footer{padding-top:4.5rem;} .footer-grid{display:grid;grid-template-columns:1.4f
 @media(max-width:980px){.footer-grid{grid-template-columns:repeat(2,1fr);}} @media(max-width:560px){.footer-grid{grid-template-columns:1fr;}}
 .footer-bottom{border-top:1px solid var(--border-inverse);padding-block:1.6rem;display:flex;justify-content:space-between;align-items:center;gap:1rem;flex-wrap:wrap;font-size:.8rem;color:var(--text-inverse-soft);}
 .footer-bottom .flinks{display:flex;gap:1.3rem;flex-wrap:wrap;} .footer-bottom a{text-decoration:none;color:inherit;} .footer-bottom a:hover{text-decoration:underline;}
+.footer-bottom .dev-credit{color:var(--text-inverse-soft);opacity:.75;font-size:.78rem;}
 .reveal{opacity:0;transform:translateY(16px);transition:opacity .6s ease,transform .6s ease;} .reveal.in{opacity:1;transform:none;}
 </style>
 
@@ -171,8 +174,9 @@ footer{padding-top:4.5rem;} .footer-grid{display:grid;grid-template-columns:1.4f
 
   <section class="section">
     <div class="container">
-      <div class="prose reveal">
-        <p>Department of Geography is one of the pioneer departments of University of Karachi. It was established in 1952 under the chairmanship of Professor Dr. Manick B. Pithawala. Professor Oscar Schmider was one of the leading German Geographers who served as Chairman in the department. Department has been providing teaching and research in various fields of Geography for the last sixty years. Department has been served by leading Pakistani Geographers who were educated in USA, UK, Germany, India etc. The Department has an excellent academic history. The Department of Geography is the only Department among Universities of Pakistan which hosted International Geography Union (IGU) Conference. More than twenty Professors have served the Department as Chairpersons. Presently Prof. Dr. Sheeba Afsar is Chairperson. The Department has qualified academic staff which includes Professors, Assistant Professors and Visiting Faculty.</p>
+      <div class="prose-card reveal">
+        <div class="prose">
+          <p>Department of Geography is one of the pioneer departments of University of Karachi. It was established in 1952 under the chairmanship of Professor Dr. Manick B. Pithawala. Professor Oscar Schmider was one of the leading German Geographers who served as Chairman in the department. Department has been providing teaching and research in various fields of Geography for the last sixty years. Department has been served by leading Pakistani Geographers who were educated in USA, UK, Germany, India etc. The Department has an excellent academic history. The Department of Geography is the only Department among Universities of Pakistan which hosted International Geography Union (IGU) Conference. More than twenty Professors have served the Department as Chairpersons. Presently Prof. Dr. Sheeba Afsar is Chairperson. The Department has qualified academic staff which includes Professors, Assistant Professors and Visiting Faculty.</p>
         <h3>Career Opportunities</h3>
         <p>Geography graduates with Master's degree generally find useful employment in some major fields, i.e. education, administration, and private organizatio&amp; other cellular companies, K-Electric, SSGC, Archeological Department, Planning Commission, and provincial departments of planning and development have employed geographers for their Geo-Spatial skills. Private firms, and Non-Governmental Organizations i.e. ECIL Consulting Services, Cabernet, Fiber optics, (NGOs) also utilize the expertise of geographers. There are various fields of application in Pakistan where geographer can explore job opportunities successfully to survive and Empowering Communities.</p>
         <h3>Industrial Link</h3>
@@ -214,6 +218,7 @@ footer{padding-top:4.5rem;} .footer-grid{display:grid;grid-template-columns:1.4f
         <p>Geoservices</p>
         <h3>DIAMOND JUBILEE CELEBRATION</h3>
         <p>Department of Geography, University of Karachi is celebrated its Diamond Jubilee from 6th to 8th November 2012, in the Department/University as per deliberations of members of the Organizing Committee and Alumni :: Read More | Ad | Portfolio</p>
+        </div>
       </div>
     </div>
   </section>
@@ -245,7 +250,7 @@ footer{padding-top:4.5rem;} .footer-grid{display:grid;grid-template-columns:1.4f
     <div class="footer-col"><h4>Administration</h4><ul><li><a href="administration.html">Vice Chancellor</a></li><li><a href="administration.html">Directorates</a></li></ul></div>
     <div class="footer-col"><h4>Connect</h4><ul><li><a href="index.html">Homepage</a></li><li><a href="alumni.html">Alumni</a></li><li><a href="contact.html">Contact Us</a></li></ul></div>
   </div>
-  <div class="footer-bottom"><span>&copy; 2026 University of Karachi. This site is available in English and Urdu.</span>
+  <div class="footer-bottom"><span>&copy; 2026 University of Karachi. This site is available in English and Urdu.</span><span class="dev-credit">Developed by Softsols Pakistan</span>
     <div class="flinks"><a href="#">Accessibility</a><a href="#">Disclaimer</a><a href="#">Sitemap</a><a href="#">Credits</a></div>
   </div>
 </div></footer>
