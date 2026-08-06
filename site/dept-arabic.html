@@ -169,7 +169,14 @@ nav.primary-nav .dropdown a:hover { background: var(--bg); color: var(--accent);
   .nav-item { width: 100%; }
   .nav-arrow { padding: .5rem; margin: -.5rem -.5rem -.5rem .25rem; }
 }
+
+.brand img { transition: filter 0.3s ease; }
+@media (prefers-color-scheme: dark) {
+  html:not([data-theme="light"]) .brand img { filter: brightness(0) invert(1); }
+}
+:root[data-theme="dark"] .brand img { filter: brightness(0) invert(1); }
 </style>
+
 
 <a href="#main" class="skip-link">Skip to main content</a>
 <div class="utility-bar"><div class="container">
