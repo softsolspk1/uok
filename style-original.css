@@ -111,6 +111,16 @@ Top Bar & Header
 }
 #nav ul li a:hover { color: var(--accent-copper); }
 
+#nav ul li a.nav-home {
+  font-family: var(--font-heading);
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--primary-dark);
+}
+#nav ul li a.nav-home:hover {
+  color: var(--accent-copper);
+}
+
 .apply-btn-wrapper { margin-left: 10px; }
 .apply-btn-wrapper a.apply-btn {
   background-color: var(--accent-green);
