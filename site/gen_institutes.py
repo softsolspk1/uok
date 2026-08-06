@@ -164,7 +164,7 @@ footer{{padding-top:4.5rem;}} .footer-grid{{display:grid;grid-template-columns:1
 </div></div>
 
 <header class="site-header"><div class="container header-row">
-  <a href="index.html" class="brand"><img src="__LOGO__" alt="University of Karachi crest" /><span class="brand-word"><span class="name">University of Karachi</span><span class="tag">Since 1951 &middot; Karachi, Pakistan</span></span></a>
+  <a href="index.html" class="brand"><img src="__LOGO__" alt="University of Karachi crest" /><span class="brand-word"><span class="name">Home</span></span></a>
   <nav class="primary-nav" id="primary-nav">
     <a href="index.html#about">About</a><a href="faculties.html">Academics</a><a href="admissions.html">Admissions</a>
     <a href="research.html" aria-current="page">Research</a><a href="library.html">Library</a><a href="contact.html">Contact</a>

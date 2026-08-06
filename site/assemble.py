@@ -14,6 +14,7 @@ html = html.replace('__LOGO__', data['logo'])
 html = html.replace('__HERO_UBIT__', data['hero_ubit'])
 html = html.replace('__HERO_CHEM__', data['hero_chem'])
 html = html.replace('__HERO_DPA__', data['hero_dpa'])
+html = html.replace('__HEADER_GATE__', data['header_gate'])
 
 with open('index.html', 'w', encoding='utf-8') as f:
     f.write(html)

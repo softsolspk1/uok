@@ -210,35 +210,40 @@ nav.primary-nav a:hover::after{transform:scaleX(1);}
 .notice-inner .view-all:hover{text-decoration:underline;}
 
 /* ===== About / history ===== */
-.about-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:4rem;align-items:start;}
-.about-grid p{color:var(--text-soft);margin-bottom:1.1rem;font-size:1.02rem;}
-.about-grid p:last-child{margin-bottom:0;}
-.pull-card{
-  background:var(--bg-elevated);border:1px solid var(--border);border-radius:6px;padding:2.4rem;
-  border-left:3px solid var(--accent-2);
+.history-grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:4rem;align-items:center;}
+.history-media{position:relative;}
+.history-media img{width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:10px;border:1px solid var(--border);}
+.history-badge{
+  position:absolute;left:-1.25rem;bottom:-1.25rem;background:var(--bg-inverse);color:var(--text-inverse);
+  border-radius:8px;padding:1.1rem 1.4rem;box-shadow:0 12px 32px -12px rgba(27,42,29,.35);
+  display:flex;align-items:baseline;gap:.6rem;
 }
-.pull-card blockquote{font-family:var(--font-display);font-style:italic;font-size:1.35rem;line-height:1.5;margin:0 0 1.2rem;}
-.pull-card cite{font-style:normal;font-size:.82rem;color:var(--text-faint);}
-@media(max-width:860px){.about-grid{grid-template-columns:1fr;gap:2.5rem;}}
+.history-badge b{font-family:var(--font-display);font-size:2.1rem;font-variant-numeric:tabular-nums;line-height:1;}
+.history-badge span{font-size:.72rem;text-transform:uppercase;letter-spacing:.06em;color:var(--text-inverse-soft);line-height:1.3;}
+.history-copy p{color:var(--text-soft);font-size:1.02rem;margin-bottom:1.6rem;}
+.mini-timeline{display:flex;flex-direction:column;gap:1.1rem;}
+.mt-item{display:grid;grid-template-columns:4.2rem 1fr;gap:1rem;padding-bottom:1.1rem;border-bottom:1px solid var(--border);}
+.mt-item:last-child{border-bottom:none;padding-bottom:0;}
+.mt-year{font-family:var(--font-display);font-weight:700;font-size:1.05rem;color:var(--accent-2);font-variant-numeric:tabular-nums;}
+.mt-item p{color:var(--text-soft);font-size:.92rem;margin:0;}
+@media(max-width:860px){.history-grid{grid-template-columns:1fr;gap:2.5rem;}
+  .history-media img{aspect-ratio:16/9;} .history-badge{left:1rem;bottom:-1rem;}}
+@media(max-width:520px){.mt-item{grid-template-columns:1fr;gap:.3rem;}}
 
-/* ===== Faculties directory ===== */
-.faculty-list{border-top:1px solid var(--border);}
-.faculty-row{
-  display:grid;grid-template-columns:2.2fr 1fr auto;gap:1.5rem;align-items:center;
-  padding:1.35rem 0;border-bottom:1px solid var(--border);text-decoration:none;color:inherit;
+/* ===== Academics grid ===== */
+.academic-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1.25rem;}
+.academic-card{
+  background:var(--bg);border:1px solid var(--border);border-radius:8px;padding:1.7rem 1.5rem;
+  display:flex;flex-direction:column;gap:.5rem;text-decoration:none;color:inherit;
+  transition:border-color .15s,transform .15s,box-shadow .15s;
 }
-.faculty-row:hover .fname{color:var(--accent);}
-.faculty-row .fnum{font-variant-numeric:tabular-nums;color:var(--text-faint);font-size:.85rem;width:1.6rem;}
-.faculty-row .fname{font-family:var(--font-display);font-weight:700;font-size:1.18rem;transition:color .15s;}
-.faculty-row .fdean{font-size:.85rem;color:var(--text-soft);}
-.faculty-row .farrow{color:var(--text-faint);}
-.faculty-row .farrow svg{width:18px;height:18px;}
-.faculty-head-row{display:grid;grid-template-columns:2.2fr 1fr auto;gap:1.5rem;padding-bottom:.7rem;
-  font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;color:var(--text-faint);}
-@media(max-width:700px){
-  .faculty-row,.faculty-head-row{grid-template-columns:1fr auto;}
-  .faculty-row .fdean,.faculty-head-row .col-dean{display:none;}
-}
+.academic-card:hover{border-color:var(--accent);transform:translateY(-3px);box-shadow:0 12px 24px -14px rgba(27,42,29,.28);}
+.academic-card .ac-num{font-family:var(--font-display);font-size:1.5rem;font-weight:700;color:var(--accent-2);opacity:.55;}
+.academic-card .ac-name{font-family:var(--font-display);font-weight:700;font-size:1.12rem;line-height:1.3;}
+.academic-card .ac-count{font-size:.7rem;text-transform:uppercase;letter-spacing:.06em;color:var(--accent);font-weight:700;}
+.academic-card .ac-dean{font-size:.84rem;color:var(--text-soft);margin-top:auto;padding-top:.7rem;border-top:1px solid var(--border);}
+@media(max-width:980px){.academic-grid{grid-template-columns:repeat(2,1fr);}}
+@media(max-width:520px){.academic-grid{grid-template-columns:1fr;}}
 
 /* ===== Research ===== */
 .research-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;margin-top:2.5rem;}
@@ -336,8 +341,7 @@ footer{padding-top:4.5rem;}
     <a href="#" class="brand">
       <img src="__LOGO__" alt="University of Karachi crest" />
       <span class="brand-word">
-        <span class="name">University of Karachi</span>
-        <span class="tag">Since 1951 &middot; Karachi, Pakistan</span>
+        <span class="name">Home</span>
       </span>
     </a>
     <nav class="primary-nav" id="primary-nav">
@@ -361,7 +365,7 @@ footer{padding-top:4.5rem;}
 <main id="main">
 
   <section class="hero">
-    <div class="hero-bg" style="background-image:url('__HERO_UBIT__')"></div>
+    <div class="hero-bg" style="background-image:url('__HEADER_GATE__')"></div>
     <div class="hero-scrim"></div>
     <div class="container hero-inner reveal">
       <div class="hero-eyebrow">
@@ -424,17 +428,33 @@ footer{padding-top:4.5rem;}
 
   <section class="section" id="about">
     <div class="container">
-      <div class="about-grid">
-        <div class="reveal">
-          <div class="eyebrow">Our History</div>
-          <h2 style="margin-top:.9rem;margin-bottom:1.4rem;">Established by an act of parliament, seventy-five years ago.</h2>
-          <p>The University of Karachi was founded under the Karachi University Act, passed on 23 October 1950 and enacted the following year, with Prof. A. B. A. Haleem appointed as its first Vice Chancellor. For its first two years the university existed only to examine the students of Sindh&rsquo;s affiliated colleges &mdash; it began teaching its own students in 1953, opening with two faculties and an intake of fifty.</p>
-          <p>As the young university outgrew its buildings beside Civil Hospital, a 1,279-acre plot on what is now University Road was acquired, and on 18 January 1960 the campus moved to its present site &mdash; a date still marked jointly by alumni associations and the university administration each year.</p>
-          <p>Today it is the largest university in Pakistan: eight faculties, fifty-three departments, and twenty research institutes and centres, serving an enrolment of more than 41,000 students under the guidance of over 700 faculty members.</p>
+      <div class="history-grid">
+        <div class="history-media reveal">
+          <img src="__HERO_UBIT__" alt="University of Karachi campus building, University Road" />
+          <div class="history-badge"><b>75</b><span>Years<br />1951&ndash;2026</span></div>
         </div>
-        <div class="pull-card reveal">
-          <blockquote>&ldquo;For its first two years, the University of Karachi taught no one &mdash; it only examined the affiliated colleges of Sindh, before enrolling a single class of its own in 1953.&rdquo;</blockquote>
-          <cite>From the university&rsquo;s founding years, 1951&ndash;1953</cite>
+        <div class="history-copy reveal">
+          <div class="eyebrow">Our History</div>
+          <h2 style="margin-top:.9rem;margin-bottom:1.2rem;">Established by an act of parliament, seventy-five years ago.</h2>
+          <p>Today the University of Karachi is the largest university in Pakistan: eight faculties, fifty-three departments, and twenty research institutes and centres, serving more than 41,000 students under the guidance of over 700 faculty members.</p>
+          <div class="mini-timeline">
+            <div class="mt-item">
+              <span class="mt-year">1950</span>
+              <p>The Karachi University Act is passed on 23 October, enacted the following year with Prof. A. B. A. Haleem as the university&rsquo;s first Vice Chancellor.</p>
+            </div>
+            <div class="mt-item">
+              <span class="mt-year">1953</span>
+              <p>Teaching begins for the first time &mdash; two faculties, fifty students &mdash; after two years spent solely examining the affiliated colleges of Sindh.</p>
+            </div>
+            <div class="mt-item">
+              <span class="mt-year">1960</span>
+              <p>The campus moves to its 1,279-acre site on University Road, on 18 January &mdash; a date still marked jointly by alumni and the administration each year.</p>
+            </div>
+            <div class="mt-item">
+              <span class="mt-year">2026</span>
+              <p>The Platinum Jubilee: seventy-five years of teaching, research, and public service from the same address.</p>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -447,18 +467,55 @@ footer{padding-top:4.5rem;}
         <h2>Eight faculties. Fifty-three departments.</h2>
         <p>From Natural Product Chemistry to Marine Science, Law to Visual Studies &mdash; degree programs span the full range of a comprehensive research university.</p>
       </div>
-      <div class="faculty-list reveal">
-        <div class="faculty-head-row">
-          <span>Faculty</span><span class="col-dean">Dean</span><span></span>
-        </div>
-        <a href="faculties.html" class="faculty-row"><span class="fnum">01</span><span class="fname">Science &mdash; 21 departments</span><span class="fdean">Prof. Dr. Bilquees Gul</span><span class="farrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a>
-        <a href="faculties.html" class="faculty-row"><span class="fnum">02</span><span class="fname">Arts &amp; Social Sciences</span><span class="fdean">Prof. Dr. Samina Saeed</span><span class="farrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a>
-        <a href="faculties.html" class="faculty-row"><span class="fnum">03</span><span class="fname">Pharmacy &amp; Pharmaceutical Sciences</span><span class="fdean">Prof. Dr. Muhammad Harris Shoaib</span><span class="farrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a>
-        <a href="faculties.html" class="faculty-row"><span class="fnum">04</span><span class="fname">Management &amp; Administrative Sciences</span><span class="fdean">Prof. Dr. Zaeema Asrar Mohiuddin</span><span class="farrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a>
-        <a href="faculties.html" class="faculty-row"><span class="fnum">05</span><span class="fname">Medicine</span><span class="fdean">Prof. Dr. Fareeda Islam</span><span class="farrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a>
-        <a href="faculties.html" class="faculty-row"><span class="fnum">06</span><span class="fname">Law</span><span class="fdean">Barrister Muhammad Sarfaraz Ali Metlo</span><span class="farrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a>
-        <a href="faculties.html" class="faculty-row"><span class="fnum">07</span><span class="fname">Islamic Studies</span><span class="fdean">Prof. Dr. Zahid Ali</span><span class="farrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a>
-        <a href="faculties.html" class="faculty-row"><span class="fnum">08</span><span class="fname">Education</span><span class="fdean">Prof. Dr. Samina Saeed (Officiating)</span><span class="farrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a>
+      <div class="academic-grid reveal">
+        <a href="faculties.html" class="academic-card">
+          <span class="ac-num">01</span>
+          <span class="ac-name">Science</span>
+          <span class="ac-count">21 departments</span>
+          <span class="ac-dean">Prof. Dr. Bilquees Gul</span>
+        </a>
+        <a href="faculties.html" class="academic-card">
+          <span class="ac-num">02</span>
+          <span class="ac-name">Arts &amp; Social Sciences</span>
+          <span class="ac-count">19 departments</span>
+          <span class="ac-dean">Prof. Dr. Samina Saeed</span>
+        </a>
+        <a href="faculties.html" class="academic-card">
+          <span class="ac-num">03</span>
+          <span class="ac-name">Pharmacy &amp; Pharmaceutical Sciences</span>
+          <span class="ac-count">5 departments</span>
+          <span class="ac-dean">Prof. Dr. Muhammad Harris Shoaib</span>
+        </a>
+        <a href="faculties.html" class="academic-card">
+          <span class="ac-num">04</span>
+          <span class="ac-name">Management &amp; Administrative Sciences</span>
+          <span class="ac-count">3 departments</span>
+          <span class="ac-dean">Prof. Dr. Zaeema Asrar Mohiuddin</span>
+        </a>
+        <a href="faculties.html" class="academic-card">
+          <span class="ac-num">05</span>
+          <span class="ac-name">Medicine</span>
+          <span class="ac-count">7 affiliated colleges</span>
+          <span class="ac-dean">Prof. Dr. Fareeda Islam</span>
+        </a>
+        <a href="faculties.html" class="academic-card">
+          <span class="ac-num">06</span>
+          <span class="ac-name">Law</span>
+          <span class="ac-count">School of Law</span>
+          <span class="ac-dean">Barrister Muhammad Sarfaraz Ali Metlo</span>
+        </a>
+        <a href="faculties.html" class="academic-card">
+          <span class="ac-num">07</span>
+          <span class="ac-name">Islamic Studies</span>
+          <span class="ac-count">4 departments</span>
+          <span class="ac-dean">Prof. Dr. Zahid Ali</span>
+        </a>
+        <a href="faculties.html" class="academic-card">
+          <span class="ac-num">08</span>
+          <span class="ac-name">Education</span>
+          <span class="ac-count">3 departments</span>
+          <span class="ac-dean">Prof. Dr. Samina Saeed (Officiating)</span>
+        </a>
       </div>
     </div>
   </section>
