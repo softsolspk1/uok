@@ -78,6 +78,7 @@ header.site-header {
   border: 1px solid var(--border) !important;
   transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1) !important;
   background: var(--bg-elevated) !important;
+  color: var(--text) !important;
 }
 .academic-card:hover, .research-card:hover, .news-card:hover {
   transform: translateY(-8px) scale(1.02) !important;
