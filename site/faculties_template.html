@@ -113,19 +113,43 @@ nav.primary-nav a[aria-current="page"]::after{transform:scaleX(1);}
 .fact-strip .fact:last-child{border-right:none;}
 .fact-strip .fact b{font-family:var(--font-display);font-size:1.2rem;font-variant-numeric:tabular-nums;}
 .fact-strip .fact span{font-size:.76rem;color:var(--text-faint);text-transform:uppercase;letter-spacing:.06em;}
-.faculty-list{border-top:1px solid var(--border);}
-.faculty-row{display:grid;grid-template-columns:2.6fr 1.6fr 1fr auto;gap:1.5rem;align-items:center;padding:1.5rem 0;border-bottom:1px solid var(--border);text-decoration:none;color:inherit;}
-.faculty-row:hover .fname{color:var(--accent);}
-.faculty-row .fnum{font-variant-numeric:tabular-nums;color:var(--text-faint);font-size:.85rem;}
-.faculty-row .fname{font-family:var(--font-display);font-weight:700;font-size:1.22rem;transition:color .15s;}
-.faculty-row .fdean{font-size:.85rem;color:var(--text-soft);}
-.faculty-row .femail{font-size:.8rem;color:var(--accent);}
-.faculty-row .farrow{color:var(--text-faint);}
+.faculty-list{border-top:1px solid var(--border); display: flex; flex-direction: column;}
+.faculty-head-row{display:flex; padding: 15px 0; font-size: 12px; font-weight: 700; color: var(--text-soft); letter-spacing: 1px; text-transform: uppercase;}
+.faculty-head-row > span:first-child { width: 60px; } /* Empty space for number */
+.faculty-head-row .col-faculty { flex-grow: 1; }
+.faculty-head-row .col-dean { width: 250px; }
+.faculty-head-row .col-email { width: 250px; }
+
+.faculty-row{
+  display: flex;
+  align-items: center;
+  padding: 30px 0;
+  border-bottom: 1px solid var(--border);
+  text-decoration: none;
+  transition: all 0.3s ease;
+  position: relative;
+  color: inherit;
+}
+.faculty-row:hover {
+  background-color: var(--bg-elevated);
+  padding-left: 10px;
+  padding-right: 10px;
+  border-radius: 4px;
+  border-bottom-color: transparent;
+}
+.faculty-row .fnum{font-size: 14px; font-weight: 600; color: var(--text-soft); width: 60px;}
+.faculty-row .fname{font-family: var(--font-display); font-size: 24px; font-weight: 700; color: var(--text); flex-grow: 1; transition: color .15s;}
+.faculty-row .fdean{font-size: 14px; color: var(--text-soft); width: 250px; font-weight: 600;}
+.faculty-row .femail{font-size: 14px; color: var(--accent); width: 250px; font-weight: 600;}
+.faculty-row .farrow{font-size: 20px; color: var(--text-faint); transition: transform 0.3s ease;}
+.faculty-row:hover .farrow { transform: translateX(5px); color: var(--accent);}
+.faculty-row:hover .fname { color: var(--accent); }
 .az-link{color:inherit;text-decoration:none;transition:color .15s;} .az-link:hover{color:var(--accent);}
-.faculty-row .farrow svg{width:18px;height:18px;}
-.faculty-head-row{display:grid;grid-template-columns:2.6fr 1.6fr 1fr auto;gap:1.5rem;padding-bottom:.7rem;font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;color:var(--text-faint);}
-@media(max-width:820px){.faculty-row,.faculty-head-row{grid-template-columns:1fr auto;}
-  .faculty-row .fdean,.faculty-row .femail,.faculty-head-row .col-dean,.faculty-head-row .col-email{display:none;}}
+@media(max-width:820px){
+  .faculty-row { flex-wrap: wrap; padding: 15px 0; }
+  .faculty-row .fdean,.faculty-row .femail,.faculty-head-row .col-dean,.faculty-head-row .col-email{display:none;}
+  .faculty-row .fname { font-size: 18px; }
+}
 .cta-band{display:flex;align-items:center;justify-content:space-between;gap:2rem;flex-wrap:wrap;padding:3.2rem 0;}
 .cta-band h3{font-size:1.7rem;}
 .cta-band p{color:var(--text-inverse-soft);margin-top:.4rem;}
@@ -196,15 +220,15 @@ footer{padding-top:4.5rem;}
   <section class="section">
     <div class="container">
       <div class="faculty-list reveal">
-        <div class="faculty-head-row"><span>Faculty</span><span class="col-dean">Dean</span><span class="col-email">Contact</span><span></span></div>
-        <a href="#" class="faculty-row"><span class="fnum">01</span><span class="fname">Science &mdash; 21 departments</span><span class="fdean">Prof. Dr. Bilquees Gul</span><span class="femail">deanscience@uok.edu.pk</span><span class="farrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a>
-        <a href="#" class="faculty-row"><span class="fnum">02</span><span class="fname">Arts &amp; Social Sciences &mdash; 19 departments</span><span class="fdean">Prof. Dr. Samina Saeed</span><span class="femail">deansocialscience@uok.edu.pk</span><span class="farrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a>
-        <a href="#" class="faculty-row"><span class="fnum">03</span><span class="fname">Pharmacy &amp; Pharmaceutical Sciences &mdash; 5 departments</span><span class="fdean">Prof. Dr. Muhammad Harris Shoaib</span><span class="femail">fphar@uok.edu.pk</span><span class="farrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a>
-        <a href="#" class="faculty-row"><span class="fnum">04</span><span class="fname">Management &amp; Administrative Sciences</span><span class="fdean">Prof. Dr. Zaeema Asrar Mohiuddin</span><span class="femail">dfmas@uok.edu.pk</span><span class="farrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a>
-        <a href="#" class="faculty-row"><span class="fnum">05</span><span class="fname">Medicine &mdash; 7 affiliated colleges</span><span class="fdean">Prof. Dr. Fareeda Islam</span><span class="femail">deanmedicine@uok.edu.pk</span><span class="farrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a>
-        <a href="#" class="faculty-row"><span class="fnum">06</span><span class="fname">Law &mdash; School of Law</span><span class="fdean">Barrister Muhammad Sarfaraz Ali Metlo</span><span class="femail">deanlaw@uok.edu.pk</span><span class="farrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a>
-        <a href="#" class="faculty-row"><span class="fnum">07</span><span class="fname">Islamic Studies &mdash; 4 departments</span><span class="fdean">Prof. Dr. Zahid Ali</span><span class="femail">dis@uok.edu.pk</span><span class="farrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a>
-        <a href="department-cs.html" class="faculty-row"><span class="fnum">08</span><span class="fname">Education &mdash; 3 departments</span><span class="fdean">Prof. Dr. Samina Saeed (Officiating)</span><span class="femail">deaneducation@uok.edu.pk</span><span class="farrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a>
+        <div class="faculty-head-row"><span></span><span class="col-faculty">Faculty</span><span class="col-dean">Dean</span><span class="col-email">Contact</span><span></span></div>
+        <a href="#" class="faculty-row"><span class="fnum">01</span><span class="fname">Science &mdash; 21 departments</span><span class="fdean">Prof. Dr. Bilquees Gul</span><span class="femail">deanscience@uok.edu.pk</span><span class="farrow">&rarr;</span></a>
+        <a href="#" class="faculty-row"><span class="fnum">02</span><span class="fname">Arts &amp; Social Sciences &mdash; 19 departments</span><span class="fdean">Prof. Dr. Samina Saeed</span><span class="femail">deansocialscience@uok.edu.pk</span><span class="farrow">&rarr;</span></a>
+        <a href="#" class="faculty-row"><span class="fnum">03</span><span class="fname">Pharmacy &amp; Pharmaceutical Sciences &mdash; 5 departments</span><span class="fdean">Prof. Dr. Muhammad Harris Shoaib</span><span class="femail">fphar@uok.edu.pk</span><span class="farrow">&rarr;</span></a>
+        <a href="#" class="faculty-row"><span class="fnum">04</span><span class="fname">Management &amp; Administrative Sciences</span><span class="fdean">Prof. Dr. Zaeema Asrar Mohiuddin</span><span class="femail">dfmas@uok.edu.pk</span><span class="farrow">&rarr;</span></a>
+        <a href="#" class="faculty-row"><span class="fnum">05</span><span class="fname">Medicine &mdash; 7 affiliated colleges</span><span class="fdean">Prof. Dr. Fareeda Islam</span><span class="femail">deanmedicine@uok.edu.pk</span><span class="farrow">&rarr;</span></a>
+        <a href="#" class="faculty-row"><span class="fnum">06</span><span class="fname">Law &mdash; School of Law</span><span class="fdean">Barrister Muhammad Sarfaraz Ali Metlo</span><span class="femail">deanlaw@uok.edu.pk</span><span class="farrow">&rarr;</span></a>
+        <a href="#" class="faculty-row"><span class="fnum">07</span><span class="fname">Islamic Studies &mdash; 4 departments</span><span class="fdean">Prof. Dr. Zahid Ali</span><span class="femail">dis@uok.edu.pk</span><span class="farrow">&rarr;</span></a>
+        <a href="department-cs.html" class="faculty-row"><span class="fnum">08</span><span class="fname">Education &mdash; 3 departments</span><span class="fdean">Prof. Dr. Samina Saeed (Officiating)</span><span class="femail">deaneducation@uok.edu.pk</span><span class="farrow">&rarr;</span></a>
       </div>
     </div>
   </section>
