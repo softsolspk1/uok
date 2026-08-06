@@ -97,6 +97,21 @@ footer{padding-top:4.5rem;} .footer-grid{display:grid;grid-template-columns:1.4f
 .footer-bottom .flinks{display:flex;gap:1.3rem;flex-wrap:wrap;}
 .footer-bottom .dev-credit{color:var(--text-inverse-soft);opacity:.75;font-size:.78rem;} .footer-bottom a{text-decoration:none;color:inherit;} .footer-bottom a:hover{text-decoration:underline;}
 .reveal{opacity:0;transform:translateY(16px);transition:opacity .6s ease,transform .6s ease;} .reveal.in{opacity:1;transform:none;}
+
+.nav-item { position: relative; }
+.nav-item > a { display: flex; align-items: center; gap: 4px; }
+.nav-arrow { font-size: 0.7em; opacity: 0.7; transition: transform 0.2s; }
+.dropdown { position: absolute; top: 100%; left: 0; background: var(--bg-elevated); min-width: 220px; box-shadow: var(--shadow); border: 1px solid var(--border); border-radius: 6px; padding: 0.5rem 0; opacity: 0; visibility: hidden; transform: translateY(10px); transition: all 0.2s ease; z-index: 100; display: flex; flex-direction: column; }
+.nav-item:hover .dropdown { opacity: 1; visibility: visible; transform: translateY(0); }
+.nav-item:hover .nav-arrow { transform: rotate(180deg); }
+nav.primary-nav .dropdown a { padding: 0.6rem 1.2rem; font-size: 0.9rem; color: var(--text-soft); font-weight: 500; width: 100%; border-bottom: none; }
+nav.primary-nav .dropdown a::after { display: none; }
+nav.primary-nav .dropdown a:hover { background: var(--bg); color: var(--accent); transform: none; }
+@media (max-width: 980px) {
+  .dropdown { position: static; box-shadow: none; border: none; padding: 0; min-width: 100%; opacity: 1; visibility: visible; transform: none; display: none; margin-top: 0.5rem; margin-left: 1rem; border-left: 2px solid var(--border); border-radius: 0; }
+  .nav-item:hover .dropdown { display: flex; }
+  .nav-item { width: 100%; }
+}
 </style>
 
 <a href="#main" class="skip-link">Skip to main content</a>
@@ -109,10 +124,52 @@ footer{padding-top:4.5rem;} .footer-grid{display:grid;grid-template-columns:1.4f
 <header class="site-header"><div class="container header-row">
   <a href="index.html" class="brand"><img src="__LOGO__" alt="University of Karachi crest" /></a>
   <nav class="primary-nav" id="primary-nav">
+  <div class="nav-item">
     <a href="https://uok-demo.vercel.app/">Home</a>
-    <a href="index.html#about">About</a><a href="faculties.html">Academics</a><a href="admissions.html">Admissions</a>
-    <a href="research.html">Research</a><a href="#" aria-current="page">Library</a><a href="contact.html">Contact</a>
-  </nav>
+  </div>
+  <div class="nav-item">
+    <a href="index.html#about">About <span class="nav-arrow">&#9662;</span></a>
+    <div class="dropdown">
+      <a href="index.html#about">About the University</a>
+      <a href="administration.html">Administration</a>
+    </div>
+  </div>
+  <div class="nav-item">
+    <a href="faculties.html">Academics <span class="nav-arrow">&#9662;</span></a>
+    <div class="dropdown">
+      <a href="faculties.html">Faculties & Departments</a>
+      <a href="examinations.html">Examinations</a>
+      <a href="journals.html">Journals</a>
+    </div>
+  </div>
+  <div class="nav-item">
+    <a href="admissions.html">Admissions <span class="nav-arrow">&#9662;</span></a>
+    <div class="dropdown">
+      <a href="admissions.html">Admissions Info</a>
+      <a href="prospectus.html">Prospectus</a>
+      <a href="student-portal.html">Student Portal</a>
+    </div>
+  </div>
+  <div class="nav-item">
+    <a href="research.html">Research <span class="nav-arrow">&#9662;</span></a>
+    <div class="dropdown">
+      <a href="research.html">Research & Institutes</a>
+    </div>
+  </div>
+  <div class="nav-item">
+    <a href="library.html">Library</a>
+  </div>
+  <div class="nav-item">
+    <a href="index.html#news">News</a>
+  </div>
+  <div class="nav-item">
+    <a href="contact.html">Contact <span class="nav-arrow">&#9662;</span></a>
+    <div class="dropdown">
+      <a href="contact.html">Contact Us</a>
+      <a href="alumni.html">Alumni</a>
+    </div>
+  </div>
+</nav>
   <div class="header-actions"><a href="admissions.html" class="btn btn-primary">Apply Now</a>
     <button class="menu-toggle" id="menu-toggle" aria-expanded="false" aria-controls="primary-nav" aria-label="Toggle navigation menu"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg></button>
   </div>
