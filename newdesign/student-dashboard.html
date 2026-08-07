@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Student Dashboard — University of Karachi Portal (Demo)</title>
+  <meta name="description" content="Student portal dashboard for the University of Karachi — a demonstration interface showing courses, CGPA, attendance, fees, exams and library account with sample data." />
+  <meta name="theme-color" content="#0e1e3a" />
+  <meta name="robots" content="noindex" />
+  <link rel="icon" href="assets/favicon.ico" sizes="any" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body class="dash-body">
+  <a class="skip-link" href="#dash">Skip to dashboard</a>
+  <div class="demo-ribbon"><strong>Demonstration interface.</strong> This is a static UI concept for a student portal. All names, IDs, grades and records below are illustrative sample data — not real student records.</div>
+
+  <!-- ============================ HEADER (shared) ============================ -->
+  <header class="site-header">
+    <div class="util-bar">
+      <div class="container">
+        <nav class="util-links" aria-label="Utility">
+          <a href="index.html">Home</a>
+          <a href="index.html#academics">Faculties</a>
+          <a href="index.html#library">Library</a>
+          <a href="index.html#news">Campus News</a>
+          <a href="index.html#footer-contact">Directory</a>
+        </nav>
+        <div class="util-right">
+          <span class="util-phone">Signed in as a student</span>
+          <div class="util-portals">
+            <a href="student-dashboard.html" aria-current="page">Student&nbsp;Portal</a>
+            <a href="faculty-dashboard.html">Faculty&nbsp;Portal</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="nav-main">
+      <div class="container nav-inner">
+        <a class="brand" href="index.html" aria-label="University of Karachi — home">
+          <img src="assets/logo.png" alt="University of Karachi" width="239" height="66" />
+        </a>
+        <nav class="nav-links" id="primary-nav" aria-label="Primary">
+          <div class="nav-item"><a class="nav-link" href="#dash">Overview</a></div>
+          <div class="nav-item"><a class="nav-link" href="#courses">Courses</a></div>
+          <div class="nav-item"><a class="nav-link" href="#exams">Exams</a></div>
+          <div class="nav-item"><a class="nav-link" href="#fees">Fees</a></div>
+          <div class="nav-item"><a class="nav-link" href="#library">Library</a></div>
+          <div class="nav-item"><a class="nav-link" href="index.html">Main site</a></div>
+        </nav>
+        <div class="nav-cta">
+          <a class="btn btn--gold" href="index.html">Sign out</a>
+          <button class="nav-toggle" aria-label="Open menu" aria-controls="primary-nav" aria-expanded="false"><span></span></button>
+        </div>
+      </div>
+    </div>
+  </header>
+  <div class="nav-backdrop" hidden aria-hidden="true"></div>
+
+  <!-- ============================ DASH HERO ============================ -->
+  <section class="dash-hero" id="dash">
+    <div class="container dash-hero__inner">
+      <div class="dash-hello">
+        <div class="dash-avatar" aria-hidden="true">AK</div>
+        <div>
+          <div class="greet">Welcome back</div>
+          <h1>Ayesha Khan</h1>
+          <div class="sub">BS Computer Science · UBIT, Faculty of Science · Roll No <span>B21102045</span> · Semester 6</div>
+        </div>
+      </div>
+      <div class="dash-term">
+        <div class="k">Current term</div>
+        <div class="v">Fall 2026</div>
+        <div class="k" style="margin-top:.6rem">Enrolment status</div>
+        <div class="v" style="font-size:1rem"><span class="pill pill--ok">Registered</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================ DASH MAIN ============================ -->
+  <div class="dash-main">
+    <div class="container">
+
+      <!-- KPI row -->
+      <div class="kpi-row">
+        <div class="kpi"><div class="k">Cumulative GPA</div><div class="v">3.62<small> / 4.0</small></div><div class="t">▲ 0.08 vs last term</div></div>
+        <div class="kpi"><div class="k">Credits earned</div><div class="v">96<small> / 133</small></div><div class="t">72% toward degree</div></div>
+        <div class="kpi"><div class="k">Enrolled credits</div><div class="v">17<small> hrs</small></div><div class="t">6 courses this term</div></div>
+        <div class="kpi"><div class="k">Attendance</div><div class="v">88<small>%</small></div><div class="t">Above 75% requirement</div></div>
+      </div>
+
+      <div class="dash-grid" style="margin-top:1.5rem">
+        <!-- LEFT COLUMN -->
+        <div>
+          <!-- Courses -->
+          <section class="card" id="courses" aria-labelledby="courses-h">
+            <div class="card__head"><h2 id="courses-h">Enrolled courses · Fall 2026</h2><a class="link" href="#courses">Registration</a></div>
+            <div class="table-scroll">
+              <table class="dtable">
+                <thead>
+                  <tr><th>Code</th><th>Course</th><th>Cr</th><th>Instructor</th><th>Schedule</th><th>Att.</th></tr>
+                </thead>
+                <tbody>
+                  <tr><td class="course-code">CS-306</td><td>Design &amp; Analysis of Algorithms</td><td>3</td><td class="muted">Dr. Imran Sheikh</td><td class="muted">Mon/Wed · 09:00</td><td><span class="pill pill--ok">92%</span></td></tr>
+                  <tr><td class="course-code">CS-312</td><td>Database Systems</td><td>3</td><td class="muted">Ms. Sana Yusuf</td><td class="muted">Tue/Thu · 11:00</td><td><span class="pill pill--ok">88%</span></td></tr>
+                  <tr><td class="course-code">CS-318</td><td>Computer Networks</td><td>3</td><td class="muted">Dr. Kamran Ali</td><td class="muted">Mon/Wed · 12:30</td><td><span class="pill pill--warn">79%</span></td></tr>
+                  <tr><td class="course-code">SE-322</td><td>Software Engineering</td><td>3</td><td class="muted">Mr. Faisal Raza</td><td class="muted">Wed/Fri · 10:00</td><td><span class="pill pill--ok">95%</span></td></tr>
+                  <tr><td class="course-code">CS-330</td><td>Artificial Intelligence</td><td>3</td><td class="muted">Dr. Nadia Iqbal</td><td class="muted">Tue/Thu · 14:00</td><td><span class="pill pill--ok">84%</span></td></tr>
+                  <tr><td class="course-code">ENG-201</td><td>Technical &amp; Business Writing</td><td>2</td><td class="muted">Ms. Hina Baig</td><td class="muted">Fri · 09:00</td><td><span class="pill pill--ok">100%</span></td></tr>
+                </tbody>
+              </table>
+            </div>
+          </section>
+
+          <!-- Attendance detail -->
+          <section class="card" aria-labelledby="att-h">
+            <div class="card__head"><h3 id="att-h">Attendance snapshot</h3><a class="link" href="#att-h">Full record</a></div>
+            <div class="attend-row"><span class="name">Overall this semester</span><span class="pct">88%</span><span class="bar"><span style="width:88%"></span></span></div>
+            <div class="attend-row"><span class="name">Computer Networks (CS-318)</span><span class="pct">79%</span><span class="bar"><span style="width:79%"></span></span></div>
+            <div class="attend-row"><span class="name">Artificial Intelligence (CS-330)</span><span class="pct">84%</span><span class="bar"><span style="width:84%"></span></span></div>
+            <p style="font-size:var(--fs-sm);color:var(--slate-2);margin:.25rem 0 0">A minimum of 75% attendance per course is required to be eligible to sit final examinations.</p>
+          </section>
+
+          <!-- Exam schedule -->
+          <section class="card" id="exams" aria-labelledby="exam-h">
+            <div class="card__head"><h3 id="exam-h">Mid-term examination schedule</h3><a class="link" href="#exams">Download slip</a></div>
+            <div class="table-scroll">
+              <table class="dtable">
+                <thead><tr><th>Date</th><th>Course</th><th>Time</th><th>Venue</th></tr></thead>
+                <tbody>
+                  <tr><td class="course-code">Nov 10</td><td>Design &amp; Analysis of Algorithms</td><td class="muted">09:00–11:00</td><td class="muted">UBIT Exam Hall A</td></tr>
+                  <tr><td class="course-code">Nov 12</td><td>Database Systems</td><td class="muted">09:00–11:00</td><td class="muted">UBIT Exam Hall B</td></tr>
+                  <tr><td class="course-code">Nov 14</td><td>Computer Networks</td><td class="muted">12:00–14:00</td><td class="muted">UBIT Exam Hall A</td></tr>
+                  <tr><td class="course-code">Nov 17</td><td>Artificial Intelligence</td><td class="muted">09:00–11:00</td><td class="muted">Centralized Lab Block</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </section>
+        </div>
+
+        <!-- RIGHT COLUMN -->
+        <aside aria-label="Account summary">
+          <!-- Fees -->
+          <section class="card" id="fees" aria-labelledby="fee-h">
+            <div class="card__head"><h3 id="fee-h">Fee &amp; dues status</h3></div>
+            <div style="display:flex;align-items:center;justify-content:space-between;gap:1rem;margin-bottom:1rem">
+              <div><div style="font-size:var(--fs-xs);color:var(--slate-2);text-transform:uppercase;letter-spacing:.06em">Fall 2026 semester fee</div><div style="font-family:var(--serif);font-size:1.6rem;color:var(--ink)">Rs 43,750</div></div>
+              <span class="pill pill--ok">Paid</span>
+            </div>
+            <div style="display:flex;align-items:center;justify-content:space-between;gap:1rem;padding-top:1rem;border-top:1px solid var(--line-2)">
+              <div><div style="font-size:var(--fs-xs);color:var(--slate-2);text-transform:uppercase;letter-spacing:.06em">Outstanding dues</div><div style="font-family:var(--serif);font-size:1.6rem;color:var(--ink)">Rs 0</div></div>
+              <span class="pill pill--info">Clear</span>
+            </div>
+            <a class="btn btn--ghost" href="#fees" style="width:100%;justify-content:center;margin-top:1.25rem">Generate fee voucher</a>
+          </section>
+
+          <!-- Library -->
+          <section class="card" id="library" aria-labelledby="lib-h">
+            <div class="card__head"><h3 id="lib-h">Library account</h3><a class="link" href="index.html#library">Catalogue</a></div>
+            <ul class="mini-list">
+              <li><span><span class="ml-name">Introduction to Algorithms</span><br /><span class="ml-sub">Cormen et al. · due in 2 days</span></span><span class="pill pill--warn">Due soon</span></li>
+              <li><span><span class="ml-name">Computer Networking: A Top-Down Approach</span><br /><span class="ml-sub">Kurose &amp; Ross · due in 9 days</span></span><span class="pill pill--ok">On loan</span></li>
+              <li><span><span class="ml-name">Artificial Intelligence: A Modern Approach</span><br /><span class="ml-sub">Russell &amp; Norvig · due in 12 days</span></span><span class="pill pill--ok">On loan</span></li>
+            </ul>
+            <p style="font-size:var(--fs-sm);color:var(--slate-2);margin:.75rem 0 0">3 of 5 borrowing slots in use · Dr. Mahmud Husain Library</p>
+          </section>
+
+          <!-- Announcements -->
+          <section class="card" aria-labelledby="ann-h">
+            <div class="card__head"><h3 id="ann-h">Announcements</h3></div>
+            <ul class="feed">
+              <li><span class="fdate"><span class="d">04</span><span class="m">Nov</span></span><span><span class="ftitle">Mid-term date sheet published</span><span class="fmeta">UBIT · Examinations</span></span></li>
+              <li><span class="fdate"><span class="d">01</span><span class="m">Nov</span></span><span><span class="ftitle">Spring 2027 course pre-registration opens</span><span class="fmeta">Registrar's Office</span></span></li>
+              <li><span class="fdate"><span class="d">28</span><span class="m">Oct</span></span><span><span class="ftitle">Guest lecture: Machine Learning in Practice</span><span class="fmeta">Dept. of Computer Science</span></span></li>
+            </ul>
+          </section>
+
+          <!-- Quick links -->
+          <section class="card" aria-labelledby="ql-h">
+            <div class="card__head"><h3 id="ql-h">Quick links</h3></div>
+            <div class="qlinks">
+              <a class="qlink" href="#courses"><span class="qi" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M4 5h16v14H4z" stroke="currentColor" stroke-width="1.8"/><path d="M8 9h8M8 13h5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></span>Course registration</a>
+              <a class="qlink" href="#dash"><span class="qi" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M6 3h9l5 5v13H6z" stroke="currentColor" stroke-width="1.8"/><path d="M14 3v5h5" stroke="currentColor" stroke-width="1.8"/></svg></span>Transcript request</a>
+              <a class="qlink" href="#fees"><span class="qi" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><rect x="3" y="6" width="18" height="12" rx="2" stroke="currentColor" stroke-width="1.8"/><path d="M3 10h18" stroke="currentColor" stroke-width="1.8"/></svg></span>Fee voucher</a>
+              <a class="qlink" href="#exams"><span class="qi" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><rect x="4" y="5" width="16" height="16" rx="2" stroke="currentColor" stroke-width="1.8"/><path d="M8 3v4M16 3v4M4 10h16" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></span>Timetable</a>
+            </div>
+          </section>
+        </aside>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============================ FOOTER (shared, condensed) ============================ -->
+  <footer class="site-footer">
+    <div class="footer-top">
+      <div class="container footer-grid">
+        <div class="footer-brand">
+          <img src="assets/logo.png" alt="University of Karachi" width="239" height="66" />
+          <p>Pakistan's largest university — teaching, research and service from a 1,279-acre campus since 1951.</p>
+          <address class="addr">University Road, Karachi 75270, Sindh, Pakistan<br />Tel: +92&nbsp;21&nbsp;9926&nbsp;1300&#8209;07</address>
+        </div>
+        <nav class="fcol" aria-label="Student"><h4>Student</h4><ul><li><a href="#courses">Courses</a></li><li><a href="#exams">Examinations</a></li><li><a href="#fees">Fees &amp; vouchers</a></li><li><a href="index.html#library">Library</a></li></ul></nav>
+        <nav class="fcol" aria-label="Support"><h4>Support</h4><ul><li><a href="index.html#footer-contact">Student Advisor</a></li><li><a href="index.html#footer-contact">Counselling</a></li><li><a href="index.html#footer-contact">Finance aid</a></li><li><a href="index.html#footer-contact">IT help desk</a></li></ul></nav>
+        <nav class="fcol" aria-label="University"><h4>University</h4><ul><li><a href="index.html">Home</a></li><li><a href="index.html#academics">Faculties</a></li><li><a href="index.html#research">Research</a></li><li><a href="index.html#admissions">Admissions</a></li></ul></nav>
+        <nav class="fcol" aria-label="Portals"><h4>Portals</h4><ul><li><a href="student-dashboard.html">Student Portal</a></li><li><a href="faculty-dashboard.html">Faculty Portal</a></li><li><a href="index.html#library">Digital Library</a></li></ul></nav>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <div>© <span data-year>2026</span> University of Karachi · Student Portal (demonstration)</div>
+      <nav class="footer-legal" aria-label="Legal"><a href="index.html#footer-contact">Contact</a><a href="index.html#footer-contact">Privacy</a><a href="index.html">Main site</a></nav>
+    </div>
+  </footer>
+
+  <script src="js/main.js" defer></script>
+</body>
+</html>

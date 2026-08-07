@@ -1,0 +1,194 @@
+/* ==========================================================================
+   UOK Custom — supplemental styles layered on top of the Blue University Two
+   template's main.css. Reuses the template's existing CSS custom properties
+   (--rs-theme-blue, --rs-yellow, --rs-ff-title, --rs-ff-body, etc.) so every
+   addition here stays visually consistent with the template's own palette
+   and type system.
+   ========================================================================== */
+
+/* ---- Page hero / breadcrumb (inner pages don't exist in the saved
+   template file, so this reuses the same blue gradient + yellow accent
+   language as the homepage banner/funfact sections) ---- */
+.uok-hero{
+  position:relative;
+  padding:180px 0 90px;
+  background:linear-gradient(115deg, var(--rs-theme-blue-two) 0%, var(--rs-theme-blue) 55%, #0c4f86 100%);
+  color:#fff;
+  overflow:hidden;
+}
+.uok-hero.has-photo{background-size:cover;background-position:center;}
+.uok-hero.has-photo::before{
+  content:"";position:absolute;inset:0;
+  background:linear-gradient(115deg, rgba(7,41,77,.92) 10%, rgba(0,58,101,.82) 60%, rgba(0,58,101,.55) 100%);
+}
+.uok-hero .container{position:relative;z-index:2;}
+.uok-breadcrumb{display:flex;align-items:center;gap:8px;font-size:14px;color:rgba(255,255,255,.75);margin-bottom:18px;font-family:var(--rs-ff-body);}
+.uok-breadcrumb a{color:rgba(255,255,255,.75);text-decoration:none;transition:color .2s;}
+.uok-breadcrumb a:hover{color:var(--rs-yellow);}
+.uok-breadcrumb .sep{opacity:.6;}
+.uok-breadcrumb .current{color:var(--rs-yellow);}
+.uok-hero h1{
+  font-family:var(--rs-ff-title);
+  font-weight:700;
+  font-size:clamp(2rem,4vw,3rem);
+  line-height:1.2;
+  margin:0 0 16px;
+  color:#fff;
+}
+.uok-hero p.lead{
+  font-family:var(--rs-ff-body);
+  font-size:18px;
+  line-height:1.7;
+  color:rgba(255,255,255,.85);
+  max-width:60ch;
+  margin:0;
+}
+.uok-hero .uok-eyebrow{
+  display:inline-block;
+  font-family:var(--rs-ff-body);
+  font-size:13px;
+  letter-spacing:.08em;
+  text-transform:uppercase;
+  color:var(--rs-yellow);
+  font-weight:600;
+  margin-bottom:14px;
+}
+
+/* ---- Simple stat strip for inner pages (lighter than the homepage
+   rs-funfact-area, no icons required) ---- */
+.uok-stat-row{display:flex;flex-wrap:wrap;gap:36px;margin-top:34px;}
+.uok-stat-row .stat b{display:block;font-family:var(--rs-ff-title);font-size:1.9rem;font-weight:700;color:var(--rs-yellow);line-height:1;}
+.uok-stat-row .stat span{display:block;margin-top:6px;font-family:var(--rs-ff-body);font-size:13px;color:rgba(255,255,255,.75);}
+
+/* ---- Section shell used across inner pages ---- */
+.uok-section{padding:90px 0;}
+.uok-section.bg-alt{background:var(--rs-bg-secondary,#F4F3F3);}
+.uok-section-head{max-width:720px;margin:0 0 46px;}
+.uok-section-head.center{margin-left:auto;margin-right:auto;text-align:center;}
+
+/* ---- A–Z department directory ---- */
+.uok-az-grid{columns:4;column-gap:2rem;font-family:var(--rs-ff-body);}
+.uok-az-grid a,.uok-az-grid span{
+  display:block;break-inside:avoid;padding:.55rem 0;
+  border-bottom:1px solid var(--rs-border-primary,#E4E4E4);
+  color:var(--rs-text-primary);text-decoration:none;font-size:.95rem;
+  transition:color .2s,padding-left .2s;
+}
+.uok-az-grid span{color:var(--rs-text-secondary);}
+.uok-az-grid a:hover{color:var(--rs-theme-blue);padding-left:6px;}
+.uok-az-grid a.is-live{color:var(--rs-theme-blue);font-weight:700;}
+.uok-az-grid a.is-live::after{content:" \2192";}
+@media(max-width:991px){.uok-az-grid{columns:2;}}
+@media(max-width:575px){.uok-az-grid{columns:1;}}
+
+/* ---- Faculty / Institute card grid (non-swiper alternative to the
+   template's carousel components, using the same visual language) ---- */
+.uok-card-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;}
+@media(max-width:1199px){.uok-card-grid{grid-template-columns:repeat(3,1fr);}}
+@media(max-width:767px){.uok-card-grid{grid-template-columns:repeat(2,1fr);}}
+@media(max-width:480px){.uok-card-grid{grid-template-columns:1fr;}}
+
+/* Faculty photo cards (real campus photos where available, styled
+   gradient fallback where no real photo exists for that faculty) */
+.uok-fac-card{
+  position:relative;display:block;height:230px;border-radius:6px;overflow:hidden;
+  background-size:cover;background-position:center;text-decoration:none;
+  background-color:var(--rs-theme-blue);transition:transform .25s ease,box-shadow .25s ease;
+}
+.uok-fac-card:hover{transform:translateY(-5px);box-shadow:0 16px 34px rgba(7,41,77,.28);}
+.uok-fac-card .ov{position:absolute;inset:0;background:linear-gradient(180deg,rgba(7,41,77,.1) 0%,rgba(4,24,46,.92) 100%);}
+.uok-fac-card.no-photo{background-image:linear-gradient(135deg,var(--rs-theme-blue) 0%,var(--rs-theme-blue-two) 100%);}
+.uok-fac-card.no-photo .ov{background:none;}
+.uok-fac-card .info{position:absolute;left:20px;right:20px;bottom:18px;color:#fff;}
+.uok-fac-card .name{display:block;font-family:var(--rs-ff-title);font-weight:700;font-size:1.15rem;line-height:1.3;}
+.uok-fac-card .sub{display:block;font-size:.78rem;color:rgba(255,255,255,.75);margin-top:6px;}
+
+.uok-inst-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;}
+@media(max-width:991px){.uok-inst-grid{grid-template-columns:repeat(2,1fr);}}
+@media(max-width:575px){.uok-inst-grid{grid-template-columns:1fr;}}
+.uok-inst-card{
+  display:flex;flex-direction:column;gap:8px;
+  background:#fff;border:1px solid var(--rs-border-primary,#E4E4E4);border-radius:6px;
+  padding:24px;text-decoration:none;transition:box-shadow .2s,transform .2s,border-color .2s;
+}
+.uok-inst-card:hover{transform:translateY(-3px);border-color:var(--rs-theme-blue);box-shadow:0 12px 30px rgba(0,58,101,.12);}
+.uok-inst-card .cat{font-family:var(--rs-ff-body);font-size:11px;text-transform:uppercase;letter-spacing:.06em;color:var(--rs-yellow);font-weight:700;}
+.uok-inst-card .name{font-family:var(--rs-ff-title);font-weight:700;font-size:1.02rem;line-height:1.4;color:var(--rs-title-tertiary);}
+.uok-inst-card .mail{font-family:var(--rs-ff-body);font-size:13px;color:var(--rs-theme-blue);}
+.uok-inst-card.is-muted{opacity:.72;cursor:default;}
+.uok-inst-card.is-muted:hover{transform:none;box-shadow:none;border-color:var(--rs-border-primary,#E4E4E4);}
+
+/* ---- Directory / contact tables ---- */
+.uok-table-wrap{overflow-x:auto;border:1px solid var(--rs-border-primary,#E4E4E4);border-radius:6px;}
+table.uok-table{width:100%;border-collapse:collapse;font-family:var(--rs-ff-body);font-size:14px;min-width:640px;}
+table.uok-table th{
+  text-align:left;background:var(--rs-theme-blue);color:#fff;padding:14px 18px;
+  font-size:12px;text-transform:uppercase;letter-spacing:.05em;font-weight:600;
+}
+table.uok-table td{padding:14px 18px;border-top:1px solid var(--rs-border-primary,#E4E4E4);vertical-align:top;}
+table.uok-table tr:nth-child(even) td{background:#FAFAF8;}
+table.uok-table a{color:var(--rs-theme-blue);text-decoration:none;font-weight:600;}
+table.uok-table a:hover{color:var(--rs-yellow-two,#F69C00);}
+.uok-off{font-weight:700;color:var(--rs-title-tertiary);}
+
+/* ---- Timeline ---- */
+.uok-timeline{position:relative;padding-left:32px;border-left:3px solid var(--rs-theme-blue);}
+.uok-timeline .item{position:relative;padding-bottom:36px;}
+.uok-timeline .item:last-child{padding-bottom:0;}
+.uok-timeline .item::before{
+  content:"";position:absolute;left:-40px;top:2px;width:16px;height:16px;border-radius:50%;
+  background:var(--rs-yellow);border:3px solid var(--rs-theme-blue);
+}
+.uok-timeline .year{font-family:var(--rs-ff-title);font-weight:700;color:var(--rs-theme-blue);font-size:1.1rem;margin-bottom:6px;}
+.uok-timeline h4{font-family:var(--rs-ff-title);font-size:1.1rem;margin:0 0 6px;color:var(--rs-title-tertiary);}
+.uok-timeline p{font-family:var(--rs-ff-body);color:var(--rs-text-secondary);margin:0;line-height:1.7;}
+
+/* ---- Leadership card with monogram (no fabricated headshots) ---- */
+.uok-lead-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:24px;}
+@media(max-width:767px){.uok-lead-grid{grid-template-columns:1fr;}}
+.uok-lead-card{display:flex;gap:20px;align-items:flex-start;background:#fff;border:1px solid var(--rs-border-primary,#E4E4E4);border-radius:6px;padding:28px;}
+.uok-monogram{
+  flex:0 0 72px;width:72px;height:72px;border-radius:50%;
+  background:linear-gradient(135deg,var(--rs-theme-blue),var(--rs-theme-blue-two));
+  color:#fff;display:flex;align-items:center;justify-content:center;
+  font-family:var(--rs-ff-title);font-weight:700;font-size:1.4rem;
+}
+.uok-lead-card .role{font-family:var(--rs-ff-body);font-size:12px;text-transform:uppercase;letter-spacing:.06em;color:var(--rs-yellow-two,#F69C00);font-weight:700;margin-bottom:4px;}
+.uok-lead-card h4{font-family:var(--rs-ff-title);font-size:1.15rem;margin:0 0 4px;color:var(--rs-title-tertiary);}
+.uok-lead-card p{margin:0 0 8px;color:var(--rs-text-secondary);font-size:.92rem;}
+.uok-lead-card a{color:var(--rs-theme-blue);font-size:.88rem;text-decoration:none;font-weight:600;}
+
+/* ---- Facts / recognitions block (replaces fabricated testimonials) ---- */
+.uok-facts-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;}
+@media(max-width:767px){.uok-facts-grid{grid-template-columns:1fr;}}
+.uok-fact-card{background:#fff;border-left:4px solid var(--rs-yellow);border-radius:0 6px 6px 0;box-shadow:0 8px 24px rgba(7,41,77,.06);padding:28px;}
+.uok-fact-card .num{font-family:var(--rs-ff-title);font-weight:700;font-size:1.7rem;color:var(--rs-theme-blue);margin-bottom:8px;}
+.uok-fact-card p{margin:0;color:var(--rs-text-secondary);line-height:1.7;font-size:.95rem;}
+
+/* ---- CTA band ---- */
+.uok-cta-band{background:var(--rs-theme-blue-two);color:#fff;padding:52px 0;}
+.uok-cta-band .inner{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:24px;}
+.uok-cta-band h3{font-family:var(--rs-ff-title);font-size:1.5rem;margin:0 0 8px;color:#fff;}
+.uok-cta-band p{margin:0;color:rgba(255,255,255,.8);font-family:var(--rs-ff-body);}
+
+/* ---- Process steps (admissions) ---- */
+.uok-steps{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;counter-reset:step;}
+@media(max-width:767px){.uok-steps{grid-template-columns:1fr;}}
+.uok-step{position:relative;background:#fff;border:1px solid var(--rs-border-primary,#E4E4E4);border-radius:6px;padding:30px 26px 26px;}
+.uok-step::before{
+  counter-increment:step;content:counter(step);
+  position:absolute;top:-16px;left:26px;width:36px;height:36px;border-radius:50%;
+  background:var(--rs-yellow);color:var(--rs-theme-blue-two);font-family:var(--rs-ff-title);font-weight:700;
+  display:flex;align-items:center;justify-content:center;font-size:1rem;
+}
+.uok-step h4{font-family:var(--rs-ff-title);font-size:1.05rem;margin:14px 0 8px;color:var(--rs-title-tertiary);}
+.uok-step p{margin:0;color:var(--rs-text-secondary);font-size:.92rem;line-height:1.6;}
+
+/* ---- Hide the template shop's demo-only "RTL/LTR settings" widget
+   (injected by main.js regardless of markup) — not relevant to a real site ---- */
+.rs-theme-settings-area{display:none !important;}
+
+/* ---- Simple utility ---- */
+.uok-muted{color:var(--rs-text-secondary);}
+.uok-mt-0{margin-top:0;}
+.text-center{text-align:center;}

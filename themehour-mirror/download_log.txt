@@ -1,0 +1,2 @@
+FAILED(404): assets/img/bg/wave-bg2.png
+DONE OK=243 FAIL=1
