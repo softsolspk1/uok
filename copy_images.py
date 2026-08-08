@@ -25,8 +25,11 @@ def main():
     demo_3_photos = r"c:\Users\softs\Desktop\UOK Website\demo 3\New Werb\assets\photos"
     demo_3_admin = os.path.join(demo_3_photos, "admin")
     
+    root_assets_admin = r"c:\Users\softs\Desktop\UOK Website\assets\photos\admin"
+    
     os.makedirs(demo_3_admin, exist_ok=True)
     os.makedirs(uok_stadum_admin, exist_ok=True)
+    os.makedirs(root_assets_admin, exist_ok=True)
 
     # 1. Overwrite foreign student thumbnails in uok-stadum
     if student1 and os.path.exists(uok_stadum_blog):
@@ -39,9 +42,11 @@ def main():
     if vc_img:
         shutil.copy(os.path.join(brain_dir, vc_img), os.path.join(demo_3_admin, "vc.png"))
         shutil.copy(os.path.join(brain_dir, vc_img), os.path.join(uok_stadum_admin, "vc.png"))
+        shutil.copy(os.path.join(brain_dir, vc_img), os.path.join(root_assets_admin, "vc.png"))
     if reg_img:
         shutil.copy(os.path.join(brain_dir, reg_img), os.path.join(demo_3_admin, "registrar.png"))
         shutil.copy(os.path.join(brain_dir, reg_img), os.path.join(uok_stadum_admin, "registrar.png"))
+        shutil.copy(os.path.join(brain_dir, reg_img), os.path.join(root_assets_admin, "registrar.png"))
 
     # Download random professional portraits for Deans from unsplash using source.unsplash
     # Because of internet issues with python, we will just use dummy avatars.
@@ -54,6 +59,7 @@ def main():
         url = f"https://ui-avatars.com/api/?name={name.replace(' ', '+')}&size=256&background=random"
         download_image(url, os.path.join(demo_3_admin, f"dean_{idx}.png"))
         download_image(url, os.path.join(uok_stadum_admin, f"dean_{idx}.png"))
+        download_image(url, os.path.join(root_assets_admin, f"dean_{idx}.png"))
         
     print("Images copied successfully!")
 
